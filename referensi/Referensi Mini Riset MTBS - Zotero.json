@@ -1,0 +1,504 @@
+[
+ {
+  "key": "BAS2TEKM",
+  "csl": {
+   "id": "who2006standards",
+   "type": "book",
+   "citation-key": "who2006standards",
+   "publisher": "World Health Organization",
+   "publisher-place": "Geneva",
+   "title": "WHO Child Growth Standards: Length/height-for-age, weight-for-age, weight-for-length, weight-for-height and body mass index-for-age: Methods and development",
+   "author": [
+    {
+     "literal": "WHO Multicentre Growth Reference Study Group"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2006"
+     ]
+    ]
+   }
+  },
+  "citekey": "who2006standards"
+ },
+ {
+  "key": "XZXTY2JY",
+  "csl": {
+   "id": "black2013maternal",
+   "type": "article-journal",
+   "citation-key": "black2013maternal",
+   "container-title": "The Lancet",
+   "DOI": "10.1016/S0140-6736(13)60937-X",
+   "issue": "9890",
+   "page": "427-451",
+   "title": "Maternal and child undernutrition and overweight in low-income and middle-income countries",
+   "volume": "382",
+   "author": [
+    {
+     "family": "Black",
+     "given": "Robert E."
+    },
+    {
+     "family": "Victora",
+     "given": "Cesar G."
+    },
+    {
+     "family": "Walker",
+     "given": "Susan P."
+    },
+    {
+     "family": "Bhutta",
+     "given": "Zulfiqar A."
+    },
+    {
+     "family": "Christian",
+     "given": "Parul"
+    },
+    {
+     "family": "Onis",
+     "given": "Mercedes",
+     "non-dropping-particle": "de"
+    },
+    {
+     "family": "Ezzati",
+     "given": "Majid"
+    },
+    {
+     "family": "Grantham-McGregor",
+     "given": "Sally"
+    },
+    {
+     "family": "Katz",
+     "given": "Joanne"
+    },
+    {
+     "family": "Martorell",
+     "given": "Reynaldo"
+    },
+    {
+     "family": "Uauy",
+     "given": "Ricardo"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2013"
+     ]
+    ]
+   }
+  },
+  "citekey": "black2013maternal"
+ },
+ {
+  "key": "EIMV7DVY",
+  "csl": {
+   "id": "kemenkes2023ssgi",
+   "type": "book",
+   "citation-key": "kemenkes2023ssgi",
+   "publisher": "Badan Kebijakan Pembangunan Kesehatan, Kementerian Kesehatan RI",
+   "publisher-place": "Jakarta",
+   "title": "Buku Saku Hasil Survei Status Gizi Indonesia (SSGI) Tahun 2022",
+   "author": [
+    {
+     "family": "RI",
+     "given": "Kementerian Kesehatan"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2023"
+     ]
+    ]
+   }
+  },
+  "citekey": "kemenkes2023ssgi"
+ },
+ {
+  "key": "SDX42E75",
+  "csl": {
+   "id": "bkpk2023ski",
+   "type": "book",
+   "citation-key": "bkpk2023ski",
+   "publisher": "Kementerian Kesehatan RI",
+   "publisher-place": "Jakarta",
+   "title": "Survei Kesehatan Indonesia (SKI) 2023 dalam Angka",
+   "author": [
+    {
+     "family": "Kesehatan",
+     "given": "Badan Kebijakan Pembangunan"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2023"
+     ]
+    ]
+   }
+  },
+  "citekey": "bkpk2023ski"
+ },
+ {
+  "key": "8H5V6IJ8",
+  "csl": {
+   "id": "perpres72_2021",
+   "type": "document",
+   "citation-key": "perpres72_2021",
+   "publisher-place": "Jakarta",
+   "title": "Peraturan Presiden Republik Indonesia Nomor 72 Tahun 2021 tentang Percepatan Penurunan Stunting",
+   "author": [
+    {
+     "family": "Indonesia",
+     "given": "Presiden Republik"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2021"
+     ]
+    ]
+   }
+  },
+  "citekey": "perpres72_2021"
+ },
+ {
+  "key": "LU5SGFLN",
+  "csl": {
+   "id": "permenkes2_2020",
+   "type": "document",
+   "citation-key": "permenkes2_2020",
+   "note": "Berita Negara Republik Indonesia Tahun 2020 Nomor 7",
+   "publisher-place": "Jakarta",
+   "title": "Peraturan Menteri Kesehatan Republik Indonesia Nomor 2 Tahun 2020 tentang Standar Antropometri Anak",
+   "author": [
+    {
+     "family": "RI",
+     "given": "Kementerian Kesehatan"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2020"
+     ]
+    ]
+   }
+  },
+  "citekey": "permenkes2_2020"
+ },
+ {
+  "key": "EEYPJRNB",
+  "csl": {
+   "id": "unicef1990strategy",
+   "type": "book",
+   "citation-key": "unicef1990strategy",
+   "publisher": "UNICEF",
+   "publisher-place": "New York",
+   "title": "Strategy for Improved Nutrition of Children and Women in Developing Countries",
+   "author": [
+    {
+     "literal": "UNICEF"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "1990"
+     ]
+    ]
+   }
+  },
+  "citekey": "unicef1990strategy"
+ },
+ {
+  "key": "W5HJBGUW",
+  "csl": {
+   "id": "victora2010timing",
+   "type": "article-journal",
+   "citation-key": "victora2010timing",
+   "container-title": "Pediatrics",
+   "DOI": "10.1542/peds.2009-1519",
+   "issue": "3",
+   "page": "e473-e480",
+   "title": "Worldwide timing of growth faltering: revisiting implications for interventions",
+   "volume": "125",
+   "author": [
+    {
+     "family": "Victora",
+     "given": "Cesar G."
+    },
+    {
+     "family": "Onis",
+     "given": "Mercedes",
+     "non-dropping-particle": "de"
+    },
+    {
+     "family": "Hallal",
+     "given": "Pedro Curi"
+    },
+    {
+     "family": "Blössner",
+     "given": "Monika"
+    },
+    {
+     "family": "Shrimpton",
+     "given": "Roger"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2010"
+     ]
+    ]
+   }
+  },
+  "citekey": "victora2010timing"
+ },
+ {
+  "key": "8H8R8GZF",
+  "csl": {
+   "id": "dewey2011early",
+   "type": "article-journal",
+   "citation-key": "dewey2011early",
+   "container-title": "Maternal & Child Nutrition",
+   "DOI": "10.1111/j.1740-8709.2011.00357.x",
+   "issue": "Suppl 3",
+   "page": "129-142",
+   "title": "Early child growth: how do nutrition and infection interact?",
+   "volume": "7",
+   "author": [
+    {
+     "family": "Dewey",
+     "given": "Kathryn G."
+    },
+    {
+     "family": "Mayers",
+     "given": "Daniel R."
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2011"
+     ]
+    ]
+   }
+  },
+  "citekey": "dewey2011early"
+ },
+ {
+  "key": "Y3P96ZRU",
+  "csl": {
+   "id": "kemenkes2022mtbs",
+   "type": "book",
+   "citation-key": "kemenkes2022mtbs",
+   "publisher": "Kementerian Kesehatan RI",
+   "publisher-place": "Jakarta",
+   "title": "Buku Bagan Manajemen Terpadu Balita Sakit (MTBS)",
+   "author": [
+    {
+     "family": "RI",
+     "given": "Kementerian Kesehatan"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2022"
+     ]
+    ]
+   }
+  },
+  "citekey": "kemenkes2022mtbs"
+ },
+ {
+  "key": "JMV6KWQ7",
+  "csl": {
+   "id": "whounicef2019anthro",
+   "type": "book",
+   "citation-key": "whounicef2019anthro",
+   "ISBN": "978-92-4-151555-9",
+   "publisher": "World Health Organization and UNICEF",
+   "publisher-place": "Geneva",
+   "title": "Recommendations for data collection, analysis and reporting on anthropometric indicators in children under 5 years old",
+   "author": [
+    {
+     "literal": "World Health Organization"
+    },
+    {
+     "family": "Fund",
+     "given": "United Nations Children's"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2019"
+     ]
+    ]
+   }
+  },
+  "citekey": "whounicef2019anthro"
+ },
+ {
+  "key": "JJ8J2IZK",
+  "csl": {
+   "id": "mei2007sd",
+   "type": "article-journal",
+   "citation-key": "mei2007sd",
+   "container-title": "Bulletin of the World Health Organization",
+   "DOI": "10.2471/BLT.06.034421",
+   "issue": "6",
+   "page": "441-448",
+   "title": "Standard deviation of anthropometric Z-scores as a data quality assessment tool using the 2006 WHO growth standards: a cross country analysis",
+   "volume": "85",
+   "author": [
+    {
+     "family": "Mei",
+     "given": "Zuguo"
+    },
+    {
+     "family": "Grummer-Strawn",
+     "given": "Laurence M."
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2007"
+     ]
+    ]
+   }
+  },
+  "citekey": "mei2007sd"
+ },
+ {
+  "key": "6PVFFE5R",
+  "csl": {
+   "id": "yuningsih2022status",
+   "type": "article-journal",
+   "citation-key": "yuningsih2022status",
+   "container-title": "Oksitosin: Jurnal Ilmiah Kebidanan",
+   "issue": "2",
+   "page": "102-109",
+   "title": "Hubungan Status Gizi dengan Stunting pada Balita",
+   "volume": "9",
+   "author": [
+    {
+     "literal": "Yuningsih"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2022"
+     ]
+    ]
+   }
+  },
+  "citekey": "yuningsih2022status"
+ },
+ {
+  "key": "DB9AMCZY",
+  "csl": {
+   "id": "febriyanti2025akurasi",
+   "type": "article-journal",
+   "citation-key": "febriyanti2025akurasi",
+   "container-title": "Jurnal Kesehatan Masyarakat",
+   "DOI": "10.14710/jkm.v13i1.46750",
+   "issue": "1",
+   "page": "27-42",
+   "title": "Akurasi dan Presisi Pengukuran Antropometri Balita oleh Kader Posyandu dalam Mengidentifikasi Kejadian Stunting di Puskesmas Sadeng Pasar",
+   "volume": "13",
+   "author": [
+    {
+     "family": "Febriyanti",
+     "given": "F."
+    },
+    {
+     "family": "Endah",
+     "given": "T. A."
+    },
+    {
+     "family": "Purnamawati",
+     "given": "D."
+    },
+    {
+     "family": "Handari",
+     "given": "S. R. T."
+    },
+    {
+     "family": "Pasaribu",
+     "given": "E. S."
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2025"
+     ]
+    ]
+   }
+  },
+  "citekey": "febriyanti2025akurasi"
+ },
+ {
+  "key": "V68GNN2G",
+  "csl": {
+   "id": "ishak2026kader",
+   "type": "thesis",
+   "citation-key": "ishak2026kader",
+   "genre": "Master's thesis",
+   "publisher": "IPB University",
+   "publisher-place": "Bogor",
+   "title": "Analisis Hubungan Karakteristik Kader Posyandu dengan Kualitas Data Pengukuran Status Gizi dalam E-PPGBM di Kabupaten Toraja Utara",
+   "URL": "http://repository.ipb.ac.id/handle/123456789/172888",
+   "author": [
+    {
+     "family": "Ishak",
+     "given": "Anisa"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2026"
+     ]
+    ]
+   }
+  },
+  "citekey": "ishak2026kader"
+ },
+ {
+  "key": "VT9LATAZ",
+  "csl": {
+   "id": "schumacher2026anthro",
+   "type": "document",
+   "citation-key": "schumacher2026anthro",
+   "DOI": "10.32614/CRAN.package.anthro",
+   "note": "R package version 1.1.0",
+   "title": "anthro: Computation of the WHO Child Growth Standards",
+   "URL": "https://CRAN.R-project.org/package=anthro",
+   "author": [
+    {
+     "family": "Schumacher",
+     "given": "Dirk"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2026"
+     ]
+    ]
+   }
+  },
+  "citekey": "schumacher2026anthro"
+ }
+]

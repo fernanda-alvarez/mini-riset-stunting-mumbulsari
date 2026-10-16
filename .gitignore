@@ -1,0 +1,13 @@
+# Data balita mengandung identitas anak (nama, NIK, nomor RM): jangan masuk git
+data/sumber/
+data/sensitivitas/
+*Data Bersih.xlsx
+*Siap Olah.xlsx
+*Z-score & Deskriptif.xlsx
+*Analisis Lanjut.xlsx
+*Daftar Tindak Lanjut (INTERNAL).xlsx
+
+# Berkas sementara Office / Python
+~$*
+__pycache__/
+*.pyc
