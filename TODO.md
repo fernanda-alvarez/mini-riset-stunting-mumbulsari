@@ -39,6 +39,7 @@ Hasil dan laporan dari data snapshot 13 Okt 2026 sudah dibekukan di `arsip/snaps
 - [x] Data per anak 2024 diunduh (12 bulan, 36.263 baris) dan diaudit: lebih bersih daripada 2025–2026. Lihat bagian "Audit kualitas" di `data/sigizi/daftar_status_gizi/README.md`.
 - [x] Keputusan 19 Okt 2026: data **2024 ikut dianalisis** (disetujui pembimbing), jadi periode analisis Jan 2024–Sep 2026.
 - [x] Cek heaping tinggi dan penumpukan z-score (`skrip/audit_heaping_tinggi.py`, hasil di `data/sigizi/daftar_status_gizi/audit_heaping_tinggi.txt`): heaping ada di semua tahun, bukan hanya 2025–2026 (lihat README daftar_status_gizi).
+- [x] Kelengkapan kolom faktor risiko (`data/sigizi/daftar_status_gizi/kelengkapan_faktor_risiko.txt`): BBLR (BB Lahir dalam kg, terisi ±95%, BBLR ±8%) dan PBLR (±10%) layak; MBG, KPSP, KIA, Kelas Ibu tidak layak (kosong atau terlalu jarang; MBG "ya" hanya 275 pengukuran, 2026); Jml Vit A ambigu (kosong vs belum dapat); Cara Ukur kosong 22% (2025) dan 53% (2026). Faktor risiko yang realistis: BBLR, PBLR, jenis kelamin, umur. Longitudinal layak: 6.328 anak, 60% terukur ≥12 bulan.
 - [ ] Tentukan perlakuan heaping/penumpukan z-score di analisis (analisis sensitivitas per desa, atau pakai desa dengan pengukuran teliti saja). Prevalensi stunting dari situs belum bisa dianggap valid.
 - [ ] Tanya petugas entri: apa yang berubah di pencatatan sejak Jan 2026 (anak terukur naik dari ±61% ke ±95% sasaran padahal sasaran datar).
 - [ ] Ambil ulang Okt 2026 setelah bulan berakhir.
