@@ -1,0 +1,49 @@
+
+=== 2024 (n=36263) ===
+BB Lahir          masuk akal: 34317 (94.6%), kosong/0: 1896 (5.2%), janggal: 50 (0.1%)
+TB Lahir          masuk akal: 34013 (93.8%), kosong/0: 2180 (6.0%), janggal: 70 (0.2%)
+BBLR              tidak: 31550 (91.9%), ya: 2767 (8.1%)
+PBLR              tidak: 30422 (89.4%), ya: 3591 (10.6%)
+Cara Ukur         berdiri: 23090 (63.7%), terlentang: 13173 (36.3%)
+MBG               -: 36263 (100.0%)
+KPSP              -: 36263 (100.0%)
+KIA               -: 36263 (100.0%)
+Kelas Ibu Balita  -: 36263 (100.0%)
+Jml Vit A         (kosong): 31925 (88.0%), 1: 4338 (12.0%)
+
+=== 2025 (n=34542) ===
+BB Lahir          masuk akal: 33016 (95.6%), kosong/0: 1367 (4.0%), janggal: 159 (0.5%)
+TB Lahir          masuk akal: 31379 (90.8%), kosong/0: 3103 (9.0%), janggal: 60 (0.2%)
+BBLR              tidak: 30335 (91.9%), ya: 2681 (8.1%)
+PBLR              tidak: 28151 (89.7%), ya: 3228 (10.3%)
+Cara Ukur         berdiri: 17492 (50.6%), terlentang: 9282 (26.9%), -: 7768 (22.5%)
+MBG               -: 20876 (60.4%), tidak: 13666 (39.6%)
+KPSP              -: 34542 (100.0%)
+KIA               -: 34542 (100.0%)
+Kelas Ibu Balita  tidak: 19266 (55.8%), -: 15226 (44.1%), ya: 50 (0.1%)
+Jml Vit A         (kosong): 30463 (88.2%), 1: 4079 (11.8%)
+
+=== 2026 (n=37537) ===
+BB Lahir          masuk akal: 35578 (94.8%), kosong/0: 1716 (4.6%), janggal: 243 (0.6%)
+TB Lahir          masuk akal: 34556 (92.1%), kosong/0: 2942 (7.8%), janggal: 39 (0.1%)
+BBLR              tidak: 32622 (91.7%), ya: 2956 (8.3%)
+PBLR              tidak: 30867 (89.3%), ya: 3689 (10.7%)
+Cara Ukur         -: 19943 (53.1%), berdiri: 9932 (26.5%), terlentang: 7662 (20.4%)
+MBG               tidak: 36692 (97.7%), -: 570 (1.5%), ya: 275 (0.7%)
+KPSP              -: 37343 (99.5%), (kosong): 194 (0.5%)
+KIA               -: 37507 (99.9%), (kosong): 30 (0.1%)
+Kelas Ibu Balita  tidak: 36969 (98.5%), -: 558 (1.5%), ya: 10 (0.0%)
+Jml Vit A         (kosong): 29793 (79.4%), 1: 7744 (20.6%)
+
+=== Pengukuran berulang (34 bulan, per NIK) ===
+anak unik: 6328
+  1-1 bulan terukur: 275 (4.3%)
+  2-5 bulan terukur: 494 (7.8%)
+  6-11 bulan terukur: 1759 (27.8%)
+  12-23 bulan terukur: 1786 (28.2%)
+  24-34 bulan terukur: 2014 (31.8%)
+  2024: >=2 bulan 89.7%, >=6 bulan 80.7% dari 3943 anak
+  2025-2026: >=2 bulan 95.0%, >=6 bulan 82.7% dari 5825 anak
+
+=== MBG per anak ===
+{'tak pernah': 6110, 'selalu': 0, 'berubah 0->1': 218, 'berubah 1->0': 197}
