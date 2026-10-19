@@ -8,7 +8,7 @@ from baca_export_sigizi import baca  # noqa: E402
 
 PROJ = Path(sys.argv[1])
 SRC = PROJ / "data/sumber/sigizi_daftar_status_gizi_2026-10-19"
-MENTAH = PROJ / "data baru/rekap status gizi/_mentah"
+MENTAH = PROJ / "arsip/sigizi_2026-10-19/data/sigizi/rekap_status_gizi/_mentah"
 HARAP = {"2025-01": 3355, "2025-02": 2632, "2025-03": 2806, "2025-04": 2982, "2025-05": 3032, "2025-06": 2555,
          "2025-07": 2798, "2025-08": 2703, "2025-09": 2898, "2025-10": 3024, "2025-11": 3025, "2025-12": 2732,
          "2026-01": 4249, "2026-02": 4250, "2026-03": 4255, "2026-04": 4244, "2026-05": 4234, "2026-06": 4194,

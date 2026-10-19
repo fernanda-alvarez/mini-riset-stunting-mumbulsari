@@ -29,7 +29,7 @@ Audit agregat (tanpa mencetak data pribadi): `python -I skrip/audit_daftar_statu
 
 ## Rekonsiliasi dengan rekap (hasil 19 Okt 2026)
 
-72.079 anak di daftar = 72.071 (laporan Puskesmas; semuanya punya desa) + 8 anak yang kolom Desa-nya kosong. Dari 72.071: 71.261 punya posyandu valid (persis jumlah semua baris posyandu pada `../rekap status gizi/`) + 810 anak yang **Posyandu-nya kosong**. Rinciannya di `../rekap status gizi/README.md` (butir 2).
+72.079 anak di daftar = 72.071 (laporan Puskesmas; semuanya punya desa) + 8 anak yang kolom Desa-nya kosong. Dari 72.071: 71.261 punya posyandu valid (persis jumlah semua baris posyandu pada `../rekap_status_gizi/`) + 810 anak yang **Posyandu-nya kosong**. Rinciannya di `../rekap_status_gizi/README.md` (butir 2).
 
 ## Masalah kualitas data yang sudah terlihat
 
