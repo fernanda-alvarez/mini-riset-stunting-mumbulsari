@@ -13,8 +13,8 @@ S="skrip"
 F="data/olahan/MTBS Balita PKM Mumbulsari 2025-2026 - "
 SENS="data/sensitivitas"
 GRAFIK="grafik"
-LAP="naskah/Laporan Mini Riset - Status Gizi Balita pada Kunjungan MTBS Puskesmas Mumbulsari 2025-2026"
-mkdir -p "$SENS" "$GRAFIK"
+LAP="Laporan Mini Riset - Status Gizi Balita pada Kunjungan MTBS Puskesmas Mumbulsari 2025-2026"
+mkdir -p data/sumber data/olahan "$SENS" "$GRAFIK"
 
 "$PY" -W ignore -I "$S/siap_olah_mtbs.py" "${F}Data Bersih.xlsx" "${F}Siap Olah.xlsx"
 "$RS" "$S/zscore_mtbs.R" "${F}Siap Olah.xlsx" "${F}Z-score & Deskriptif.xlsx" || true
@@ -29,6 +29,7 @@ mkdir -p "$SENS" "$GRAFIK"
 
 "$RS" "$S/kualitas_tambahan_mtbs.R" "${F}Data Bersih.xlsx" "${F}Analisis Lanjut.xlsx" "$SENS/Analisis Lanjut - termasuk 2024.xlsx" "${F}Kualitas Tambahan.xlsx" "$GRAFIK" || true
 "$PY" -W ignore -I "$S/daftar_tindak_lanjut.py" "${F}Analisis Lanjut.xlsx" "${F}Daftar Tindak Lanjut (INTERNAL).xlsx"
+"$PY" -W ignore -I "$S/percantik_excel.py" || true
 "$PY" -W ignore -I "$S/buat_laporan_docx.py"
 "$PY" -W ignore -I "$S/pasang_sitasi_zotero.py"
 "$PS" -ExecutionPolicy Bypass -File "$S/perbarui_daftar_isi.ps1" "$LAP.docx" || true

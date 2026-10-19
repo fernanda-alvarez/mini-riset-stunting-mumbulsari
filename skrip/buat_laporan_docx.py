@@ -11,7 +11,7 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 
 DRAF = "naskah/Draf Proposal Mini Riset - Status Gizi Balita pada Kunjungan MTBS Puskesmas Mumbulsari 2025-2026.docx"
-OUT = "naskah/Laporan Mini Riset - Status Gizi Balita pada Kunjungan MTBS Puskesmas Mumbulsari 2025-2026.docx"
+OUT = "Laporan Mini Riset - Status Gizi Balita pada Kunjungan MTBS Puskesmas Mumbulsari 2025-2026.docx"
 F = "data/olahan/MTBS Balita PKM Mumbulsari 2025-2026 - "
 G = "grafik/"
 
@@ -235,7 +235,7 @@ for _i in (8, 37):
     assert _p.text.startswith("HALAMAN"), "label halaman sampul tidak ditemukan"
     _p._p.getparent().remove(_p._p)
 # baris kosong di sampul dikurangi supaya "2026" dan pemisah halaman tidak tumpah ke halaman kosong
-for _i in (3, 4, 5, 6, 16, 17, 28, 29, 30, 31, 34, 35, 36, 45, 46):
+for _i in (3, 4, 6, 16, 17, 28, 29, 30, 31, 34, 35, 36, 45, 46):
     _p = _RAW[_i]
     assert not _p.text.strip(), "baris kosong sampul tidak kosong"
     _p._p.getparent().remove(_p._p)
@@ -275,8 +275,7 @@ for t in ["Gambar 4.1 Diagram alur subjek penelitian", "Gambar 4.2 Distribusi st
 pecah(sebelum=P[45])
 klon(T_HFRONT, "DAFTAR LAMPIRAN", sebelum=P[45])
 for t in ["Lampiran 1. Hubungan diagnosis MTBS dengan berat badan kurang dan wasting",
-          "Lampiran 2. Ringkasan pembersihan data", "Lampiran 3. Usulan format register MTBS",
-          "Lampiran 4. Berkas analisis dan skrip"]:
+          "Lampiran 2. Ringkasan pembersihan data", "Lampiran 3. Usulan format register MTBS"]:
     klon(T_DAFTAR, t, sebelum=P[45])
 
 # ================= BAB 1 =================
@@ -316,7 +315,7 @@ set_text(P[74], "Status gizi balita dinilai dengan antropometri, yaitu pengukura
          "bulan [1].")
 set_text(P[77], "z-score dihitung dengan metode LMS: z = ((X/M)^L − 1) / (L·S), dengan L, M, dan S diambil dari tabel WHO "
          "menurut umur dan jenis kelamin [1]. Untuk BB/U dan BB/PB, WHO menetapkan koreksi pada ekor distribusi (|z| > 3). "
-         "Nilai yang tidak mungkin secara biologis (flag WHO) dikeluarkan.")
+         "Nilai yang tidak mungkin secara biologis (di luar batas WHO) dikeluarkan.")
 set_text(P[79], "Stunting terjadi akibat kombinasi asupan gizi yang tidak mencukupi, infeksi berulang, kesehatan dan gizi ibu "
          "selama kehamilan, pola asuh, serta sanitasi dan akses air bersih yang buruk, sebagaimana digambarkan dalam kerangka "
          "konseptual UNICEF [7]. Pertumbuhan linear terhambat terutama dalam 1.000 hari pertama kehidupan. Analisis data "
@@ -375,7 +374,7 @@ set_text(P[100], f"Hasil akhir: {n_layak} kunjungan memenuhi syarat dan {N} bali
 set_text(P[101], "Kriteria eksklusi penilaian z-score (baris tetap disimpan dan ditandai alasannya, tidak dihapus): kunjungan "
          "2024; baris duplikat; umur di luar 0–60 bulan, tidak dapat ditentukan, atau perlu dicek; umur hanya tercatat dalam "
          "tahun bulat (\"umur kasar\"); jenis kelamin kosong; dan panjang/tinggi badan kosong atau tidak valid. Nilai tak "
-         "mungkin secara biologis (flag WHO: TB/U < −6 atau > +6; BB/U < −6 atau > +5; BB/TB < −5 atau > +5) tidak "
+         "mungkin secara biologis (batas WHO: TB/U < −6 atau > +6; BB/U < −6 atau > +5; BB/TB < −5 atau > +5) tidak "
          "dikategorikan.")
 set_text(P[102], "Unit analisis: balita. Bila seorang anak memiliki beberapa kunjungan yang memenuhi syarat, dipakai kunjungan "
          "pertama, agar anak yang sering berkunjung tidak dihitung berulang. Kunjungan tanpa nomor identitas tidak dapat "
@@ -391,11 +390,11 @@ set_text(P[108], "Tanggal lahir diambil dari kolom tanggal lahir, dari kolom umu
          "tidak ditebak dari nama. Penulisan desa (sekitar 50 variasi) disamakan, BB/PB bersatuan atau bertanda koma "
          "dibersihkan, BB dan PB yang tertukar dibalik, dan nilai mustahil dikosongkan.")
 set_text(P[109], f"Seluruh perubahan ({k(len(log), 0)} perubahan) dicatat per baris dan kolom, nilai asli disimpan pada kolom "
-         f"tersendiri, dan {len(cek)} baris yang membutuhkan keputusan manual dicantumkan pada daftar terpisah (Lampiran 2). "
+         f"tersendiri, dan {len(cek)} baris yang membutuhkan keputusan manual dicatat tersendiri untuk diperiksa ulang (Lampiran 2). "
          "Konsistensi PB/BB antar-kunjungan anak yang sama juga diperiksa (PB turun > 2 cm; PB naik > 4 cm/bulan pada umur "
          "> 6 bulan; BB berubah > 25% dalam ≤ 60 hari).")
 set_text(P[110], "Identitas (nama, NIK, nomor indeks) tidak disertakan dalam laporan. Daftar balita untuk tindak lanjut "
-         "disimpan terpisah sebagai dokumen internal puskesmas.")
+         "disimpan terpisah dan hanya diserahkan kepada puskesmas.")
 set_text(P[112], "z-score dihitung dengan paket R \"anthro\" versi 1.1.0 yang mengimplementasikan WHO Child Growth Standards "
          "2006 [1,16]. Umur dihitung dalam hari dari selisih tanggal kunjungan dan tanggal lahir; bila tanggal lahir tidak "
          "konsisten dengan umur tercatat, dipakai umur dalam bulan dari register. Anak di bawah 24 bulan memakai tabel "
@@ -416,11 +415,11 @@ set_text(P[117], "Kelengkapan data: persentase BB, PB/TB, jenis kelamin, dan tan
          "menilai apakah yang tidak terukur berbeda secara sistematis.")
 set_text(P[118], "Pemeriksaan kualitas dan sensitivitas: SD z-score (harapan ≈ 1), proporsi nilai tak mungkin secara "
          "biologis, dan digit preference score (DPS) angka terakhir PB/TB dan BB [11]. Analisis sensitivitas dilakukan dengan "
-         "(a) mengeluarkan balita yang ditandai perlu cek antropometri, (b) menyertakan kunjungan 2024, (c) menambahkan balita "
+         "(a) mengeluarkan balita dengan data antropometri meragukan, (b) menyertakan kunjungan 2024, (c) menambahkan balita "
          "dengan umur kasar dengan tiga asumsi umur, dan (d) menghitung BB/U pada semua balita yang memiliki BB tanpa "
          "mensyaratkan PB/TB.")
-set_text(P[119], "Perangkat lunak: Python 3.11 (pandas, openpyxl) untuk pembersihan data; R 4.6 (anthro, ggplot2, openxlsx) "
-         "untuk z-score, analisis, dan grafik. Seluruh langkah dapat diulang dengan skrip pada Lampiran 4.")
+set_text(P[119], "Perangkat lunak: Python 3.11 untuk pembersihan data; R 4.6 (paket anthro) untuk z-score, analisis, dan grafik. "
+         "Seluruh langkah dijalankan dengan skrip sehingga dapat diulang.")
 set_text(P[121], "Studi memakai data layanan rutin tanpa kontak dengan pasien. Pemakaian data dilakukan atas izin Kepala "
          "Puskesmas Mumbulsari [isi: nomor/tanggal surat izin bila ada]. Identitas pasien tidak disertakan dalam laporan, "
          "dan hasil dilaporkan secara agregat.")
@@ -584,7 +583,7 @@ h2("4.5 Kualitas Data dan Analisis Sensitivitas")
 dpb, dbb = dg.loc["Panjang/tinggi badan (cm)"], dg.loc["Berat badan (kg)"]
 body(f"SD z-score TB/U {k(zq.loc['TB/U', 'SD'], 2)}, BB/U {k(zq.loc['BB/U', 'SD'], 2)}, dan BB/TB "
      f"{k(zq.loc['BB/TB', 'SD'], 2)}. Nilai TB/U dan BB/TB jauh di atas harapan 1, sedangkan BB/U lebih mendekati. SD "
-     f"hanya sedikit turun setelah {n_perlu_cek} balita yang ditandai perlu cek antropometri dikeluarkan (TB/U "
+     f"hanya sedikit turun setelah {n_perlu_cek} balita dengan data antropometri meragukan dikeluarkan (TB/U "
      f"{k(zq.loc['TB/U', 'SD_tanpa_perlu_cek'], 2)}), sehingga galat pengukuran panjang/tinggi badan tampak menyebar, bukan "
      "hanya pada beberapa baris salah ketik.")
 body(f"Seluruh ({k(dpb.persen_bilangan_bulat)}%) nilai panjang/tinggi badan ditulis dalam sentimeter bulat, dan angka "
@@ -610,7 +609,7 @@ body(f"Proporsi stunting yang teramati tetap stabil pada berbagai analisis sensi
      f"kunjungan 2024 juga tidak mengubah hasil (stunting {k(r24.loc['stunting', 'persen'])}%).")
 cap("Tabel 4.8 Analisis sensitivitas")
 rows = [["Analisis utama", k(ST.n, 0), k(ST.persen), k(UW.persen), k(WS.persen)],
-        [f"Tanpa {n_perlu_cek} balita perlu cek antropometri", k(rs.loc['stunting', 'n_tanpa_perlu_cek'], 0),
+        [f"Tanpa {n_perlu_cek} balita dengan data antropometri meragukan", k(rs.loc['stunting', 'n_tanpa_perlu_cek'], 0),
          k(rs.loc['stunting', 'persen_tanpa_perlu_cek']), k(rs.loc['underweight', 'persen_tanpa_perlu_cek']),
          k(rs.loc['wasting', 'persen_tanpa_perlu_cek'])],
         ["Termasuk kunjungan Juli–Desember 2024", k(r24.loc['stunting', 'n'], 0), k(r24.loc['stunting', 'persen']),
@@ -724,7 +723,7 @@ for t in ["Menjadikan pengukuran berat badan dan panjang/tinggi badan serta peng
           "terstandar dan rujukan ke program gizi."]:
     poin(t)
 body("Bagi penelitian selanjutnya:")
-for t in [f"Memverifikasi {len(cek)} baris data yang ditandai dan {n_perlu_cek} balita yang ditandai perlu cek antropometri "
+for t in [f"Memverifikasi {len(cek)} baris data yang ditandai dan {n_perlu_cek} balita dengan data antropometri meragukan "
           "dengan register kertas atau SIMPUS.",
           "Membandingkan hasil dengan data e-PPGBM/posyandu desa yang sama untuk melihat beda antara balita sakit dan "
           "populasi umum.",
@@ -799,11 +798,11 @@ h2("Lampiran 2. Ringkasan Pembersihan Data")
 lg = log.copy()
 lg["jenis"] = lg.alasan.astype(str).str.split(":").str[0].str.strip()
 rk = lg.groupby(["kolom", "jenis"]).size().reset_index(name="n").sort_values("n", ascending=False)
-body(f"Seluruh {k(len(log), 0)} perubahan dicatat pada lembar Log_Perubahan berkas Data Bersih, dengan nilai asli dan nilai "
+body(f"Seluruh {k(len(log), 0)} perubahan dicatat per baris dan kolom, dengan nilai asli dan nilai "
      f"baru. Sebanyak {len(cek)} baris perlu diverifikasi manual. Ringkasan perubahan menurut kolom dan jenis perubahan:")
 cap("Tabel L2.1 Ringkasan perubahan pada pembersihan data")
 tabel(["Kolom", "Jenis perubahan", "n"], [[r.kolom, r.jenis, k(r.n, 0)] for _, r in rk.head(20).iterrows()], [3.5, 9.5, 2])
-catatan("Dua puluh jenis perubahan terbanyak ditampilkan; daftar lengkap pada berkas Data Bersih.")
+catatan("Dua puluh jenis perubahan terbanyak ditampilkan; daftar lengkap tersedia dari peneliti.")
 
 h2("Lampiran 3. Usulan Format Register MTBS")
 body("Usulan kolom register agar status gizi setiap balita yang berkunjung ke poli MTBS dapat langsung dinilai dan "
@@ -822,15 +821,6 @@ usul = [["Tanggal kunjungan", "Format tetap dd/mm/yyyy (tanggal, bukan teks)", "
         ["Diagnosis dan kode ICD-10", "Satu diagnosis per kolom", "Ya"]]
 tabel(["Kolom", "Cara pengisian", "Wajib"], usul, [5, 8, 2])
 
-h2("Lampiran 4. Berkas Analisis dan Skrip")
-for t in ["Data Bersih: seluruh kunjungan hasil pembersihan, nilai asli, log perubahan, dan baris perlu cek manual.",
-          "Siap Olah: kunjungan yang memenuhi syarat dan yang dikeluarkan beserta alasannya.",
-          "Z-score & Deskriptif, Analisis Lanjut, Kelengkapan & Kualitas, Kualitas Tambahan, Tabel & Grafik: hasil analisis.",
-          "Daftar Tindak Lanjut (INTERNAL): daftar balita bermasalah gizi beserta identitas; hanya untuk puskesmas.",
-          "Skrip: cleanup_mtbs.py, siap_olah_mtbs.py, zscore_mtbs.R, analisis_lanjut_mtbs.R, tabel_grafik_mtbs.R, "
-          "kelengkapan_mtbs.R, kualitas_tambahan_mtbs.R, daftar_tindak_lanjut.py, buat_laporan_docx.py; seluruh alur "
-          "dijalankan dengan jalankan_semua.sh."]:
-    poin(t)
 akhir._p.getparent().remove(akhir._p)
 
 # Seragamkan font run lama yang masih Gungsuh (hanya format)

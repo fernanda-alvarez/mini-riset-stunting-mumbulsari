@@ -9,7 +9,7 @@ import docx
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 
-DOC = "naskah/Laporan Mini Riset - Status Gizi Balita pada Kunjungan MTBS Puskesmas Mumbulsari 2025-2026.docx"
+DOC = "Laporan Mini Riset - Status Gizi Balita pada Kunjungan MTBS Puskesmas Mumbulsari 2025-2026.docx"
 SNAP = "referensi/Referensi Mini Riset MTBS - Zotero.json"
 BIB = "referensi/Referensi Mini Riset MTBS.bib"
 API = "http://127.0.0.1:23119/api/users/0/collections/UQ9XZL3Y/items/top?limit=100&format="
