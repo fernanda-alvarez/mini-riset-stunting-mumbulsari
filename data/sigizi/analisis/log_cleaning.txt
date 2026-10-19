@@ -1,0 +1,68 @@
+Baris mentah: 108322 (anak unik 6312), 2024-01..2026-09
+
+Jumlah baris kena flag per tahun (flag keras: f_keras = gabungan):
+tahun                 2024   2025   2026
+f_zs_penanda            32    681   1135
+f_nol                   29     47      3
+f_aneh                  28    196    350
+f_nik_ganda              0      0      0
+f_umur_luar            154    162    432
+f_keras                241    945   1534
+f_tgl_luar               3      9      7
+f_pos_kosong             0     96    713
+f_nik_pendek         15254  11402  11235
+f_id_tak_konsisten       0      0      0
+f_tbu_outlier          197   1088   3346
+f_cara_ukur_salah      357    707   1159
+f_tgl_seragam         8546    889  18987
+f_anomali_desabulan    239   1932   6434
+f_heaping_tinggi     23053  28763  16508
+
+Jumlah baris per skenario per tahun:
+          S0     S1     S2     S3
+tahun                            
+2024   36022  36022  13101  35785
+2025   33597  33597   5444  32042
+2026   35981  18592  19610  30143
+
+Desa-bulan anomali (f_anomali_desabulan; baris kena flag):
+desa        bulan_berkas
+LAMPEJI     2026-06         952
+            2026-07         948
+LENGKONG    2024-01         239
+            2025-01         410
+            2025-04         256
+            2025-11         361
+            2026-03         517
+            2026-06         503
+            2026-07         506
+MUMBULSARI  2025-01         708
+            2026-01         908
+            2026-06         864
+            2026-07         853
+TAMANSARI   2025-09         197
+            2026-01         383
+
+Heaping desa-tahun (>= 70% = heaping_tinggi):
+tahun  desa          
+2024   KARANGKEDAWUNG     0.88
+       KAWANGREJO        0.777
+       LAMPEJI           0.907
+       LENGKONG          0.359
+       MUMBULSARI        0.481
+       SUCO              0.917
+       TAMANSARI          0.42
+2025   KARANGKEDAWUNG    0.841
+       KAWANGREJO        0.864
+       LAMPEJI           0.976
+       LENGKONG          0.349
+       MUMBULSARI        0.748
+       SUCO              0.934
+       TAMANSARI         0.635
+2026   KARANGKEDAWUNG    0.932
+       KAWANGREJO        0.872
+       LAMPEJI           0.387
+       LENGKONG          0.439
+       MUMBULSARI        0.319
+       SUCO              0.917
+       TAMANSARI         0.748
