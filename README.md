@@ -15,7 +15,7 @@ KOAS Ilmu Kesehatan Masyarakat, FK Universitas Jember.
 | `naskah/` | Draf proposal (sumber laporan). Laporan `.docx` dibuat di folder induk ini, PDF lama ada di `arsip/`. |
 | `presentasi/` | Slide presentasi. |
 | `arsip/` | Hasil kerja yang sudah selesai/dibekukan, satu subfolder per snapshot (struktur sama dengan folder induk). `snapshot_2026-10-13` = data register 13 Okt 2026 beserta laporan, grafik, presentasi, form, dan TODO-nya. |
-| `data/sigizi/` | Data SigiziKesga Jan 2025–Okt 2026. `rekap_status_gizi/` = Excel rekap per desa (agregat; **sheet `Laporan Puskesmas` = dataset analisis tingkat desa**). `daftar_status_gizi/` = dokumentasi dataset per anak. Baca `README.md` di tiap subfolder dulu. Data per anak (memuat identitas anak, tidak masuk git) ada di `data/sumber/sigizi_daftar_status_gizi_2026-10-19/`; `rekap_insiden_stunting/` = 10 berkas rekap insiden stunting per desa dan jenis kelamin (agregat, Jan–Okt 2026). |
+| `data/sigizi/` | Data SigiziKesga Jan 2025–Okt 2026. `rekap_status_gizi/` = Excel rekap per desa (agregat; **sheet `Laporan Puskesmas` = dataset analisis tingkat desa**). `daftar_status_gizi/` = dokumentasi dataset per anak. Baca `README.md` di tiap subfolder dulu. Data per anak (memuat identitas anak, tidak masuk git) ada di `data/sumber/sigizi_daftar_status_gizi_2026-10-19/`; `rekap_insiden_stunting/` = 10 berkas rekap insiden stunting per desa dan jenis kelamin (agregat, Jan–Okt 2026). `rekap_tambahan/` = Sasaran Anak (penyebut), Status Gizi & Usia (+JK), dan cek volume 2024. `inventaris_sigizikesga.md` = peta semua laporan situs dan analisis yang layak. |
 
 Daftar pekerjaan untuk dataset baru ada di `TODO.md`.
 
