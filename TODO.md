@@ -28,8 +28,11 @@ Hasil dan laporan dari data snapshot 13 Okt 2026 sudah dibekukan di `arsip/snaps
 - [ ] Data sumber, Data Bersih, Daftar Tindak Lanjut (INTERNAL), dan form isian memuat identitas anak (NIK, nama). Semua sudah di `.gitignore`. Cek `git status` sebelum commit.
 - [ ] Serahkan Daftar Tindak Lanjut ke petugas gizi atau penanggung jawab MTBS secara langsung, bukan lewat grup.
 
-## F. Rekap status gizi SigiziKesga (`data baru/rekap status gizi/`)
-- [ ] Putuskan penyebab selisih posyandu vs laporan Puskesmas (55 dari 154 desa-bulan, terpusat di Mumbulsari, Lengkong, Lampeji). Cara: hitung anak dengan posyandu kosong/di luar daftar di "Daftar Status Gizi" (data per anak, perlu izin peneliti).
-- [ ] Cek ke entri sumber: sebaran TB/U janggal (banyak "Outlier") di Lampeji, Mumbulsari, Lengkong Jan–Agu 2026. Jangan pakai angka stunting desa-desa itu sebelum dicek.
-- [ ] Buat berkas khusus tingkat desa (7 desa × 22 bulan dari sheet `Laporan Puskesmas`) dengan persen stunting, wasting, underweight.
+## F. Data SigiziKesga (`data baru/rekap status gizi/`, `data baru/daftar status gizi/`)
+- [x] Penyebab selisih posyandu vs laporan Puskesmas: anak dengan Posyandu kosong (818 anak, terpusat di Mumbulsari, Lengkong, Lampeji). Rinciannya di README kedua folder itu.
+- [ ] Minta petugas entri Puskesmas melengkapi Posyandu yang kosong (818 anak, naik 50–110/bulan sepanjang 2026) dan 8 anak tanpa Desa.
+- [ ] Konfirmasi ke petugas entri: entri massal bertanggal 31 Jul 2026 di Lampeji, Mumbulsari, Lengkong (tinggi/berat tidak sesuai umur, ZS TB/U −6 s.d. −9). Jangan pakai angka stunting periode itu sebelum dibersihkan.
+- [ ] Bersihkan data per anak sebelum analisis: nilai penanda (ZS = 1000), salah satuan (berat 3700), tinggi/berat 0, tanggal ukur di luar bulan berkas. Pseudonimkan NIK, buang kolom identitas.
+- [ ] Putuskan dataset analisis: sheet `Laporan Puskesmas` (agregat per desa) atau data per anak yang sudah dibersihkan. Rencana analisis menunggu hasil sesi inventaris SigiziKesga (lihat `data baru/inventaris_sigizikesga.md` bila sudah ada).
+- [ ] Buat berkas khusus tingkat desa (7 desa × 22 bulan) dengan persen stunting, wasting, underweight.
 - [ ] Ambil ulang Okt 2026 setelah bulan berakhir.

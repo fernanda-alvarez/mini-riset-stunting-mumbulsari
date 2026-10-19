@@ -123,7 +123,7 @@ def main(mentah, keluar):
         negatif = sum(s[5] < 0 for s in selisih)
         ringkas = (f"{n_beda} dari {len(selisih)} baris desa-bulan berbeda antara laporan tingkat Puskesmas (tanpa filter desa) dan rekap per posyandu; "
                    f"selisih total balita (Puskesmas - posyandu) berkisar {min(s[5] for s in selisih)} s.d. {max(s[5] for s in selisih)}, "
-                   f"{negatif} baris negatif. Rincian di sheet 'Selisih'. Penyebab belum diketahui. "
+                   f"{negatif} baris negatif. Rincian di sheet 'Selisih'. Penyebab: anak yang kolom Posyandu-nya kosong di data entri (lihat README folder ini). "
                    "Untuk total per desa/Puskesmas gunakan laporan tingkat Puskesmas, bukan penjumlahan posyandu.")
 
     with open(keluar / "rekap_status_gizi_per_posyandu.csv", "w", newline="", encoding="utf-8-sig") as f:
