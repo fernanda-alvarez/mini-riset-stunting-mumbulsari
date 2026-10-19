@@ -503,7 +503,7 @@ def s_ringkasan_kamus(wb):
     ws.sheet_properties.pageSetUpPr = PageSetupProperties(fitToPage=True)
     sel(ws, 1, 1, "Analisis Status Gizi Balita — Puskesmas Mumbulsari", bold=True, size=20, color=NAVY)
     ws.row_dimensions[1].height = 34
-    sel(ws, 2, 1, "Mini Riset KOAS IKM, FK Universitas Jember · data SigiziKesga (sigizikesga.kemkes.go.id) · Jan 2024–Sep 2026 · 7 desa · 108.322 pengukuran, 6.312 anak · diolah 19 Okt 2026", color=GRAY)
+    sel(ws, 2, 1, "Mini Riset KOAS IKM, FK Universitas Jember · data SigiziKesga (sigizikesga.kemkes.go.id) · Jan 2024–Sep 2026 · 7 desa · 108.322 pengukuran, 6.312 anak · data diambil 19 Okt 2026; Okt 2026 tidak dianalisis (baru 20 pengukuran, sampai 19 Okt)", color=GRAY)
     ws.column_dimensions["A"].width = 4
     ws.column_dimensions["B"].width = 34
     ws.column_dimensions["C"].width = 110
@@ -538,8 +538,8 @@ def s_ringkasan_kamus(wb):
     sel(ws, r, 2, "PERINGATAN", bold=True, size=12, color="DC2626")
     r += 1
     ws.merge_cells(start_row=r, start_column=2, end_row=r, end_column=3)
-    sel(ws, r, 2, "Data ini adalah data rutin (entri petugas) dengan masalah kualitas yang terdokumentasi (sheet 12). Semua hasil adalah asosiasi pada data observasional. Verifikasi dengan petugas entri Puskesmas "
-        "dan izin penggunaan data tetap perlu dikonfirmasi sebelum publikasi. Tidak ada data pribadi di berkas ini.", wrap=True, fill=RED)
+    sel(ws, r, 2, "Data ini adalah data rutin (entri petugas) dengan masalah kualitas yang terdokumentasi (sheet 12). Semua hasil adalah asosiasi pada data observasional. Petugas entri Puskesmas telah mengonfirmasi (20 Okt 2026) bahwa sebagian desa mengisi satu tanggal ukur per bulan dan tinggi badan dibulatkan. "
+        "Izin penggunaan data ada dan dilampirkan terpisah. Tidak ada data pribadi di berkas ini.", wrap=True, fill=RED)
     ws.row_dimensions[r].height = 50
 
 

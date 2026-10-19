@@ -48,5 +48,10 @@ Angka antar skenario berbeda jauh. S2 dan S1 mengubah komposisi desa (bukan hany
 - Hitung ulang z-score WHO (opsional; label situs sudah konsisten dengan z-score).
 - Paket `statsmodels` tidak bisa dipasang di laptop ini (Windows ARM64, tidak ada wheel, build butuh Visual Studio). Terpasang: `pandas`, `scipy`, `matplotlib`. Regresi logistik dan GEE untuk analisis 8–9 perlu ditulis dengan `scipy` (standard error robust per anak dihitung manual).
 
+## Konfirmasi petugas dan cakupan data (20 Okt 2026)
+- Petugas entri mengonfirmasi bahwa sebagian desa memang mengisi **satu tanggal ukur per bulan** dan **tinggi badan dibulatkan**. Ini menjelaskan pola `f_tgl_seragam` dan heaping; tanggal ukur di desa-desa itu adalah tanggal entri, bukan tanggal pengukuran sebenarnya, dan analisis per bulan di sana hanya setingkat bulan.
+- Izin penggunaan data ada (dokumen dilampirkan terpisah oleh peneliti).
+- Data diambil **19 Okt 2026**. Analisis memakai pengukuran **1 Jan 2024 s.d. 30 Sep 2026**. Okt 2026 dibuang: berkasnya hanya 20 pengukuran (tanggal ukur terakhir 19 Okt 2026) dan belum final.
+
 ## Workbook akhir
 `Analisis_Stunting_Mumbulsari.xlsx` dibangun ulang dengan `python -I skrip/bangun_workbook_analisis.py data/sigizi/analisis data/sumber/anak_bersih/anak_bersih.csv data/sigizi/analisis/Analisis_Stunting_Mumbulsari.xlsx` dari tabel di `tabel/` dan `anak_bersih.csv` (dipakai hanya untuk menghitung ulang agregat sheet 10–12; tidak ada data pribadi yang ditulis). Tampilan diperiksa lewat ekspor PDF Excel. Sheet 10 (MBG), 11 (profil desa), dan 12 (kualitas data) dihitung langsung di skrip, bukan dari CSV di `tabel/`.
