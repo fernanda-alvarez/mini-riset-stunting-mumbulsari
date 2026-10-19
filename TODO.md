@@ -42,7 +42,8 @@ Hasil dan laporan dari data snapshot 13 Okt 2026 sudah dibekukan di `arsip/snaps
 - [x] Kelengkapan kolom faktor risiko (`data/sigizi/daftar_status_gizi/kelengkapan_faktor_risiko.txt`): BBLR (BB Lahir dalam kg, terisi ±95%, BBLR ±8%) dan PBLR (±10%) layak; MBG, KPSP, KIA, Kelas Ibu tidak layak (kosong atau terlalu jarang; MBG "ya" hanya 275 pengukuran, 2026); Jml Vit A ambigu (kosong vs belum dapat); Cara Ukur kosong 22% (2025) dan 53% (2026). Faktor risiko yang realistis: BBLR, PBLR, jenis kelamin, umur. Longitudinal layak: 6.328 anak, 60% terukur ≥12 bulan.
 - [x] Tahap 1 cleaning selesai (`skrip/bersihkan_data_anak.py`, hasil di `data/sigizi/analisis/`; rencana di `data/sigizi/RENCANA_ANALISIS.md`). Dataset anak berpseudonim ada di `data/sumber/anak_bersih/` (tidak di git). Angka cocok 147/147 desa-bulan dengan Laporan Puskesmas.
 - [x] Keputusan 19 Okt 2026: S1 diperluas sampai Sep 2026 untuk Lampeji/Mumbulsari/Lengkong; Lengkong/Mumbulsari 2024 (tanggal ukur seragam) tetap di S0 dan dicatat sebagai keterbatasan.
-- [ ] Tahap 2–4 rencana analisis: dataset desa-bulan → analisis 1–12 → workbook Excel akhir.
+- [x] Tahap 2 analisis 1–5 selesai (`skrip/analisis_tahap2.py`, tabel dan temuan di `data/sigizi/analisis/tabel/README.md`). Temuan: prevalensi per desa-tahun tidak stabil (mis. Mumbulsari stunting 4% → 28% → 2%), cakupan 2026 = 100% di tiga desa bermasalah, tren pooled tidak bisa dibaca.
+- [ ] Tahap 2 lanjutan: analisis 6–9 (z-score, umur, faktor risiko BBLR/PBLR, longitudinal), lalu 10–12 dan workbook Excel akhir (Tahap 3).
 - [ ] Tentukan perlakuan heaping/penumpukan z-score di analisis (analisis sensitivitas per desa, atau pakai desa dengan pengukuran teliti saja). Prevalensi stunting dari situs belum bisa dianggap valid.
 - [ ] Tanya petugas entri: apa yang berubah di pencatatan sejak Jan 2026 (anak terukur naik dari ±61% ke ±95% sasaran padahal sasaran datar).
 - [ ] Ambil ulang Okt 2026 setelah bulan berakhir.
