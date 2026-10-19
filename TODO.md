@@ -27,3 +27,9 @@ Hasil dan laporan dari data snapshot 13 Okt 2026 sudah dibekukan di `arsip/snaps
 ## E. Data sensitif
 - [ ] Data sumber, Data Bersih, Daftar Tindak Lanjut (INTERNAL), dan form isian memuat identitas anak (NIK, nama). Semua sudah di `.gitignore`. Cek `git status` sebelum commit.
 - [ ] Serahkan Daftar Tindak Lanjut ke petugas gizi atau penanggung jawab MTBS secara langsung, bukan lewat grup.
+
+## F. Rekap status gizi SigiziKesga (`data baru/rekap status gizi/`)
+- [ ] Putuskan penyebab selisih posyandu vs laporan Puskesmas (55 dari 154 desa-bulan, terpusat di Mumbulsari, Lengkong, Lampeji). Cara: hitung anak dengan posyandu kosong/di luar daftar di "Daftar Status Gizi" (data per anak, perlu izin peneliti).
+- [ ] Cek ke entri sumber: sebaran TB/U janggal (banyak "Outlier") di Lampeji, Mumbulsari, Lengkong Jan–Agu 2026. Jangan pakai angka stunting desa-desa itu sebelum dicek.
+- [ ] Buat berkas khusus tingkat desa (7 desa × 22 bulan dari sheet `Laporan Puskesmas`) dengan persen stunting, wasting, underweight.
+- [ ] Ambil ulang Okt 2026 setelah bulan berakhir.

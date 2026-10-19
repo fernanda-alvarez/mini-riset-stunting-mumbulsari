@@ -15,6 +15,7 @@ KOAS Ilmu Kesehatan Masyarakat, FK Universitas Jember.
 | `naskah/` | Draf proposal (sumber laporan). Laporan `.docx` dibuat di folder induk ini, PDF lama ada di `arsip/`. |
 | `presentasi/` | Slide presentasi. |
 | `arsip/` | Hasil kerja yang sudah selesai/dibekukan, satu subfolder per snapshot (struktur sama dengan folder induk). `snapshot_2026-10-13` = data register 13 Okt 2026 beserta laporan, grafik, presentasi, form, dan TODO-nya. |
+| `data baru/rekap status gizi/` | Rekap status gizi per desa dari SigiziKesga (Jan 2025–Okt 2026). Data agregat. Baca `README.md` di folder itu dulu: dataset yang dipakai dan temuan selisih. |
 
 Daftar pekerjaan untuk dataset baru ada di `TODO.md`.
 
