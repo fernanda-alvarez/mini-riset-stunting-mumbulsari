@@ -4,7 +4,7 @@ Berkas ini hanya dokumentasi. **Datanya sendiri memuat identitas anak** (NIK, na
 
 ## Isi
 
-22 berkas `Daftar_Status_Gizi_YYYY-MM.xls` (2025-01 s.d. 2026-10, ±150 MB total). Sumber: **Laporan > Anak - Gizi > Daftar Status Gizi** (`/ppgbm/index.php/Laporan/daftar_status_gizi_balita.html`), akun Puskesmas Mumbulsari, diambil 19 Okt 2026. Filter: semua desa dan posyandu, usia 0–59 bulan, status gizi = semua, tanpa filter MBG/BBLR/PBLR/LILA/IMD. Setiap berkas = satu bulan pengukuran, satu baris per pengukuran/anak (NIK tidak ada yang ganda dalam satu bulan).
+34 berkas `Daftar_Status_Gizi_YYYY-MM.xls` (2024-01 s.d. 2026-10, ±230 MB total; 2024 diunduh belakangan). Sumber: **Laporan > Anak - Gizi > Daftar Status Gizi** (`/ppgbm/index.php/Laporan/daftar_status_gizi_balita.html`), akun Puskesmas Mumbulsari, diambil 19 Okt 2026. Filter: semua desa dan posyandu, usia 0–59 bulan, status gizi = semua, tanpa filter MBG/BBLR/PBLR/LILA/IMD. Setiap berkas = satu bulan pengukuran, satu baris per pengukuran/anak (NIK tidak ada yang ganda dalam satu bulan).
 
 | Bulan | Baris | Bulan | Baris | Bulan | Baris |
 |---|---|---|---|---|---|
@@ -14,10 +14,13 @@ Berkas ini hanya dokumentasi. **Datanya sendiri memuat identitas anak** (NIK, na
 | 2025-04 | 2.982 | 2025-12 | 2.732 | 2026-08 | 4.025 |
 | 2025-05 | 3.032 | 2026-01 | 4.249 | 2026-09 | 3.998 |
 | 2025-06 | 2.555 | 2026-02 | 4.250 | 2026-10 | 20 (bulan berjalan) |
-| 2025-07 | 2.798 | 2026-03 | 4.255 | **Total** | **72.079** |
+| 2025-07 | 2.798 | 2026-03 | 4.255 | **Total 2025–2026** | **72.079** |
 | 2025-08 | 2.703 | 2026-04 | 4.244 | | |
 
 Jumlah baris sama dengan "Jumlah Data" yang dilaporkan situs untuk tiap bulan.
+
+Tahun 2024 (diunduh belakangan; jumlah baris = hitungan situs = total rekap Puskesmas, tidak ada anak tanpa desa): 2024-01 2.741, 02 2.875, 03 2.796, 04 2.849, 05 2.903, 06 3.104, 07 3.193, 08 3.173, 09 3.216, 10 3.132, 11 3.131, 12 3.150 (total 36.263). Total seluruh berkas: **108.342 baris**. Des 2023 hanya 269 anak menurut rekap (belum diunduh), jadi riwayat efektif mulai Jan 2024.
+
 
 36 kolom: No, NIK, Nama, JK, Tgl Lahir, BB Lahir, TB Lahir, Nama Ortu, Prov, Kab/Kota, Kec, Pukesmas, Desa/Kel, Posyandu, RT, RW, Alamat, Usia Saat Ukur, Tanggal Pengukuran, Berat, Tinggi, Cara Ukur, LiLA, BB/U, ZS BB/U, TB/U, ZS TB/U, BB/TB, ZS BB/TB, Naik Berat Badan, Jml Vit A, KPSP, KIA, Kelas Ibu Balita, MBG, Detail.
 
@@ -38,6 +41,16 @@ Audit agregat (tanpa mencetak data pribadi): `python -I skrip/audit_daftar_statu
 - **Nilai penanda/salah satuan**: ZS TB/U = 1000 (Mumbulsari Jan 2025), berat 3700 (kemungkinan gram diisi sebagai kg), tinggi/berat 0 pada sebagian baris.
 - **Tanggal ukur di luar bulan berkas**: 1–2 baris per bulan bertanggal tahun-tahun lalu (2021–2025), kemungkinan salah ketik.
 - Bulan terakhir (2026-10) belum final; laporan dihitung langsung, jadi angka bulan lama bisa berubah kalau ada entri susulan.
+
+## Audit kualitas per bulan (34 bulan, 19 Okt 2026)
+
+Tabel lengkap: [audit_kualitas_per_bulan.txt](audit_kualitas_per_bulan.txt) (dibuat `skrip/audit_kualitas_daftar.py`, agregat saja). Hal yang menonjol:
+
+- **2024 jauh lebih bersih daripada 2025–2026**: Desa dan Posyandu tidak pernah kosong; TB/U Outlier hanya 0,1–1,5%; nilai aneh (ZS = ±1000, tinggi/berat 0, berat > 40, tinggi > 130) 0–14 baris per bulan. Posyandu kosong baru muncul sejak Jan 2025 dan naik terus sampai 110/bulan (Sep 2026).
+- **Kontinuitas anak**: 89–97% NIK pada 2024 juga ada di bulan sebelumnya (81–94% pada 2025). Jan 2026 hanya 61%: sekitar 39% anak pada Jan 2026 tidak terukur di Des 2025. Ini selaras dengan lonjakan cakupan (`../rekap_tambahan/README.md`).
+- **Tanggal ukur menumpuk di satu hari pada 2026**: pada Jan, Apr–Sep 2026, 51–57% baris bertanggal sama (2024: 12–30%; 2025: 9–15%). Selaras dengan dugaan perubahan cara pencatatan/entri massal sejak awal 2026.
+- **Persentase stunting dari data per anak tidak stabil dan tidak bisa dibaca sebagai tren nyata**: 2024 turun 8,3% → 4,4%; 2025 naik 8,9% → 17,0% (dengan Nov 2025 turun ke 6,7%); 2026 3,5–8,5% lalu 25,0% pada Jul 2026 (entri massal, lihat atas). Label TB/U situs konsisten dengan ZS TB/U (100% sesuai ambang −2), jadi masalahnya bukan klasifikasi.
+- **Bentuk sebaran z-score TB/U tidak wajar** (belum dibuktikan penyebabnya): median tinggi anak 12–23 bulan konstan 78,0 cm di 12 bulan yang dicek (Jul 2024–Jun 2025), dan z-score menumpuk persis di atas ambang −2 SD (Des 2024: persentil 5 = −2,00, persentil 25 = −1,82, median −1,48) lalu menumpuk di sekitar nilai tengah (Mei 2026: persentil 25 = −1,09, median −0,21, persentil 75 = −0,07). Bentuk seperti ini lazim pada pembulatan/pengisian tinggi yang tidak diukur sungguh-sungguh (heaping, tinggi dikira-kira atau disalin dari acuan), dan stunting 4–6% jauh di bawah angka umum balita Indonesia. Ini dugaan yang perlu diverifikasi (heaping digit tinggi, perbandingan dengan alat ukur, konfirmasi petugas), dan membuat prevalensi dari situs tidak bisa dianggap valid begitu saja. Perbandingan 2024 vs 2025 vs 2026 belum layak sebelum itu jelas.
 
 ## Mengambil ulang
 

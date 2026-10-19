@@ -36,6 +36,7 @@ Hasil dan laporan dari data snapshot 13 Okt 2026 sudah dibekukan di `arsip/snaps
 - [ ] Putuskan dataset analisis: sheet `Laporan Puskesmas` (agregat per desa) atau data per anak yang sudah dibersihkan. Rencana analisis menunggu hasil sesi inventaris SigiziKesga (lihat `data/sigizi/inventaris_sigizikesga.md` bila sudah ada).
 - [ ] Buat berkas khusus tingkat desa (7 desa × 22 bulan) dengan persen stunting, wasting, underweight.
 - [x] Rekap Sasaran Anak, Status Gizi & Usia (+JK) 22 bulan, dan cek volume 2024 sudah diambil (`data/sigizi/rekap_tambahan/`). Filter MBG/BBLR/PBLR dan insiden 2025 tidak diunduh: dihitung dari data per anak.
-- [ ] Putuskan apakah data per anak 2024 diunduh (volume 2024 ada, 2.741–3.216 anak/bulan; manfaat: riwayat awal untuk insiden dan lintasan, satu siklus tahunan tambahan).
+- [x] Data per anak 2024 diunduh (12 bulan, 36.263 baris) dan diaudit: lebih bersih daripada 2025–2026. Lihat bagian "Audit kualitas" di `data/sigizi/daftar_status_gizi/README.md`.
+- [ ] Verifikasi bentuk sebaran tinggi/z-score TB/U (penumpukan tepat di atas −2 SD pada 2024, di sekitar nilai tengah pada 2026): heaping digit tinggi, bandingkan dengan alat ukur/petugas. Prevalensi stunting dari situs belum bisa dianggap valid.
 - [ ] Tanya petugas entri: apa yang berubah di pencatatan sejak Jan 2026 (anak terukur naik dari ±61% ke ±95% sasaran padahal sasaran datar).
 - [ ] Ambil ulang Okt 2026 setelah bulan berakhir.
