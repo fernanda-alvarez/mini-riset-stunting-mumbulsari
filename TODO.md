@@ -37,6 +37,8 @@ Hasil dan laporan dari data snapshot 13 Okt 2026 sudah dibekukan di `arsip/snaps
 - [ ] Buat berkas khusus tingkat desa (7 desa × 22 bulan) dengan persen stunting, wasting, underweight.
 - [x] Rekap Sasaran Anak, Status Gizi & Usia (+JK) 22 bulan, dan cek volume 2024 sudah diambil (`data/sigizi/rekap_tambahan/`). Filter MBG/BBLR/PBLR dan insiden 2025 tidak diunduh: dihitung dari data per anak.
 - [x] Data per anak 2024 diunduh (12 bulan, 36.263 baris) dan diaudit: lebih bersih daripada 2025–2026. Lihat bagian "Audit kualitas" di `data/sigizi/daftar_status_gizi/README.md`.
-- [ ] Verifikasi bentuk sebaran tinggi/z-score TB/U (penumpukan tepat di atas −2 SD pada 2024, di sekitar nilai tengah pada 2026): heaping digit tinggi, bandingkan dengan alat ukur/petugas. Prevalensi stunting dari situs belum bisa dianggap valid.
+- [x] Keputusan 19 Okt 2026: data **2024 ikut dianalisis** (disetujui pembimbing), jadi periode analisis Jan 2024–Sep 2026.
+- [x] Cek heaping tinggi dan penumpukan z-score (`skrip/audit_heaping_tinggi.py`, hasil di `data/sigizi/daftar_status_gizi/audit_heaping_tinggi.txt`): heaping ada di semua tahun, bukan hanya 2025–2026 (lihat README daftar_status_gizi).
+- [ ] Tentukan perlakuan heaping/penumpukan z-score di analisis (analisis sensitivitas per desa, atau pakai desa dengan pengukuran teliti saja). Prevalensi stunting dari situs belum bisa dianggap valid.
 - [ ] Tanya petugas entri: apa yang berubah di pencatatan sejak Jan 2026 (anak terukur naik dari ±61% ke ±95% sasaran padahal sasaran datar).
 - [ ] Ambil ulang Okt 2026 setelah bulan berakhir.
