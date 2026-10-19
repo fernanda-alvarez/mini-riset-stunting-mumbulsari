@@ -20,7 +20,7 @@ from baca_export_sigizi import baca  # noqa: E402
 AKHIR = "2026-09"
 KOLOM = ["NIK", "JK", "Tgl Lahir", "BB Lahir", "TB Lahir", "Desa/Kel", "Posyandu", "Tanggal Pengukuran", "Berat", "Tinggi",
          "Cara Ukur", "LiLA", "BB/U", "ZS BB/U", "TB/U", "ZS TB/U", "BB/TB", "ZS BB/TB", "Naik Berat Badan", "Jml Vit A", "MBG"]
-DESA_26 = {"LAMPEJI", "MUMBULSARI", "LENGKONG"}  # S1: tanpa tiga desa ini pada 2026-01..2026-08
+DESA_26 = {"LAMPEJI", "MUMBULSARI", "LENGKONG"}  # S1: tanpa tiga desa ini pada 2026-01..2026-09
 AMBANG_SERAGAM = 0.30  # tgl_seragam: satu tanggal ukur memuat >= 30% baris desa-bulan (dan >= 100 baris)
 # anomali desa-bulan (S3): TB/U Outlier >= 10% (dasar 0,3-3%) atau stunting >= 50% (dasar 4-17%); mis. 2026-07 di tiga desa
 AMBANG_OUTLIER, AMBANG_STUNTING = 0.10, 0.50
@@ -122,7 +122,7 @@ def bersihkan(raw, g):
 
 def skenario(d):
     s0 = ~d["f_keras"] & d["desa"].notna()
-    s1 = s0 & ~(d["desa"].isin(DESA_26) & (d["bulan_berkas"] >= "2026-01") & (d["bulan_berkas"] <= "2026-08"))
+    s1 = s0 & ~(d["desa"].isin(DESA_26) & (d["bulan_berkas"] >= "2026-01") & (d["bulan_berkas"] <= "2026-09"))
     return {"S0": s0, "S1": s1, "S2": s0 & ~d["f_heaping_tinggi"], "S3": s0 & ~d["f_anomali_desabulan"]}
 
 

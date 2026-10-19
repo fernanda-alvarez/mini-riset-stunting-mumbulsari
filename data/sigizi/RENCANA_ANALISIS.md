@@ -7,7 +7,7 @@ Dibuat 19 Okt 2026. Status tiap tahap ada di judulnya. Sumber data dan kualitasn
 - **Dua unit analisis**: desa-bulan (7 desa × 33 bulan) dan anak-bulan (±108 ribu pengukuran, ±6.300 anak).
 - **Data bermasalah ditandai (flag), tidak dihapus**, lalu dibandingkan lewat skenario sensitivitas:
   - **S0**: semua data.
-  - **S1**: tanpa Lampeji, Mumbulsari, Lengkong untuk Jan–Agu 2026.
+  - **S1**: tanpa Lampeji, Mumbulsari, Lengkong untuk Jan–Sep 2026 (diperluas 19 Okt 2026: Sep 2026 berpola sama dengan Jan–Agu).
   - **S2**: hanya desa-tahun dengan heaping tinggi badan rendah.
   - **S3**: tanpa hari entri massal.
 

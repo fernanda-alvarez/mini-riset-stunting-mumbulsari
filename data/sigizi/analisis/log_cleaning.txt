@@ -23,7 +23,7 @@ Jumlah baris per skenario per tahun:
 tahun                            
 2024   36022  36022  13101  35785
 2025   33597  33597   5444  32042
-2026   35981  18592  19610  30143
+2026   35981  16371  19610  30143
 
 Desa-bulan anomali (f_anomali_desabulan; baris kena flag):
 desa        bulan_berkas

@@ -22,7 +22,7 @@ Stunting, wasting, dan underweight yang dihitung dari data per anak (semua baris
 
 ## Skenario
 - **S0**: semua baris tanpa flag keras dan dengan desa terisi.
-- **S1**: S0 tanpa Lampeji, Mumbulsari, Lengkong untuk 2026-01..2026-08.
+- **S1**: S0 tanpa Lampeji, Mumbulsari, Lengkong untuk 2026-01..2026-09 (Sep ditambahkan 19 Okt 2026 karena berpola sama).
 - **S2**: S0 hanya desa-tahun dengan heaping rendah (< 70%).
 - **S3**: S0 tanpa desa-bulan anomali (15 desa-bulan, antara lain Lampeji/Mumbulsari/Lengkong 2026-06 dan 2026-07).
 
@@ -31,7 +31,7 @@ Persen stunting menurut skenario (dari `desa_bulan.csv`, gabungan semua desa):
 | Skenario | 2024 | 2025 | 2026 |
 |---|---|---|---|
 | S0 | 6,5% | 13,1% | 7,0% |
-| S1 | 6,5% | 13,1% | 11,1% |
+| S1 | 6,5% | 13,1% | 12,4% |
 | S2 | 6,1% | 20,6% | 1,8% |
 | S3 | 6,2% | 13,0% | 7,1% |
 
