@@ -44,7 +44,8 @@ Hasil dan laporan dari data snapshot 13 Okt 2026 sudah dibekukan di `arsip/snaps
 - [x] Keputusan 19 Okt 2026: S1 diperluas sampai Sep 2026 untuk Lampeji/Mumbulsari/Lengkong; Lengkong/Mumbulsari 2024 (tanggal ukur seragam) tetap di S0 dan dicatat sebagai keterbatasan.
 - [x] Tahap 2 analisis 1–5 selesai (`skrip/analisis_tahap2.py`, tabel dan temuan di `data/sigizi/analisis/tabel/README.md`). Temuan: prevalensi per desa-tahun tidak stabil (mis. Mumbulsari stunting 4% → 28% → 2%), cakupan 2026 = 100% di tiga desa bermasalah, tren pooled tidak bisa dibaca.
 - [x] Tahap 2 analisis 6–9 selesai (`skrip/analisis_tahap2b.py`, ringkasan di `data/sigizi/analisis/tabel/README.md`). Inti yang layak dilaporkan: faktor risiko BBLR (OR stunting 2,1), PBLR (1,5), JK perempuan (0,68) dengan efek tetap desa-tahun; insiden/pemulihan absolut dan prevalensi absolut tidak layak.
-- [ ] Tahap 2 sisa: analisis 10 (MBG deskriptif), 11 (spasial desa), 12 (kualitas data), lalu workbook Excel akhir (Tahap 3).
+- [x] Tahap 3 selesai: workbook akhir `data/sigizi/analisis/Analisis_Stunting_Mumbulsari.xlsx` (`skrip/bangun_workbook_analisis.py`), termasuk analisis 10–12 sebagai sheet. Excel rekap lama (`rekap_status_gizi_per_posyandu.xlsx`, `sasaran_cakupan_cek2024.xlsx`) sudah berheader gelap dan panel dibekukan, tidak diubah.
+- [ ] Berikutnya: verifikasi ke petugas entri (pencatatan 2026, tanggal seragam, pembulatan tinggi), cek izin/etik, lalu tulis laporan akhir (Metode, Hasil, Keterbatasan) dari workbook.
 - [ ] Tentukan perlakuan heaping/penumpukan z-score di analisis (analisis sensitivitas per desa, atau pakai desa dengan pengukuran teliti saja). Prevalensi stunting dari situs belum bisa dianggap valid.
 - [ ] Tanya petugas entri: apa yang berubah di pencatatan sejak Jan 2026 (anak terukur naik dari ±61% ke ±95% sasaran padahal sasaran datar).
 - [ ] Ambil ulang Okt 2026 setelah bulan berakhir.

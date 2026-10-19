@@ -6,6 +6,8 @@ Dibuat 19 Okt 2026 oleh `skrip/bersihkan_data_anak.py`. Sumber: 33 berkas `Dafta
 | Berkas | Isi | Di git |
 |---|---|---|
 | `desa_bulan.csv` | 7 desa × 33 bulan × 4 skenario (741 baris): n, jumlah dan persen stunting/wasting/underweight, kolom kualitas | ya (agregat) |
+| `Analisis_Stunting_Mumbulsari.xlsx` | **Workbook akhir** (16 sheet: Ringkasan, analisis 1–12, Kamus, Data Desa-Bulan) dengan grafik native Excel; hanya agregat | ya |
+| `tabel/` | CSV hasil analisis 1–9 beserta README temuan (`tabel/README.md`) | ya |
 | `log_cleaning.txt` | jumlah baris kena tiap flag per tahun, baris per skenario, desa-bulan anomali, heaping per desa-tahun | ya |
 | `data/sumber/anak_bersih/anak_bersih.csv` | dataset anak-bulan (108.322 baris, 6.312 anak) dengan ID acak | **tidak** (gitignore, di laptop saja) |
 | `data/sumber/anak_bersih/.garam` | garam HMAC untuk ID acak; hilang = ID tidak bisa direproduksi, jangan dibagikan | **tidak** |
@@ -45,3 +47,6 @@ Angka antar skenario berbeda jauh. S2 dan S1 mengubah komposisi desa (bukan hany
 ## Belum dilakukan
 - Hitung ulang z-score WHO (opsional; label situs sudah konsisten dengan z-score).
 - Paket `statsmodels` tidak bisa dipasang di laptop ini (Windows ARM64, tidak ada wheel, build butuh Visual Studio). Terpasang: `pandas`, `scipy`, `matplotlib`. Regresi logistik dan GEE untuk analisis 8–9 perlu ditulis dengan `scipy` (standard error robust per anak dihitung manual).
+
+## Workbook akhir
+`Analisis_Stunting_Mumbulsari.xlsx` dibangun ulang dengan `python -I skrip/bangun_workbook_analisis.py data/sigizi/analisis data/sumber/anak_bersih/anak_bersih.csv data/sigizi/analisis/Analisis_Stunting_Mumbulsari.xlsx` dari tabel di `tabel/` dan `anak_bersih.csv` (dipakai hanya untuk menghitung ulang agregat sheet 10–12; tidak ada data pribadi yang ditulis). Tampilan diperiksa lewat ekspor PDF Excel. Sheet 10 (MBG), 11 (profil desa), dan 12 (kualitas data) dihitung langsung di skrip, bukan dari CSV di `tabel/`.
