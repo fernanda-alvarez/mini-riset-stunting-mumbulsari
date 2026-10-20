@@ -1,0 +1,41 @@
+skenario,definisi,faktor,grup1,skala,strata,n_anak,n_kejadian,chi2,p,O_grup1,E_grup1
+S3,satu pengukuran,bblr,1.0,sejak masuk,tanpa,2895,1111,13.17,0.00028,95,66.7
+S3,satu pengukuran,bblr,1.0,sejak masuk,desa,2895,1111,13.99,0.00018,95,66.2
+S3,satu pengukuran,bblr,1.0,sejak masuk,desa x umur masuk,2895,1111,14.12,0.00017,95,66.3
+S3,satu pengukuran,bblr,1.0,umur,tanpa,2895,1111,17.04,4e-05,95,63.2
+S3,satu pengukuran,bblr,1.0,umur,desa,2895,1111,18.13,2e-05,95,62.5
+S3,satu pengukuran,jk,L,sejak masuk,tanpa,2995,1152,38.73,0.0,674,570.0
+S3,satu pengukuran,jk,L,sejak masuk,desa,2995,1152,32.61,0.0,674,579.2
+S3,satu pengukuran,jk,L,sejak masuk,desa x umur masuk,2995,1152,33.71,0.0,673,577.9
+S3,satu pengukuran,jk,L,umur,tanpa,2995,1152,40.97,0.0,673,564.7
+S3,satu pengukuran,jk,L,umur,desa,2995,1152,37.81,0.0,673,569.5
+S3,terkonfirmasi,bblr,1.0,sejak masuk,tanpa,2895,640,15.64,8e-05,62,38.4
+S3,terkonfirmasi,bblr,1.0,sejak masuk,desa,2895,640,14.45,0.00014,62,39.3
+S3,terkonfirmasi,bblr,1.0,sejak masuk,desa x umur masuk,2895,640,13.3,0.00027,62,40.2
+S3,terkonfirmasi,bblr,1.0,umur,tanpa,2895,640,17.13,3e-05,62,37.4
+S3,terkonfirmasi,bblr,1.0,umur,desa,2895,640,14.82,0.00012,62,38.9
+S3,terkonfirmasi,jk,L,sejak masuk,tanpa,2995,667,14.41,0.00015,387,338.4
+S3,terkonfirmasi,jk,L,sejak masuk,desa,2995,667,11.63,0.00065,387,343.7
+S3,terkonfirmasi,jk,L,sejak masuk,desa x umur masuk,2995,667,12.23,0.00047,387,343.1
+S3,terkonfirmasi,jk,L,umur,tanpa,2995,667,14.65,0.00013,387,337.6
+S3,terkonfirmasi,jk,L,umur,desa,2995,667,12.36,0.00044,387,341.9
+S0,satu pengukuran,bblr,1.0,sejak masuk,tanpa,2928,1237,15.41,9e-05,106,73.9
+S0,satu pengukuran,bblr,1.0,sejak masuk,desa,2928,1237,14.51,0.00014,106,75.0
+S0,satu pengukuran,bblr,1.0,sejak masuk,desa x umur masuk,2928,1237,14.18,0.00017,106,75.6
+S0,satu pengukuran,bblr,1.0,umur,tanpa,2928,1237,19.58,1e-05,106,70.1
+S0,satu pengukuran,bblr,1.0,umur,desa,2928,1237,17.13,3e-05,106,72.1
+S0,satu pengukuran,jk,L,sejak masuk,tanpa,3014,1269,25.69,0.0,719,630.4
+S0,satu pengukuran,jk,L,sejak masuk,desa,3014,1269,20.49,1e-05,719,640.5
+S0,satu pengukuran,jk,L,sejak masuk,desa x umur masuk,3014,1269,21.88,0.0,718,638.2
+S0,satu pengukuran,jk,L,umur,tanpa,3014,1269,27.3,0.0,718,625.2
+S0,satu pengukuran,jk,L,umur,desa,3014,1269,25.1,0.0,718,629.6
+S0,terkonfirmasi,bblr,1.0,sejak masuk,tanpa,2928,679,14.21,0.00016,63,40.0
+S0,terkonfirmasi,bblr,1.0,sejak masuk,desa,2928,679,12.82,0.00034,63,41.1
+S0,terkonfirmasi,bblr,1.0,sejak masuk,desa x umur masuk,2928,679,13.28,0.00027,63,40.9
+S0,terkonfirmasi,bblr,1.0,umur,tanpa,2928,679,15.52,8e-05,63,39.1
+S0,terkonfirmasi,bblr,1.0,umur,desa,2928,679,13.41,0.00025,63,40.5
+S0,terkonfirmasi,jk,L,sejak masuk,tanpa,3014,698,15.96,6e-05,406,353.6
+S0,terkonfirmasi,jk,L,sejak masuk,desa,3014,698,12.83,0.00034,406,359.4
+S0,terkonfirmasi,jk,L,sejak masuk,desa x umur masuk,3014,698,13.18,0.00028,406,359.4
+S0,terkonfirmasi,jk,L,umur,tanpa,3014,698,16.41,5e-05,406,352.5
+S0,terkonfirmasi,jk,L,umur,desa,3014,698,13.5,0.00024,406,357.8

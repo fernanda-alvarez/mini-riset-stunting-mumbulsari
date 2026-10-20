@@ -1,6 +1,6 @@
 # Laporan akhir mini riset (Word)
 
-`Laporan_Mini_Riset_Stunting_Mumbulsari.docx` (±26 halaman, A4, Times New Roman 12, sitasi Vancouver). Dibuat 20 Okt 2026. Pembingkaian tujuan disetujui peneliti: gambaran status gizi dan kualitas data, faktor risiko (BBLR, PBLR, JK, umur), rekomendasi pencatatan.
+`Laporan_Mini_Riset_Stunting_Mumbulsari.docx` (±27 halaman, A4, Times New Roman 12, sitasi Vancouver). Dibuat 20 Okt 2026. Pembingkaian tujuan disetujui peneliti: gambaran status gizi dan kualitas data, faktor risiko (BBLR, PBLR, JK, umur), rekomendasi pencatatan.
 
 ## Yang harus diisi/dicek peneliti
 - Sampul: nama penulis, NIM, nama pembimbing. Bab II 2.8: nomor dan tanggal surat izin, status kaji etik.

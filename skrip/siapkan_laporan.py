@@ -25,7 +25,10 @@ def f(x, n=1):
     if pd.isna(x):
         return "–"
     x = np.sign(x) * np.floor(abs(x) * 10 ** n + 0.5 + 1e-9) / 10 ** n  # bulatkan ke atas seperti Excel
-    return f"{x:,.{n}f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    return f"{x:,.{n}f}".replace(",", "X").replace(".", ",").replace("X", ".").replace("-", "−")
+
+
+KOMA = matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:g}".replace(".", ",").replace("-", "−"))  # sumbu desimal gaya Indonesia
 
 
 def nm(d):
@@ -168,21 +171,22 @@ def main(analisis, anak, keluar):
     simpan(fig, gam, "g2_histogram_zscore")
 
     # ---- Gambar 3: tercatat vs diharapkan ----
-    fig, ax = plt.subplots(figsize=(5.2, 4.2))
+    fig, ax = plt.subplots(figsize=(6.4, 4.2))
     zz = z[z.desa != "SEMUA"]
-    for th in TAHUN:
-        q = zz[zz.tahun == th]
-        ax.scatter(q.harapan, q.pct_di_bawah_min2, color=WARNA[th], s=34, label=str(th), zorder=3)
-        for i, (_, r) in enumerate(q.iterrows()):
-            ax.annotate(SINGKAT[r.desa], (r.harapan, r.pct_di_bawah_min2), fontsize=6.5, xytext=[(3, 3), (-11, 3), (3, -8), (-11, -8)][i % 4], textcoords="offset points")
+    BENTUK = dict(zip(DESA, "osD^vPX"))  # bentuk = desa, warna = tahun; label teks bertumpuk di gugus 15-20%
+    for _, r in zz.iterrows():
+        ax.scatter(r.harapan, r.pct_di_bawah_min2, color=WARNA[r.tahun], marker=BENTUK[r.desa], s=36, zorder=3, edgecolor="k", lw=.3)
     lim = max(zz.harapan.max(), zz.pct_di_bawah_min2.max()) + 3
     ax.plot([0, lim], [0, lim], color="gray", ls="--", lw=.8)
     ax.set_xlim(0, lim)
     ax.set_ylim(0, lim)
     ax.set_xlabel("Diharapkan bila z-score normal (% < −2 SD)")
     ax.set_ylabel("Tercatat (% < −2 SD)")
-    ax.legend(frameon=False, loc="lower right")
     ax.set_aspect("equal")
+    from matplotlib.lines import Line2D
+    l1 = ax.legend([Line2D([], [], marker="o", ls="", color=WARNA[t]) for t in TAHUN], [str(t) for t in TAHUN], frameon=False, title="Tahun", loc="upper left", bbox_to_anchor=(1.02, 1))
+    ax.add_artist(l1)
+    ax.legend([Line2D([], [], marker=BENTUK[d_], ls="", color="gray", markeredgecolor="k", markeredgewidth=.3) for d_ in DESA], [nm(d_) for d_ in DESA], frameon=False, title="Desa", loc="upper left", bbox_to_anchor=(1.02, .62))
     simpan(fig, gam, "g3_tercatat_vs_diharapkan")
 
     # ---- Gambar 4: kurva umur ----
@@ -193,6 +197,7 @@ def main(analisis, anak, keluar):
         ax.plot(g.umur_awal_bln, g.zs_tbu_mean, color=WARNA[th], label=str(th), lw=1.6)
     ax.set_xlabel("Umur (bulan, awal interval 3 bulan)")
     ax.set_ylabel("Rerata z-score TB/U")
+    ax.yaxis.set_major_formatter(KOMA)
     ax.legend(frameon=False)
     simpan(fig, gam, "g4_kurva_umur")
 
@@ -217,12 +222,18 @@ def main(analisis, anak, keluar):
     simpan(fig, gam, "g5_forest_faktor_risiko")
 
     # ---- Gambar 6: Kaplan-Meier BBLR ----
-    fig, ax = plt.subplots(figsize=(6.0, 3.3))
-    for nil, lab_, col in (("0.0", "Tanpa BBLR", "#4C78A8"), ("1.0", "BBLR", "#E45756")):
+    fig, ax = plt.subplots(figsize=(6.0, 3.7))
+    titik = [1, 6, 12, 18, 24, 30]
+    ax.text(-.02, -.32, "Berisiko:", transform=ax.transAxes, ha="right", va="top", fontsize=7.5)
+    for j, (nil, lab_, col) in enumerate((("0.0", "Tanpa BBLR", "#4C78A8"), ("1.0", "BBLR", "#E45756"))):
         g = k[(k.faktor == "bblr") & (k.nilai == nil)]
         ax.plot(g.waktu_bln, g.S, color=col, label=lab_, lw=1.8)
         ax.fill_between(g.waktu_bln, g.ci_low, g.ci_high, color=col, alpha=.15)
+        nr = g.set_index("waktu_bln").n_berisiko
+        for t in titik:
+            ax.text(t, -.32 - .08 * j, f(nr.get(t, np.nan), 0), transform=ax.get_xaxis_transform(), ha="center", va="top", fontsize=7.5, color=col)
     ax.set_ylim(0, 1)
+    ax.yaxis.set_major_formatter(KOMA)
     ax.set_xlabel("Bulan sejak pertama kali terlihat tidak stunting")
     ax.set_ylabel("Proporsi belum stunting")
     ax.legend(frameon=False)

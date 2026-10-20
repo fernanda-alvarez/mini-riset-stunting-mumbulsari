@@ -67,3 +67,22 @@ Hasil hampir identik di S0 dan S1 (mis. BBLR→stunting 2,09 dan 2,11), jadi tid
 
 ## Implikasi
 Hasil yang layak jadi inti laporan: **analisis 8** (faktor risiko BBLR, PBLR, JK, umur dengan efek tetap desa-tahun) dan perbandingan relatif di analisis 9, ditambah analisis 6, 7, 12 sebagai bukti kualitas data dan keterbatasan. Prevalensi absolut, insiden, pemulihan, dan tren 2026 untuk Lampeji/Mumbulsari/Lengkong tidak layak dilaporkan sebagai temuan.
+
+# Analisis sensitivitas P1–P3 (`skrip/analisis_tahap2c.py`, 20 Okt 2026)
+
+Diusulkan saat telaah laporan dan dijalankan atas persetujuan peneliti. Pakai: `python -I skrip/analisis_tahap2c.py <anak_bersih.csv> data/sigizi/analisis/tabel/who_lhfa_lms.csv data/sigizi/analisis/tabel`. Verifikasi bawaan: definisi lama mereproduksi `a9_km_stunting`/`a9_logrank` (S3: 2.995 anak, 1.152 kejadian, S(12) = 0,7304, log-rank BBLR χ² 13,17).
+
+| Berkas | Isi |
+|---|---|
+| `who_lhfa_lms.csv` | tabel LMS TB/U WHO 2006 (umur 0–1.826 hari, L = 1), diekspor dari paket R `anthro` 1.1.0 (`anthro:::growthstandards_lenanthro`); data acuan publik |
+| `p1_km_konfirmasi.csv` | Kaplan-Meier S0/S3: kejadian satu pengukuran vs terkonfirmasi (dua pengukuran berurutan < −2 SD, jarak ≤ 3 bulan); S pada 12 dan 24 bulan sejak masuk dan pada umur 24 dan 36 bulan (delayed entry) |
+| `p1_logrank.csv` | log-rank BBLR dan JK: skala sejak masuk/umur, tanpa strata, strata desa, strata desa × umur masuk |
+| `p2_bulan_terukur.csv` | jumlah bulan terukur per anak (semua baris dan S0) |
+| `p3_tumpuk_digit.csv` | rasio penumpukan dan % < −2 SD menurut digit desimal tinggi (.0/.5 vs lain), S3 |
+| `p3_simulasi_pembulatan.csv` | simulasi: z halus N(rerata, SD desa-tahun) → tinggi via LMS → dibulatkan 5 cara → z ulang (20 ulangan, seed 20261019) |
+| `p3_validasi_lms.csv` | kecocokan z dari tinggi tercatat + LMS dengan z situs |
+
+## Temuan
+- **P1**: dengan kejadian terkonfirmasi (S3), kejadian turun dari 1.152 menjadi 667 dan stunting dalam 24 bulan sejak masuk dari 44% menjadi 27% (sampai umur 36 bulan: 60% → 37%). Perbandingan relatif bertahan pada semua 10 varian S3: BBLR χ² 13,2–18,1 (p ≤ 0,0003), JK χ² 11,6–41,0 (p ≤ 0,0007), arah selalu sama; S0 serupa. Satu anak dikeluarkan dari skala umur (umur keluar ≤ umur masuk).
+- **P2**: dari 6.312 anak, 60,2% terukur pada ≥ 12 bulan dan 31,9% pada ≥ 24 bulan (median 16, IQR 9–27); S0 (6.202 anak) 59,8% dan 31,6%.
+- **P3**: z hitung ulang cocok dengan situs (median selisih 0,005; 97,9% dalam ±0,1 SD dengan koreksi posisi ukur). Simulasi pembulatan (0,5 cm, 1 cm, ke bawah, ke atas) menghasilkan rasio penumpukan 0,86–1,24 di semua ulangan, sedangkan teramati 5,82 (2024), 5,04 (2025), 2,62 (2026). Pembulatan ke atas 1 cm menurunkan % < −2 SD 2024 dari 17,0% ke 13,4% tanpa penumpukan. Penumpukan juga ada pada tinggi berdesimal selain .0/.5 (2024: 5,16; 2024–2026: 3,01; belum disesuaikan desa). Pembulatan saja tidak menjelaskan penumpukan; dugaan penyesuaian tinggi tetap belum dikonfirmasi.
