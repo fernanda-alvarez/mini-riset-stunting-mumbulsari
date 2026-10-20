@@ -1,10 +1,11 @@
 """Ubah sitasi teks [n] dan daftar pustaka pada laporan docx menjadi field Zotero (Word plugin).
 Hasilnya terbaca oleh tab Zotero di Word: Add/Edit Citation, Refresh, dan Document Preferences langsung berfungsi.
-Data item diambil dari koleksi Zotero "Mini Riset MTBS Mumbulsari" lewat API lokal (Zotero harus terbuka);
-bila Zotero tertutup dipakai salinan terakhir di "Referensi Mini Riset MTBS - Zotero.json".
-Usage: python pasang_sitasi_zotero.py  (setelah buat_laporan_docx.py, sebelum perbarui_daftar_isi.ps1)
+Data item diambil lewat API lokal Zotero (Zotero harus terbuka); bila tertutup dipakai salinan JSON terakhir.
+Usage (laporan MTBS lama): python pasang_sitasi_zotero.py
+Usage (laporan lain): python pasang_sitasi_zotero.py <docx> <salinan.json> <KEY1,KEY2,...>  (urutan key = nomor Vancouver)
+Jalankan setelah docx dibangun dan sebelum perbarui_daftar_isi.ps1; docx yang sudah berfield tidak boleh dibangun ulang.
 """
-import copy, json, os, random, re, string, urllib.request, zipfile, shutil, tempfile
+import copy, json, os, random, re, string, sys, urllib.request, zipfile, shutil, tempfile
 import docx
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
@@ -18,8 +19,18 @@ STYLE = "http://www.zotero.org/styles/nlm-citation-sequence-brackets"  # Vancouv
 SCHEMA = "https://github.com/citation-style-language/schema/raw/master/csl-citation.json"
 
 
-def ambil_referensi():
-    """Daftar 16 item berurutan sesuai nomor Vancouver (= urutan entri di file .bib)."""
+def ambil_referensi(urutan=None):
+    """Daftar item berurutan sesuai nomor Vancouver: dari daftar key bila diberikan, selain itu urutan entri file .bib."""
+    if urutan:
+        try:
+            item = lambda k: json.load(urllib.request.urlopen(f"http://127.0.0.1:23119/api/users/0/items/{k}?format=csljson", timeout=10))
+            ref = [{"key": k, "csl": item(k)[0]} for k in urutan]
+            json.dump(ref, open(SNAP, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+            print("Referensi diambil dari Zotero:", len(ref))
+        except OSError:
+            ref = json.load(open(SNAP, encoding="utf-8"))
+            print("Zotero tidak terjangkau; memakai salinan", SNAP)
+        return ref
     try:
         get = lambda f: json.load(urllib.request.urlopen(API + f, timeout=10))
         js, csl = get("json"), get("csljson")
@@ -169,7 +180,10 @@ def pasang_gaya():
 
 
 if __name__ == "__main__":
-    ref = ambil_referensi()
+    urutan = None
+    if len(sys.argv) == 4:
+        DOC, SNAP, urutan = sys.argv[1], sys.argv[2], sys.argv[3].split(",")
+    ref = ambil_referensi(urutan)
     d = docx.Document(DOC)
     n = pasang_sitasi(d, ref)
     pasang_bibliografi(d, len(ref))

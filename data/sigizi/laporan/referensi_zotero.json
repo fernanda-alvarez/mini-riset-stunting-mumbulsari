@@ -1,0 +1,609 @@
+[
+ {
+  "key": "V68GNN2G",
+  "csl": {
+   "id": "who2006standards",
+   "type": "book",
+   "citation-key": "who2006standards",
+   "publisher": "World Health Organization",
+   "publisher-place": "Geneva",
+   "title": "WHO Child Growth Standards: Length/height-for-age, weight-for-age, weight-for-length, weight-for-height and body mass index-for-age: Methods and development",
+   "author": [
+    {
+     "literal": "WHO Multicentre Growth Reference Study Group"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2006"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "key": "6PVFFE5R",
+  "csl": {
+   "id": "permenkes2_2020",
+   "type": "document",
+   "citation-key": "permenkes2_2020",
+   "note": "Berita Negara Republik Indonesia Tahun 2020 Nomor 7",
+   "publisher-place": "Jakarta",
+   "title": "Peraturan Menteri Kesehatan Republik Indonesia Nomor 2 Tahun 2020 tentang Standar Antropometri Anak",
+   "author": [
+    {
+     "family": "RI",
+     "given": "Kementerian Kesehatan"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2020"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "key": "JJ8J2IZK",
+  "csl": {
+   "id": "perpres72_2021",
+   "type": "document",
+   "citation-key": "perpres72_2021",
+   "publisher-place": "Jakarta",
+   "title": "Peraturan Presiden Republik Indonesia Nomor 72 Tahun 2021 tentang Percepatan Penurunan Stunting",
+   "author": [
+    {
+     "family": "Indonesia",
+     "given": "Presiden Republik"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2021"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "key": "TIZ9IFPS",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/TIZ9IFPS",
+   "type": "webpage",
+   "language": "id",
+   "note": "accessed: {\"date-parts\": [[2026, 10, 20]]}",
+   "title": "SSGI 2024: prevalensi stunting nasional turun menjadi 19,8%",
+   "URL": "https://www.kemkes.go.id/id/ssgi-2024-prevalensi-stunting-nasional-turun-menjadi-198",
+   "author": [
+    {
+     "literal": "Kementerian Kesehatan Republik Indonesia"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2025",
+      5,
+      26
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "key": "XZXTY2JY",
+  "csl": {
+   "id": "mei2007sd",
+   "type": "article-journal",
+   "citation-key": "mei2007sd",
+   "container-title": "Bulletin of the World Health Organization",
+   "DOI": "10.2471/BLT.06.034421",
+   "issue": "6",
+   "page": "441-448",
+   "title": "Standard deviation of anthropometric Z-scores as a data quality assessment tool using the 2006 WHO growth standards: a cross country analysis",
+   "volume": "85",
+   "author": [
+    {
+     "family": "Mei",
+     "given": "Zuguo"
+    },
+    {
+     "family": "Grummer-Strawn",
+     "given": "Laurence M."
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2007"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "key": "GX7ZSILR",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/GX7ZSILR",
+   "type": "report",
+   "number": "16",
+   "publisher-place": "Rockville, Maryland, USA",
+   "title": "An assessment of the quality of DHS anthropometric data, 2005–2014",
+   "URL": "https://dhsprogram.com/pubs/pdf/MR16/MR16.pdf",
+   "author": [
+    {
+     "family": "Assaf",
+     "given": "Shireen"
+    },
+    {
+     "family": "Kothari",
+     "given": "Monica T."
+    },
+    {
+     "family": "Pullum",
+     "given": "Thomas"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2015",
+      9
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "key": "TRB8QMED",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/TRB8QMED",
+   "type": "article-journal",
+   "abstract": "Data quality regarding the nutritional status of children under five is crucial for developing strategies to address nutritional issues. This study aims to develop indicators and assess the quality of anthropometric data from community-based nutrition surveillance using the EPPGBM application in Magelang Regency. The research employed an observational design with a quantitative approach. Data quality indicators were defined based on expert consensus using the Delphi method. These indicators were also used to construct an anthropometric data quality index (IKDA). The WPS Office spreadsheet was utilized to assess data quality and perform IKDA calculations. Nine data quality indicators were identified, categorized into four domains: representation, completeness, accuracy, and external consistency. Evaluation of the EPPGBM data revealed that indicators for representation and completeness were categorized as good quality. In contrast, within the accuracy domain, only the z-score accuracy indicator met the “good” standard, while the digit preference indicator showed poor quality. Specifically, digit preference accounted for 24.2% of weight measurements and 62.8% of height measurements, with clustering around digits 0 and 5. In the external consistency domain, the stunting prevalence from the EPPGBM results was lower than the 2022 SSGI results. The IKDA score for the data was 85.8. Overall, the evaluation identified that the EPPGBM data quality in Magelang Regency demonstrated strong representation and completeness but exhibited limitations in accuracy and external consistency. To improve data accuracy, relevant stakeholders should implement targeted interventions, including capacity-building through training of cadres, standardization of measurement procedures and instruments, and reinforcement of supervisory mechanisms.",
+   "container-title": "Media Kesehatan Masyarakat Indonesia",
+   "DOI": "10.30597/mkmi.v21i4.43510",
+   "ISSN": "2356-4067",
+   "issue": "4",
+   "page": "298-311",
+   "publisher": "Hasanuddin University",
+   "title": "Evaluation of Anthropometric Data Quality for Children from Electronic-Based Nutrition Surveillance: A Case Study in Magelang Regency, Central Java, Indonesia",
+   "URL": "https://doi.org/10.30597/mkmi.v21i4.43510",
+   "volume": "21",
+   "author": [
+    {
+     "family": "Riyanto",
+     "given": "Slamet"
+    },
+    {
+     "family": "Purwaningrum",
+     "given": "Digna Niken"
+    },
+    {
+     "family": "Lazuardi",
+     "given": "Lutfan"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2025",
+      12,
+      17
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "key": "SDX42E75",
+  "csl": {
+   "id": "febriyanti2025akurasi",
+   "type": "article-journal",
+   "citation-key": "febriyanti2025akurasi",
+   "container-title": "Jurnal Kesehatan Masyarakat",
+   "DOI": "10.14710/jkm.v13i1.46750",
+   "issue": "1",
+   "page": "27-42",
+   "title": "Akurasi dan Presisi Pengukuran Antropometri Balita oleh Kader Posyandu dalam Mengidentifikasi Kejadian Stunting di Puskesmas Sadeng Pasar",
+   "volume": "13",
+   "author": [
+    {
+     "family": "Febriyanti",
+     "given": "F."
+    },
+    {
+     "family": "Endah",
+     "given": "T. A."
+    },
+    {
+     "family": "Purnamawati",
+     "given": "D."
+    },
+    {
+     "family": "Handari",
+     "given": "S. R. T."
+    },
+    {
+     "family": "Pasaribu",
+     "given": "E. S."
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2025"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "key": "7ZWBZW9M",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/7ZWBZW9M",
+   "type": "article-journal",
+   "abstract": "Abstract Child stunting reduction is the first of 6 goals in the Global Nutrition Targets for 2025 and a key indicator in the second Sustainable Development Goal of Zero Hunger. The prevalence of child stunting in Indonesia has remained high over the past decade, and at the national level is approximately 37%. It is unclear whether current approaches to reduce child stunting align with the scientific evidence in Indonesia. We use the World Health Organization conceptual framework on child stunting to review the available literature and identify what has been studied and can be concluded about the determinants of child stunting in Indonesia and where data gaps remain. Consistent evidence suggests nonexclusive breastfeeding for the first 6 months, low household socio‐economic status, premature birth, short birth length, and low maternal height and education are particularly important child stunting determinants in Indonesia. Children from households with both unimproved latrines and untreated drinking water are also at increased risk. Community and societal factors—particularly, poor access to health care and living in rural areas—have been repeatedly associated with child stunting. Published studies are lacking on how education; society and culture; agriculture and food systems; and water, sanitation, and the environment contribute to child stunting. This comprehensive synthesis of the available evidence on child stunting determinants in Indonesia outlines who are the most vulnerable to stunting, which interventions have been most successful, and what new research is needed to fill knowledge gaps.",
+   "container-title": "Maternal & Child Nutrition",
+   "DOI": "10.1111/mcn.12617",
+   "ISSN": "1740-8695",
+   "issue": "4",
+   "publisher": "Wiley",
+   "title": "A review of child stunting determinants in Indonesia",
+   "URL": "https://doi.org/10.1111/mcn.12617",
+   "volume": "14",
+   "author": [
+    {
+     "family": "Beal",
+     "given": "Ty"
+    },
+    {
+     "family": "Tumilowicz",
+     "given": "Alison"
+    },
+    {
+     "family": "Sutrisna",
+     "given": "Aang"
+    },
+    {
+     "family": "Izwardy",
+     "given": "Doddy"
+    },
+    {
+     "family": "Neufeld",
+     "given": "Lynnette M."
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2018",
+      5,
+      17
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "key": "9IU7GNCU",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/9IU7GNCU",
+   "type": "article-journal",
+   "abstract": "Indonesia is ranked fifth among countries with the highest burden of stunting in children under five. This study aims to examine the determinants of stunting in children aged 0–2 years in Indonesia using data derived from the 2013 Indonesia Basic Health Survey. Twenty potential predictors of stunting, categorized into household and housing characteristics; maternal and paternal characteristics; antenatal care services and child characteristics were analyzed. Multilevel analyses were performed to examine the role of cluster/district/provincial differences, as well as individual/household level characteristics and stunting status. Of 24,657 children analyzed, 33.7% (95%CI: 32.8%–34.7%) were stunted. The odds of stunting increased significantly among children living in households with three or more children under five-years-old (aOR = 1.33, 95%CI: 1.03–1.72), households with five to seven household members (aOR =1.11; 95%CI: 1.03–1.20), children whose mothers during pregnancy attended less than four antenatal care services (aOR = 1.22, 95%CI: 1.08–1.39), boys (aOR = 1.33, 95%CI: 1.22–1.45), children aged 12–23 months (aOR = 1.89; 95%CI: 1.54–2.32), and children who weighed &lt;2500 g at birth (aOR = 2.55; 95%CI: 2.05–3.15). The odds also increased significantly with the reduction of household wealth index. Integrated interventions to address environment, an individual level associated with stunting in Indonesia, from the environment- to individual-level factors are important.",
+   "container-title": "Nutrients",
+   "DOI": "10.3390/nu11051106",
+   "ISSN": "2072-6643",
+   "issue": "5",
+   "page": "1106",
+   "publisher": "MDPI AG",
+   "title": "Determinants of the Stunting of Children Under Two Years Old in Indonesia: A Multilevel Analysis of the 2013 Indonesia Basic Health Survey",
+   "URL": "https://doi.org/10.3390/nu11051106",
+   "volume": "11",
+   "author": [
+    {
+     "family": "Titaley",
+     "given": "Christiana R."
+    },
+    {
+     "family": "Ariawan",
+     "given": "Iwan"
+    },
+    {
+     "family": "Hapsari",
+     "given": "Dwi"
+    },
+    {
+     "family": "Muasyaroh",
+     "given": "Anifatun"
+    },
+    {
+     "family": "Dibley",
+     "given": "Michael J."
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2019",
+      5,
+      18
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "key": "CVAISV2Y",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/CVAISV2Y",
+   "type": "article-journal",
+   "container-title": "International Journal of Epidemiology",
+   "DOI": "10.1093/ije/dyt109",
+   "ISSN": "1464-3685",
+   "issue": "5",
+   "page": "1340-1355",
+   "publisher": "Oxford University Press (OUP)",
+   "title": "Risk of childhood undernutrition related to small-for-gestational age and preterm birth in low- and middle-income countries",
+   "URL": "https://doi.org/10.1093/ije/dyt109",
+   "volume": "42",
+   "author": [
+    {
+     "family": "Christian",
+     "given": "Parul"
+    },
+    {
+     "family": "Lee",
+     "given": "Sun Eun"
+    },
+    {
+     "family": "Donahue Angel",
+     "given": "Moira"
+    },
+    {
+     "family": "Adair",
+     "given": "Linda S"
+    },
+    {
+     "family": "Arifeen",
+     "given": "Shams E"
+    },
+    {
+     "family": "Ashorn",
+     "given": "Per"
+    },
+    {
+     "family": "Barros",
+     "given": "Fernando C"
+    },
+    {
+     "family": "Fall",
+     "given": "Caroline Hd"
+    },
+    {
+     "family": "Fawzi",
+     "given": "Wafaie W"
+    },
+    {
+     "family": "Hao",
+     "given": "Wei"
+    },
+    {
+     "family": "Hu",
+     "given": "Gang"
+    },
+    {
+     "family": "Humphrey",
+     "given": "Jean H"
+    },
+    {
+     "family": "Huybregts",
+     "given": "Lieven"
+    },
+    {
+     "family": "Joglekar",
+     "given": "Charu V"
+    },
+    {
+     "family": "Kariuki",
+     "given": "Simon K"
+    },
+    {
+     "family": "Kolsteren",
+     "given": "Patrick"
+    },
+    {
+     "family": "Krishnaveni",
+     "given": "Ghattu V"
+    },
+    {
+     "family": "Liu",
+     "given": "Enqing"
+    },
+    {
+     "family": "Martorell",
+     "given": "Reynaldo"
+    },
+    {
+     "family": "Osrin",
+     "given": "David"
+    },
+    {
+     "family": "Persson",
+     "given": "Lars-Ake"
+    },
+    {
+     "family": "Ramakrishnan",
+     "given": "Usha"
+    },
+    {
+     "family": "Richter",
+     "given": "Linda"
+    },
+    {
+     "family": "Roberfroid",
+     "given": "Dominique"
+    },
+    {
+     "family": "Sania",
+     "given": "Ayesha"
+    },
+    {
+     "family": "Ter Kuile",
+     "given": "Feiko O"
+    },
+    {
+     "family": "Tielsch",
+     "given": "James"
+    },
+    {
+     "family": "Victora",
+     "given": "Cesar G"
+    },
+    {
+     "family": "Yajnik",
+     "given": "Chittaranjan S"
+    },
+    {
+     "family": "Yan",
+     "given": "Hong"
+    },
+    {
+     "family": "Zeng",
+     "given": "Lingxia"
+    },
+    {
+     "family": "Black",
+     "given": "Robert E"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2013",
+      8,
+      6
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "key": "EEYPJRNB",
+  "csl": {
+   "id": "victora2010timing",
+   "type": "article-journal",
+   "citation-key": "victora2010timing",
+   "container-title": "Pediatrics",
+   "DOI": "10.1542/peds.2009-1519",
+   "issue": "3",
+   "page": "e473-e480",
+   "title": "Worldwide timing of growth faltering: revisiting implications for interventions",
+   "volume": "125",
+   "author": [
+    {
+     "family": "Victora",
+     "given": "Cesar G."
+    },
+    {
+     "family": "Onis",
+     "given": "Mercedes",
+     "non-dropping-particle": "de"
+    },
+    {
+     "family": "Hallal",
+     "given": "Pedro Curi"
+    },
+    {
+     "family": "Blössner",
+     "given": "Monika"
+    },
+    {
+     "family": "Shrimpton",
+     "given": "Roger"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2010"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "key": "LGQWFDIX",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/LGQWFDIX",
+   "type": "article-journal",
+   "abstract": "Background Excess male morbidity and mortality is well recognised in neonatal medicine and infant health. In contrast, within global nutrition, it is commonly assumed that girls are more at risk of experiencing undernutrition. We aimed to explore evidence for any male/female differences in child undernutrition using anthropometric case definitions and the reasons for differences observed. Methods We searched: Medline, Embase, Global health, Popline and Cochrane databases with no time limits applied. Eligible studies focused on children aged 0–59 months affected by undernutrition where sex was reported. In the meta-analysis, undernutrition-specific estimates were examined separately for wasting, stunting and underweight using a random-effects model. Results 74 studies were identified: 44/74 studies were included in the meta-analysis. In 20 which examined wasting, boys had higher odds of being wasted than girls (pooled OR 1.26, 95% CI 1.13 to 1.40). 38 examined stunting: boys had higher odds of stunting than girls (pooled OR 1.29 95% CI 1.22 to 1.37). 23 explored underweight: boys had higher odds of being underweight than girls (pooled OR 1.14, 95% CI 1.02 to 1.26). There was some limited evidence that the female advantage, indicated by a lower risk of stunting and underweight, was weaker in South Asia than other parts of the world. 43/74 (58%) studies discussed possible reasons for boy/girl differences; 10/74 (14%) cited studies with similar findings with no further discussion; 21/74 (28%) had no sex difference discussion. 6/43 studies (14%) postulated biological causes, 21/43 (49%) social causes and 16/43 (37%) to a combination. Conclusion Our review indicates that undernutrition in children under 5 is more likely to affect boys than girls, though the magnitude of these differences varies and is more pronounced in some contexts than others. Future research should further explore reasons for these differences and implications for nutrition policy and practice.",
+   "container-title": "BMJ Global Health",
+   "DOI": "10.1136/bmjgh-2020-004030",
+   "ISSN": "2059-7908",
+   "issue": "12",
+   "page": "e004030",
+   "publisher": "BMJ",
+   "title": "Boys are more likely to be undernourished than girls: a systematic review and meta-analysis of sex differences in undernutrition",
+   "URL": "https://doi.org/10.1136/bmjgh-2020-004030",
+   "volume": "5",
+   "author": [
+    {
+     "family": "Thurstans",
+     "given": "Susan"
+    },
+    {
+     "family": "Opondo",
+     "given": "Charles"
+    },
+    {
+     "family": "Seal",
+     "given": "Andrew"
+    },
+    {
+     "family": "Wells",
+     "given": "Jonathan"
+    },
+    {
+     "family": "Khara",
+     "given": "Tanya"
+    },
+    {
+     "family": "Dolan",
+     "given": "Carmel"
+    },
+    {
+     "family": "Briend",
+     "given": "André"
+    },
+    {
+     "family": "Myatt",
+     "given": "Mark"
+    },
+    {
+     "family": "Garenne",
+     "given": "Michel"
+    },
+    {
+     "family": "Sear",
+     "given": "Rebecca"
+    },
+    {
+     "family": "Kerac",
+     "given": "Marko"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2020",
+      12
+     ]
+    ]
+   }
+  }
+ }
+]

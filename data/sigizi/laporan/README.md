@@ -13,4 +13,10 @@
 python -I skrip/siapkan_laporan.py data/sigizi/analisis data/sumber/anak_bersih/anak_bersih.csv data/sigizi/laporan   # gambar + tabel_laporan.json
 NODE_PATH=<folder node_modules berisi docx> node skrip/bangun_laporan.js data/sigizi/laporan data/sigizi/laporan/Laporan_Mini_Riset_Stunting_Mumbulsari.docx
 ```
+Sitasi native Zotero (koleksi "Mini Riset Stunting Mumbulsari", key `K9EKXJC7`) dipasang sesudah build, dengan Zotero terbuka:
+```bash
+python -I skrip/pasang_sitasi_zotero.py data/sigizi/laporan/Laporan_Mini_Riset_Stunting_Mumbulsari.docx data/sigizi/laporan/referensi_zotero.json V68GNN2G,6PVFFE5R,JJ8J2IZK,TIZ9IFPS,XZXTY2JY,GX7ZSILR,TRB8QMED,SDX42E75,7ZWBZW9M,9IU7GNCU,CVAISV2Y,EEYPJRNB,LGQWFDIX
+```
+Urutan key = nomor Vancouver [1]–[13]. **Membangun ulang docx dari skrip menghapus field Zotero**; jalankan ulang perintah di atas sesudahnya, lalu Refresh di tab Zotero Word. Sitasi baru sebaiknya disisipkan lewat tab Zotero, bukan ditulis [n].
+
 Isi narasi ada di `skrip/bangun_laporan.js`; angka tabel dan gambar dari `tabel_laporan.json` dan `gambar/` (semua agregat). Angka di teks ditulis manual dan diperiksa terhadap `data/sigizi/analisis/tabel/`.
