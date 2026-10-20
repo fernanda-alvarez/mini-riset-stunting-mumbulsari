@@ -569,11 +569,11 @@
  "t5": {
   "kepala": [
    "Faktor",
-   "Stunting OR (CI 95%)",
+   "Stunting OR (IK 95%)",
    "p",
-   "Wasting OR (CI 95%)",
+   "Wasting OR (IK 95%)",
    "p",
-   "Underweight OR (CI 95%)",
+   "Underweight OR (IK 95%)",
    "p"
   ],
   "baris": [
@@ -683,7 +683,7 @@
   "kepala": [
    "Kelompok",
    "Anak",
-   "Kejadian stunting",
+   "Kejadian stunting (seluruh pengamatan)",
    "Belum stunting 12 bln",
    "Belum stunting 24 bln"
   ],

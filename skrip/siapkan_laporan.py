@@ -115,7 +115,7 @@ def main(analisis, anak, keluar):
             r.append("<0,001" if z_.p < 0.001 else f(z_.p, 3))
         rows.append(r)
     n0 = m[m.outcome == "stunting"].iloc[0]
-    tb["t5"] = {"kepala": ["Faktor", "Stunting OR (CI 95%)", "p", "Wasting OR (CI 95%)", "p", "Underweight OR (CI 95%)", "p"], "baris": rows,
+    tb["t5"] = {"kepala": ["Faktor", "Stunting OR (IK 95%)", "p", "Wasting OR (IK 95%)", "p", "Underweight OR (IK 95%)", "p"], "baris": rows,
                 "n": [int(n0.n_obs), int(n0.n_anak), int(n0.n_kasus)]}
     rb = a8[(a8.outcome == "stunting") & a8.term.isin(["bblr", "pblr", "jk_P"])]
     rows = []
@@ -139,7 +139,7 @@ def main(analisis, anak, keluar):
         g = k[(k.faktor == fak) & (k.nilai == nil)]
         s12, s24 = g[g.waktu_bln == 12].iloc[0], g[g.waktu_bln == 24].iloc[0]
         rows.append([lab, f(s12.n_anak, 0), f(s12.n_kejadian, 0), f(100 * s12.S, 0) + "%", f(100 * s24.S, 0) + "%"])
-    tb["t7"] = {"kepala": ["Kelompok", "Anak", "Kejadian stunting", "Belum stunting 12 bln", "Belum stunting 24 bln"], "baris": rows}
+    tb["t7"] = {"kepala": ["Kelompok", "Anak", "Kejadian stunting (seluruh pengamatan)", "Belum stunting 12 bln", "Belum stunting 24 bln"], "baris": rows}
 
     # ---- Gambar 1: prevalensi stunting per desa-tahun ----
     fig, ax = plt.subplots(figsize=(6.4, 3.4))
@@ -212,7 +212,7 @@ def main(analisis, anak, keluar):
     ax.set_xticks([0.5, 0.7, 1, 1.5, 2, 3], ["0,5", "0,7", "1", "1,5", "2", "3"])
     ax.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
     ax.set_yticks([-1, -4.6, -8.2], lab)
-    ax.set_xlabel("Odds ratio (CI 95%), skala logaritmik")
+    ax.set_xlabel("Odds ratio (IK 95%), skala logaritmik")
     ax.legend(frameon=False, fontsize=8, loc="lower right")
     simpan(fig, gam, "g5_forest_faktor_risiko")
 
