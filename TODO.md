@@ -46,7 +46,7 @@ Hasil dan laporan dari data snapshot 13 Okt 2026 sudah dibekukan di `arsip/snaps
 - [x] Tahap 2 analisis 6–9 selesai (`skrip/analisis_tahap2b.py`, ringkasan di `data/sigizi/analisis/tabel/README.md`). Inti yang layak dilaporkan: faktor risiko BBLR (OR stunting 2,1), PBLR (1,5), JK perempuan (0,68) dengan efek tetap desa-tahun; insiden/pemulihan absolut dan prevalensi absolut tidak layak.
 - [x] Tahap 3 selesai: workbook akhir `data/sigizi/analisis/Analisis_Stunting_Mumbulsari.xlsx` (`skrip/bangun_workbook_analisis.py`), termasuk analisis 10–12 sebagai sheet. Excel rekap lama (`rekap_status_gizi_per_posyandu.xlsx`, `sasaran_cakupan_cek2024.xlsx`) sudah berheader gelap dan panel dibekukan, tidak diubah.
 - [x] 20 Okt 2026: petugas entri mengonfirmasi satu tanggal ukur per bulan di sebagian desa dan pembulatan tinggi badan; izin penggunaan data ada (dilampirkan peneliti sendiri). Okt 2026 tidak dianalisis: data diambil 19 Okt 2026, hanya 20 pengukuran (sampai 19 Okt).
-- [ ] Tulis laporan akhir (Metode, Hasil, Keterbatasan) dari workbook; rencana laporan dibahas dulu.
+- [x] Draf laporan akhir Word selesai (`data/sigizi/laporan/`, lihat README di sana). Tinggal: isi sampul/izin/etik, cek semua sitasi, cek panduan format fakultas, baca ulang narasi bersama pembimbing.
 - [ ] Tentukan perlakuan heaping/penumpukan z-score di analisis (analisis sensitivitas per desa, atau pakai desa dengan pengukuran teliti saja). Prevalensi stunting dari situs belum bisa dianggap valid.
 - [ ] Tanya petugas entri: apa yang berubah di pencatatan sejak Jan 2026 (anak terukur naik dari ±61% ke ±95% sasaran padahal sasaran datar).
 - [ ] Ambil ulang Okt 2026 setelah bulan berakhir.
