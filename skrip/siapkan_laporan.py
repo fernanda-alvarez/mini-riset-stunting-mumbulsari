@@ -104,7 +104,7 @@ def main(analisis, anak, keluar):
         for th in TAHUN:
             r = z[(z.desa == ds) & (z.tahun == th)].iloc[0]
             rows.append([nm(ds), str(th), "–" if ds == "SEMUA" else f(hp[(ds, th)], 0), f(r["mean"], 2), f(r.sd, 2), f(r.pct_di_bawah_min2), f(r.harapan), f(r.rasio_tumpuk)])
-    tb["t4"] = {"kepala": ["Desa", "Tahun", "Tinggi bulat (%)", "Rerata z TB/U", "SD", "Tercatat < −2 SD (%)", "Diharapkan (%)", "Rasio penumpukan"], "baris": rows}
+    tb["t4"] = {"kepala": ["Desa", "Tahun", "Heaping (%)", "Rerata z TB/U", "SD", "Tercatat < −2 SD (%)", "Diharapkan (%)", "Rasio penumpukan"], "baris": rows}
 
     # ---- Tabel 5: faktor risiko (model C, S3) ----
     m = a8[(a8.model == "C") & (a8.skenario == "S3")]
