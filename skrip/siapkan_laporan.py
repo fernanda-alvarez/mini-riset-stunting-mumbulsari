@@ -135,6 +135,62 @@ def main(analisis, anak, keluar):
     rows = [[th, f(g.sasaran.mean(), 0), f(g.terukur.mean(), 0), f(g.cakupan_pct.min(), 0) + "–" + f(g.cakupan_pct.max(), 0)] for th, g in c.groupby("th")]
     tb["t6"] = {"kepala": ["Tahun", "Sasaran rerata/bulan", "Terukur rerata/bulan", "Cakupan (%, rentang bulanan)"], "baris": rows}
 
+    # ---- Tabel cakupan dan kontinuitas per desa (S0) ----
+    cd = pd.concat([c.assign(desa="SEMUA"), T("a4_cakupan_desa_bulan").dropna(subset=["sasaran"]).assign(th=lambda z_: z_.bulan_berkas.str[:4])])
+    ids = {(ds, b): set(g.id_anak) for (ds, b), g in x.groupby(["desa", "bulan_berkas"])}
+    for b, g in x.groupby("bulan_berkas"):
+        ids[("SEMUA", b)] = set(g.id_anak)
+    rows = []
+    for ds in ["SEMUA"] + DESA:
+        r = [nm(ds)]
+        for th in ("2025", "2026"):
+            g = cd[(cd.desa == ds) & (cd.th == th)].cakupan_pct
+            r.append(f"{f(g.mean())} ({f(g.min())}–{f(g.max())})")
+        a, b = ids[(ds, "2025-12")], ids[(ds, "2026-01")]
+        r.append(f(100 * len(a & b) / len(b)))
+        rows.append(r)
+    tb["t_kont"] = {"kepala": ["Desa", "Cakupan 2025 (%), rerata (rentang)", "Cakupan 2026 (%), rerata (rentang)", "Anak Januari 2026 yang juga terukur Desember 2025 (%)"], "baris": rows}
+    bul = sorted(x.bulan_berkas.unique())
+    lanjut = {b: 100 * len(ids[("SEMUA", b)] & ids[("SEMUA", a)]) / len(ids[("SEMUA", b)]) for a, b in zip(bul, bul[1:])}
+    pernah, baru = set(), {}
+    for b in bul:
+        baru[b] = len(ids[("SEMUA", b)] - pernah)
+        pernah |= ids[("SEMUA", b)]
+    lain = [v for b, v in lanjut.items() if b != "2026-01"]
+    tb["kont"] = {"lanjut_jan26": f(lanjut["2026-01"], 0), "lanjut_lain": [f(min(lain), 0), f(max(lain), 0)],
+                  "baru_jan26": f(baru["2026-01"], 0), "baru_jan26_pct": f(100 * baru["2026-01"] / len(ids[("SEMUA", "2026-01")]), 0),
+                  "baru_lain_pct": [f(min(100 * baru[b] / len(ids[("SEMUA", b)]) for b in bul[1:] if b != "2026-01"), 0),
+                                    f(max(100 * baru[b] / len(ids[("SEMUA", b)]) for b in bul[1:] if b != "2026-01"), 0)]}
+
+    # ---- Tabel perubahan tinggi antarbulan (S0) ----
+    kt = T("a9_kecepatan_tumbuh")
+    kt = kt[kt.kel_umur == "semua"].set_index(["desa", "tahun"])
+    rows = [[nm(ds)] + [f(kt.loc[(ds, th), "sd_cm"]) for th in TAHUN] + [f(kt.loc[(ds, th), "pct_turun_ge1cm"]) for th in TAHUN] for ds in ["SEMUA"] + DESA]
+    tb["t_tumbuh"] = {"kepala": ["Desa", "SD 2024 (cm)", "SD 2025 (cm)", "SD 2026 (cm)", "Turun ≥ 1 cm 2024 (%)", "Turun ≥ 1 cm 2025 (%)", "Turun ≥ 1 cm 2026 (%)"], "baris": rows}
+
+    # ---- Lampiran: prevalensi seluruh Puskesmas menurut skenario ----
+    rows = []
+    for o, jud in (("stunting", "Stunting"), ("wasting", "Wasting"), ("underweight", "Underweight")):
+        for sk in ("S0", "S1", "S2", "S3"):
+            r = [jud, sk]
+            for th in TAHUN:
+                z_ = a1[(a1.skenario == sk) & (a1.outcome == o) & (a1.desa == "SEMUA") & (a1.tahun == th)].iloc[0]
+                r.append(f"{f(z_.pct)} ({f(z_.ci_low)}–{f(z_.ci_high)})")
+            rows.append(r)
+    tb["tL_sk"] = {"kepala": ["Outcome", "Skenario", "2024", "2025", "2026"], "baris": rows}
+
+    # ---- Lampiran: OR model A, B, C untuk tiga outcome (S3) ----
+    s3 = a8[a8.skenario == "S3"]
+    nmu = {f"umur_{u}": f"Umur {u.replace('-', '–')} (vs 0–5 bln)" for u in ("6-11 bln", "12-23 bln", "24-35 bln", "36-47 bln", "48-59 bln")}
+    rows = []
+    for t, mod in [("bblr", "A"), ("bblr", "C"), ("pblr", "B"), ("pblr", "C"), ("jk_P", "C")] + [(u, "C") for u in nmu]:
+        r = [nmf.get(t) or nmu[t], mod]
+        for o in ("stunting", "wasting", "underweight"):
+            z_ = s3[(s3.outcome == o) & (s3.model == mod) & (s3.term == t)].iloc[0]
+            r.append(f"{f(z_.OR, 2)} ({f(z_.ci_low, 2)}–{f(z_.ci_high, 2)})")
+        rows.append(r)
+    tb["tL_or"] = {"kepala": ["Faktor", "Model", "Stunting", "Wasting", "Underweight"], "baris": rows}
+
     # ---- Tabel 7: longitudinal ringkas (S3 KM; S0 transisi SEMUA) ----
     k = a9k[(a9k.skenario == "S3") & a9k.faktor.isin(["bblr", "jk"])]
     rows = []
