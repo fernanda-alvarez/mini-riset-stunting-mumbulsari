@@ -3,7 +3,7 @@
 `Laporan_Mini_Riset_Stunting_Mumbulsari.docx` (±35 halaman, A4, Times New Roman 12, sitasi Vancouver). Dibuat 20 Okt 2026. Pembingkaian tujuan disetujui peneliti: gambaran status gizi dan kualitas data, faktor risiko (BBLR, PBLR, JK, umur), rekomendasi pencatatan.
 
 ## Yang harus diisi/dicek peneliti
-- Sampul: nama penulis, NIM, nama pembimbing. Bab II 2.8: nomor dan tanggal surat izin, status kaji etik.
+- Sampul mengikuti sampul draf proposal di `naskah/` (logo `gambar/logo_unej.png`, nama, NIM, pembimbing), dengan judul laporan. Tanpa abstrak. Bab II 2.8: nomor dan tanggal surat izin, status kaji etik.
 - **Setiap sitasi dicek sendiri** terhadap sumber aslinya. 20 Okt 2026: metadata ref. 1–13 dicocokkan dengan Crossref, Europe PMC, situs jurnal, peraturan.go.id/JDIH, dan PDF DHS; daftar penulis ref. 11 cocok (PMID 23920141). Klaim yang disitasi baru dicek terhadap abstrak, belum terhadap teks lengkap. Ref. 12 (Victora 2010) dan 13 (Thurstans 2020) ditambahkan pada tinjauan itu.
 - Panduan format fakultas (margin, spasi, jumlah halaman) belum diketahui; margin 3 cm dan spasi 1,5 dipakai sebagai asumsi.
 - Daftar isi diperbarui lewat Word (klik kanan > Perbarui bidang) bila isi diubah.

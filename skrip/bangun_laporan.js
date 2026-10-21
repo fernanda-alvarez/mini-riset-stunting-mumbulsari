@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const {
   Document, Packer, Paragraph, TextRun, ImageRun, Table, TableRow, TableCell, WidthType, ShadingType, AlignmentType, HeadingLevel,
-  TableOfContents, Footer, PageNumber, PageBreak, LevelFormat, BorderStyle, SectionType,
+  TableOfContents, Footer, PageNumber, PageBreak, LevelFormat, BorderStyle, SectionType, Tab,
 } = require("docx");
 
 const [, , dir, out] = process.argv;
@@ -55,34 +55,25 @@ function figure(file, caption, wpx = 520) {
 const tbl = (key, widths, caption, notes) => [cap(caption), table(key, widths), notes ? note(notes) : new Paragraph({ spacing: { after: 160 }, children: [] })];
 
 // ---------- isi ----------
+// sampul mengikuti halaman sampul draf proposal (naskah/), judul diganti judul laporan
+const C = (t, o = {}) => new Paragraph({ alignment: AlignmentType.CENTER, spacing: { line: 360, after: 0 }, children: t ? [new TextRun({ children: t.split("	").flatMap((u, i) => (i ? [new Tab(), u] : [u])), bold: o.bold, size: 24, font: FONT })] : [] });
 const cover = [
-  new Paragraph({ spacing: { before: 1200 }, alignment: AlignmentType.CENTER, children: [new TextRun({ text: "LAPORAN MINI RISET", bold: true, size: 28, font: FONT })] }),
-  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 600 }, children: [new TextRun({ text: "Kepaniteraan Klinik Ilmu Kesehatan Masyarakat", size: 24, font: FONT })] }),
-  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { line: 360, after: 600 }, children: [new TextRun({ text: "STATUS GIZI BALITA DAN FAKTOR RISIKO STUNTING DI WILAYAH KERJA PUSKESMAS MUMBULSARI, KABUPATEN JEMBER, TAHUN 2024–2026: ANALISIS DATA RUTIN SIGIZIKESGA DAN PENILAIAN KUALITAS DATA", bold: true, size: 28, font: FONT })] }),
-  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 120 }, children: [new TextRun({ text: "Disusun oleh:", size: 24, font: FONT })] }),
-  new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "[Nama penulis]", size: 24, font: FONT })] }),
-  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 360 }, children: [new TextRun({ text: "NIM [nomor induk mahasiswa]", size: 24, font: FONT })] }),
-  new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "Pembimbing: [nama pembimbing]", size: 24, font: FONT })] }),
-  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 1400 }, children: [new TextRun({ text: "FAKULTAS KEDOKTERAN", bold: true, size: 26, font: FONT })] }),
-  new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "UNIVERSITAS JEMBER", bold: true, size: 26, font: FONT })] }),
-  new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ text: "2026", bold: true, size: 26, font: FONT })] }),
+  C(""),
+  C("STATUS GIZI BALITA DAN FAKTOR RISIKO STUNTING DI WILAYAH KERJA PUSKESMAS MUMBULSARI, KABUPATEN JEMBER, TAHUN 2024–2026: ANALISIS DATA RUTIN SIGIZIKESGA DAN PENILAIAN KUALITAS DATA", { bold: true }),
+  C(""), C(""),
+  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { line: 360, after: 0 }, children: [new ImageRun({ type: "png", data: fs.readFileSync(path.join(dir, "gambar", "logo_unej.png")), transformation: { width: 195, height: 184 }, altText: { title: "Logo Universitas Jember", description: "Logo Universitas Jember", name: "logo_unej.png" } })] }),
+  C(""), C(""), C(""),
+  C("Disusun Oleh :"),
+  C("Thalia Anisya Dewi 		242011101105", { bold: true }),
+  C("Fitranda Kusyanto Taslim 	242011101115", { bold: true }),
+  C(""),
+  C("Dokter Pembimbing :"),
+  C("dr. Irawan Fajar Kusuma, M.Sc., Sp.PD., FISPH., FISCM.", { bold: true }),
+  C(""), C(""),
+  ...["PROGRAM STUDI PROFESI DOKTER", "ILMU KESEHATAN MASYARAKAT", "FAKULTAS KEDOKTERAN", "UNIVERSITAS JEMBER", "2026"].map((t) => C(t, { bold: true })),
 ];
 
 const K = TB.kont;
-const abstrak = [
-  H1("ABSTRAK", { pb: false }),
-  P("**Latar belakang.** Data rutin SigiziKesga adalah sumber utama pemantauan status gizi balita di Puskesmas, tetapi mutu pengukurannya jarang dievaluasi. **Tujuan.** Menggambarkan status gizi balita per desa di wilayah kerja Puskesmas Mumbulsari tahun 2024–2026, menilai kualitas data, dan menganalisis hubungan berat badan lahir rendah (BBLR), panjang badan lahir rendah (PBLR), jenis kelamin, dan umur dengan stunting, wasting, dan underweight.", { noIndent: true }),
-  P("**Metode.** Analisis data sekunder atas 108.322 pengukuran dari 6.312 balita usia 0–59 bulan di tujuh desa (Januari 2024–September 2026). Data bermasalah ditandai (flag) dan dianalisis dengan empat skenario sensitivitas. Interval kepercayaan prevalensi dihitung dengan bootstrap klaster per anak, faktor risiko dianalisis dengan regresi logistik berefek tetap desa × tahun dan galat baku robust klaster, dan waktu sampai stunting dianalisis dengan Kaplan-Meier.", { noIndent: true }),
-  P("**Hasil.** Prevalensi stunting seluruh Puskesmas tercatat 6,5% (2024), 13,1% (2025), dan 7,0% (2026), tetapi angka per desa naik-turun secara tidak wajar (Mumbulsari: 4,2%, 28,4%, lalu 1,9%). Tinggi badan sangat sering dibulatkan (digit desimal .0 atau .5 hingga 98% di sebagian desa), dan anak di bawah −2 SD jauh lebih sedikit daripada yang diharapkan bila z-score menyebar normal (skenario S3 tahun 2024: 6,2%, sedangkan yang diharapkan 17,8%). Pada 2026, tiga desa mencatat hampir semua pengukuran pada satu tanggal per bulan, dan 24–29% pasangan pengukuran bulan berurutan di desa-desa itu menunjukkan tinggi turun ≥ 1 cm. Petugas entri membenarkan adanya pengisian satu tanggal per bulan dan pembulatan tinggi. BBLR (OR 2,11; IK 95% 1,64–2,71) dan PBLR (OR 1,47; 1,15–1,88) berhubungan dengan odds stunting yang lebih tinggi, sedangkan odds pada anak perempuan lebih rendah (OR 0,68; 0,60–0,78). Hasil ini konsisten pada skenario S0, S1, dan S3.", { noIndent: true }),
-  P("**Kesimpulan.** Prevalensi absolut dari data rutin ini tidak dapat diandalkan, sedangkan asosiasi faktor risikonya konsisten dan sesuai dengan literatur. Pencatatan tinggi badan dan tanggal ukur perlu diperbaiki, dan prevalensi per desa perlu diverifikasi.", { noIndent: true }),
-  P("**Kata kunci:** stunting, status gizi balita, kualitas data, BBLR, SigiziKesga, Puskesmas Mumbulsari.", { noIndent: true }),
-  H1("ABSTRACT"),
-  P("**Background.** Routine SigiziKesga data are the main source of under-five nutritional surveillance at primary health centres, but their measurement quality is rarely evaluated. **Objectives.** To describe the nutritional status of children under five in the catchment area of Mumbulsari Primary Health Centre (2024–2026), assess data quality, and analyse the association of low birth weight (LBW), short birth length, sex and age with stunting, wasting and underweight.", { noIndent: true, en: true }),
-  P("**Methods.** Secondary analysis of 108,322 measurements from 6,312 children aged 0–59 months in seven villages (January 2024–September 2026). Problematic records were flagged and analysed under four sensitivity scenarios. Prevalence confidence intervals used a child-level cluster bootstrap; risk factors were analysed with logistic regression with village × year fixed effects and cluster-robust standard errors; time to stunting with Kaplan-Meier.", { noIndent: true, en: true }),
-  P("**Results.** Recorded stunting prevalence for the whole Puskesmas was 6.5% (2024), 13.1% (2025) and 7.0% (2026), but village figures moved implausibly between years (Mumbulsari: 4.2%, 28.4%, then 1.9%). Heights were heavily rounded (decimal digits .0/.5 up to 98% in some villages), and far fewer children fell below −2 SD than expected under a normal z-score distribution (scenario S3, 2024: 6.2% recorded vs 17.8% expected). In 2026, three villages recorded nearly all measurements on one date per month, and 24–29% of consecutive-month measurement pairs in these villages showed a height decrease of ≥ 1 cm. Data-entry staff confirmed one-date-per-month entry and height rounding. LBW (OR 2.11; 95% CI 1.64–2.71) and short birth length (OR 1.47; 1.15–1.88) were associated with higher odds of stunting, and girls had lower odds (OR 0.68; 0.60–0.78). These results were consistent across scenarios S0, S1 and S3.", { noIndent: true, en: true }),
-  P("**Conclusion.** Absolute prevalence from these routine data is unreliable, whereas the risk-factor associations are consistent and in line with the literature. Recording of height and measurement dates needs to improve, and village prevalence should be verified.", { noIndent: true, en: true }),
-  P("**Keywords:** stunting, child nutritional status, data quality, low birth weight, SigiziKesga, Mumbulsari.", { noIndent: true, en: true }),
-];
 
 const bab1 = [
   H1("BAB I  PENDAHULUAN"),
@@ -283,10 +274,10 @@ const doc = new Document({
     ],
   },
   sections: [
-    { properties: sectionProps, children: cover },
+    { properties: { page: { ...sectionProps.page, margin: { top: 2268, left: 2268, bottom: 1701, right: 1701 } } }, children: cover }, // margin sampul proposal
     { properties: { ...sectionProps, type: SectionType.NEXT_PAGE }, footers: { default: footer },
-      children: [...abstrak,
-        new Paragraph({ pageBreakBefore: true, children: [new TextRun({ text: "DAFTAR ISI", bold: true, size: 26, font: FONT })], alignment: AlignmentType.CENTER, spacing: { after: 200 } }),
+      children: [
+        new Paragraph({ children: [new TextRun({ text: "DAFTAR ISI", bold: true, size: 26, font: FONT })], alignment: AlignmentType.CENTER, spacing: { after: 200 } }),
         new TableOfContents("Daftar Isi", { hyperlink: true, headingStyleRange: "1-2" }),
         ...bab1, ...bab2, ...bab3, ...bab4, ...bab5, ...pustaka, ...lamp] },
   ],
