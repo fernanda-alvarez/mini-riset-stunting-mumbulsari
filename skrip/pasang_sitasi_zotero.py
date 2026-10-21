@@ -3,9 +3,12 @@ Hasilnya terbaca oleh tab Zotero di Word: Add/Edit Citation, Refresh, dan Docume
 Data item diambil lewat API lokal Zotero (Zotero harus terbuka); bila tertutup dipakai salinan JSON terakhir.
 Usage (laporan MTBS lama): python pasang_sitasi_zotero.py
 Usage (laporan lain): python pasang_sitasi_zotero.py <docx> <salinan.json> <KEY1,KEY2,...>  (urutan key = nomor Vancouver)
+Usage (APA 7): python pasang_sitasi_zotero.py <docx> <referensi.json>
+  referensi.json = daftar {"id", "key"} (id dipakai di teks sebagai [@id; @id], atau [-@id] untuk sitasi naratif "Penulis (tahun)"); citation, bib, dan CSL diambil dari Zotero
+  lalu disimpan kembali ke file itu. Daftar pustaka (urut abjad) disisipkan di bawah judul DAFTAR PUSTAKA.
 Jalankan setelah docx dibangun dan sebelum perbarui_daftar_isi.ps1; docx yang sudah berfield tidak boleh dibangun ulang.
 """
-import copy, json, os, random, re, string, sys, urllib.request, zipfile, shutil, tempfile
+import copy, html, json, os, random, re, string, sys, urllib.request, zipfile, shutil, tempfile
 import docx
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
@@ -16,6 +19,8 @@ BIB = "referensi/Referensi Mini Riset MTBS.bib"
 API = "http://127.0.0.1:23119/api/users/0/collections/UQ9XZL3Y/items/top?limit=100&format="
 USER_ID = 7207399  # akun Zotero pemilik pustaka (URI item: http://zotero.org/users/<id>/items/<key>)
 STYLE = "http://www.zotero.org/styles/nlm-citation-sequence-brackets"  # Vancouver, nomor dalam kurung siku
+APA = "http://www.zotero.org/styles/apa"
+LOCALE = "id-ID"  # "dkk.", nama bulan Indonesia
 SCHEMA = "https://github.com/citation-style-language/schema/raw/master/csl-citation.json"
 
 
@@ -44,6 +49,100 @@ def ambil_referensi(urutan=None):
         ref = json.load(open(SNAP, encoding="utf-8"))
         print("Zotero tidak terjangkau; memakai salinan", SNAP)
     return ref
+
+
+def ambil_apa(snap):
+    """Lengkapi tiap entri {id, key} dengan csl, citation, dan bib APA dari API lokal Zotero; bila tertutup pakai isi file."""
+    ref = json.load(open(snap, encoding="utf-8"))
+    base = "http://127.0.0.1:23119/api/users/0/items/"
+    try:
+        for r in ref:
+            get = lambda q: json.load(urllib.request.urlopen(base + r["key"] + q, timeout=10))
+            r["csl"] = get("?format=csljson")[0]
+            j = get(f"?format=json&include=citation,bib&style=apa&locale={LOCALE}")
+            r["cite"], r["bib"] = html.unescape(j["citation"]), j["bib"]  # citation berupa HTML (&#38;)
+        json.dump(ref, open(snap, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        print("Referensi diambil dari Zotero:", len(ref))
+    except OSError:
+        print("Zotero tidak terjangkau; memakai salinan", snap)
+    return {r["id"]: r for r in ref}
+
+
+def kode_sitasi_apa(items, naratif=False):
+    # gabungan beberapa sitasi APA: urut abjad, dipisah titik koma, satu pasang kurung; naratif = hanya tahun
+    if naratif:
+        teks = "(" + items[0]["cite"].strip("()").rsplit(", ", 1)[1] + ")"
+    else:
+        teks = "(" + "; ".join(sorted(r["cite"].strip("()") for r in items)) + ")"
+    obj = {"citationID": rid(), "properties": {"formattedCitation": teks, "plainCitation": teks, "noteIndex": 0},
+           "citationItems": [{"id": r["key"], "uris": [f"http://zotero.org/users/{USER_ID}/items/{r['key']}"],
+                              "itemData": dict(r["csl"], id=r["key"]), **({"suppress-author": True} if naratif else {})} for r in items], "schema": SCHEMA}
+    return " ADDIN ZOTERO_ITEM CSL_CITATION " + json.dumps(obj, ensure_ascii=False) + " ", teks
+
+
+def pasang_sitasi_apa(d, ref):
+    pola = re.compile(r"\[(-@[\w-]+|@[\w-]+(?:;\s*@[\w-]+)*)\]")
+    n_sitasi, dipakai = 0, set()
+    ps = d.paragraphs
+    for p in ps[:idx_pustaka(ps)]:
+        for r in list(p._p.iter(qn("w:r"))):
+            t = "".join(x.text or "" for x in r.iter(qn("w:t")))
+            if not pola.search(t) or r.find(qn("w:instrText")) is not None:
+                continue
+            rpr = r.find(qn("w:rPr"))
+            baru, pos = [], 0
+            for m in pola.finditer(t):
+                naratif = m.group(1).startswith("-")
+                ids = [x.strip().lstrip("-")[1:] for x in m.group(1).split(";")]
+                hilang = [i for i in ids if i not in ref]
+                assert not hilang, f"id sitasi tidak ada di referensi: {hilang}"
+                dipakai.update(ids)
+                if m.start() > pos:
+                    baru.append(run_el(copy_(rpr), "t", t[pos:m.start()]))
+                instr, teks = kode_sitasi_apa([ref[i] for i in ids], naratif)
+                baru += field(rpr, instr, teks); n_sitasi += 1
+                pos = m.end()
+            if pos < len(t):
+                baru.append(run_el(copy_(rpr), "t", t[pos:]))
+            for b in baru:
+                r.addprevious(b)
+            r.getparent().remove(r)
+    return n_sitasi, [ref[i] for i in dipakai]
+
+
+def pasang_bibliografi_apa(d, items):
+    """Entri APA (teks dari Zotero, miring sesuai <i>) urut abjad di bawah judul DAFTAR PUSTAKA, dibungkus field ZOTERO_BIBL."""
+    entri = lambda r: re.search(r'<div class="csl-entry">(.*?)</div>', r["bib"], re.S).group(1).strip()
+    polos = lambda r: html.unescape(re.sub(r"<[^>]+>", "", entri(r)))
+    judul = d.paragraphs[idx_pustaka(d.paragraphs)]._p
+    rpr = OxmlElement("w:rPr")
+    for tag, val in (("w:rFonts", None), ("w:sz", "24")):
+        e = OxmlElement(tag)
+        if val:
+            e.set(qn("w:val"), val)
+        else:
+            for a in ("w:ascii", "w:hAnsi", "w:cs"):
+                e.set(qn(a), "Times New Roman")
+        rpr.append(e)
+    paras, prev = [], judul
+    for r in sorted(items, key=lambda r: polos(r).casefold()):
+        p = OxmlElement("w:p")
+        ppr = OxmlElement("w:pPr")
+        sp = OxmlElement("w:spacing"); sp.set(qn("w:line"), "360"); sp.set(qn("w:after"), "120"); ppr.append(sp)
+        ind = OxmlElement("w:ind"); ind.set(qn("w:left"), "720"); ind.set(qn("w:hanging"), "720"); ppr.append(ind)
+        p.append(ppr)
+        for k, bag in enumerate(re.split(r"</?i>", entri(r))):
+            if not bag:
+                continue
+            rp = copy.deepcopy(rpr)
+            if k % 2:
+                rp.append(OxmlElement("w:i"))
+            p.append(run_el(rp, "t", html.unescape(bag)))
+        prev.addnext(p); prev = p; paras.append(p)
+    awal = field(rpr, ' ADDIN ZOTERO_BIBL {"uncited":[],"omitted":[],"custom":[]} CSL_BIBLIOGRAPHY ', "")
+    for el in reversed(awal[:-2]):
+        paras[0].find(qn("w:pPr")).addnext(el)
+    paras[-1].append(awal[-1])
 
 
 def rid(n=8):
@@ -139,10 +238,10 @@ def pasang_bibliografi(d, n_ref):
     akhir._p.append(awal[-1])
 
 
-def pasang_preferensi(path):
+def pasang_preferensi(path, style=STYLE, locale=""):
     """Simpan preferensi dokumen Zotero (gaya, tipe field) sebagai custom property ZOTERO_PREF_n."""
     pref = (f'<data data-version="3" zotero-version="10.0.6"><session id="{rid()}"/>'
-            f'<style id="{STYLE}" hasBibliography="1" bibliographyStyleHasBeenSet="1"/>'
+            f'<style id="{style}"' + (f' locale="{locale}"' if locale else "") + ' hasBibliography="1" bibliographyStyleHasBeenSet="1"/>'
             '<prefs><pref name="fieldType" value="Field"/><pref name="automaticJournalAbbreviations" value="true"/>'
             '</prefs></data>')
     potong = [pref[i:i + 255] for i in range(0, len(pref), 255)]
@@ -180,6 +279,16 @@ def pasang_gaya():
 
 
 if __name__ == "__main__":
+    if len(sys.argv) == 3:
+        DOC, SNAP = sys.argv[1], sys.argv[2]
+        ref = ambil_apa(SNAP)
+        d = docx.Document(DOC)
+        n, dipakai = pasang_sitasi_apa(d, ref)
+        pasang_bibliografi_apa(d, dipakai)
+        d.save(DOC)
+        pasang_preferensi(DOC, APA, LOCALE)
+        print(f"OK: {n} field sitasi APA + daftar pustaka {len(dipakai)} entri ->", DOC)
+        sys.exit()
     urutan = None
     if len(sys.argv) == 4:
         DOC, SNAP, urutan = sys.argv[1], sys.argv[2], sys.argv[3].split(",")

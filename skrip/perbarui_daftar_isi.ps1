@@ -7,7 +7,9 @@ $w = New-Object -ComObject Word.Application
 $w.Visible = $false
 try {
     $doc = $w.Documents.Open($src)
+    [void]$doc.Fields.Update()  # nomor SEQ keterangan tabel/gambar dulu, baru daftar isi/tabel/gambar
     foreach ($toc in $doc.TablesOfContents) { $toc.Update() }
+    foreach ($tof in $doc.TablesOfFigures) { $tof.Update() }
     $doc.Save()
     if ($Pdf) { $doc.SaveAs([ref]$Pdf, [ref]17) }
     "pages: " + $doc.ComputeStatistics(2)

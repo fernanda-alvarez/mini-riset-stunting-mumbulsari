@@ -1,5 +1,6 @@
 [
  {
+  "id": "who2006",
   "key": "V68GNN2G",
   "csl": {
    "id": "who2006standards",
@@ -20,9 +21,12 @@
      ]
     ]
    }
-  }
+  },
+  "cite": "(WHO Multicentre Growth Reference Study Group, 2006)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">WHO Multicentre Growth Reference Study Group. (2006). <i>WHO Child Growth Standards: Length/height-for-age, weight-for-age, weight-for-length, weight-for-height and body mass index-for-age: Methods and development</i>. World Health Organization.</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=WHO%20Child%20Growth%20Standards%3A%20Length%2Fheight-for-age%2C%20weight-for-age%2C%20weight-for-length%2C%20weight-for-height%20and%20body%20mass%20index-for-age%3A%20Methods%20and%20development&amp;rft.place=Geneva&amp;rft.publisher=World%20Health%20Organization&amp;rft.au=undefined&amp;rft.date=2006\"></span>\n</div>"
  },
  {
+  "id": "permenkes2020",
   "key": "6PVFFE5R",
   "csl": {
    "id": "permenkes2_2020",
@@ -33,8 +37,7 @@
    "title": "Peraturan Menteri Kesehatan Republik Indonesia Nomor 2 Tahun 2020 tentang Standar Antropometri Anak",
    "author": [
     {
-     "family": "RI",
-     "given": "Kementerian Kesehatan"
+     "literal": "Kementerian Kesehatan Republik Indonesia"
     }
    ],
    "issued": {
@@ -44,9 +47,12 @@
      ]
     ]
    }
-  }
+  },
+  "cite": "(Kementerian Kesehatan Republik Indonesia, 2020)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Kementerian Kesehatan Republik Indonesia. (2020). <i>Peraturan Menteri Kesehatan Republik Indonesia Nomor 2 Tahun 2020 tentang Standar Antropometri Anak</i>.</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.type=document&amp;rft.title=Peraturan%20Menteri%20Kesehatan%20Republik%20Indonesia%20Nomor%202%20Tahun%202020%20tentang%20Standar%20Antropometri%20Anak&amp;rft.au=undefined&amp;rft.date=2020\"></span>\n</div>"
  },
  {
+  "id": "perpres2021",
   "key": "JJ8J2IZK",
   "csl": {
    "id": "perpres72_2021",
@@ -56,8 +62,7 @@
    "title": "Peraturan Presiden Republik Indonesia Nomor 72 Tahun 2021 tentang Percepatan Penurunan Stunting",
    "author": [
     {
-     "family": "Indonesia",
-     "given": "Presiden Republik"
+     "literal": "Presiden Republik Indonesia"
     }
    ],
    "issued": {
@@ -67,9 +72,12 @@
      ]
     ]
    }
-  }
+  },
+  "cite": "(Presiden Republik Indonesia, 2021)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Presiden Republik Indonesia. (2021). <i>Peraturan Presiden Republik Indonesia Nomor 72 Tahun 2021 tentang Percepatan Penurunan Stunting</i>.</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.type=document&amp;rft.title=Peraturan%20Presiden%20Republik%20Indonesia%20Nomor%2072%20Tahun%202021%20tentang%20Percepatan%20Penurunan%20Stunting&amp;rft.au=undefined&amp;rft.date=2021\"></span>\n</div>"
  },
  {
+  "id": "kemenkes2025",
   "key": "TIZ9IFPS",
   "csl": {
    "id": "http://zotero.org/users/7207399/items/TIZ9IFPS",
@@ -92,9 +100,12 @@
      ]
     ]
    }
-  }
+  },
+  "cite": "(Kementerian Kesehatan Republik Indonesia, 2025)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Kementerian Kesehatan Republik Indonesia. (2025, Mei 26). <i>SSGI 2024: Prevalensi stunting nasional turun menjadi 19,8%</i>. https://www.kemkes.go.id/id/ssgi-2024-prevalensi-stunting-nasional-turun-menjadi-198</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.type=webpage&amp;rft.title=SSGI%202024%3A%20prevalensi%20stunting%20nasional%20turun%20menjadi%2019%2C8%25&amp;rft.identifier=https%3A%2F%2Fwww.kemkes.go.id%2Fid%2Fssgi-2024-prevalensi-stunting-nasional-turun-menjadi-198&amp;rft.au=undefined&amp;rft.date=2025-05-26&amp;rft.language=id\"></span>\n</div>"
  },
  {
+  "id": "mei2007",
   "key": "XZXTY2JY",
   "csl": {
    "id": "mei2007sd",
@@ -123,9 +134,12 @@
      ]
     ]
    }
-  }
+  },
+  "cite": "(Mei & Grummer-Strawn, 2007)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Mei, Z., &amp; Grummer-Strawn, L. M. (2007). Standard deviation of anthropometric Z-scores as a data quality assessment tool using the 2006 WHO growth standards: A cross country analysis. <i>Bulletin of the World Health Organization</i>, <i>85</i>(6), 441–448. https://doi.org/10.2471/BLT.06.034421</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.2471%2FBLT.06.034421&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Standard%20deviation%20of%20anthropometric%20Z-scores%20as%20a%20data%20quality%20assessment%20tool%20using%20the%202006%20WHO%20growth%20standards%3A%20a%20cross%20country%20analysis&amp;rft.jtitle=Bulletin%20of%20the%20World%20Health%20Organization&amp;rft.volume=85&amp;rft.issue=6&amp;rft.aufirst=Zuguo&amp;rft.aulast=Mei&amp;rft.au=Zuguo%20Mei&amp;rft.au=Laurence%20M.%20Grummer-Strawn&amp;rft.date=2007&amp;rft.pages=441-448&amp;rft.spage=441&amp;rft.epage=448\"></span>\n</div>"
  },
  {
+  "id": "assaf2015",
   "key": "GX7ZSILR",
   "csl": {
    "id": "http://zotero.org/users/7207399/items/GX7ZSILR",
@@ -156,9 +170,12 @@
      ]
     ]
    }
-  }
+  },
+  "cite": "(Assaf dkk., 2015)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Assaf, S., Kothari, M. T., &amp; Pullum, T. (2015). <i>An assessment of the quality of DHS anthropometric data, 2005–2014</i> (No. 16). https://dhsprogram.com/pubs/pdf/MR16/MR16.pdf</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=report&amp;rft.btitle=An%20assessment%20of%20the%20quality%20of%20DHS%20anthropometric%20data%2C%202005%E2%80%932014&amp;rft.place=Rockville%2C%20Maryland%2C%20USA&amp;rft.aufirst=Shireen&amp;rft.aulast=Assaf&amp;rft.au=Shireen%20Assaf&amp;rft.au=Monica%20T.%20Kothari&amp;rft.au=Thomas%20Pullum&amp;rft.date=2015-09\"></span>\n</div>"
  },
  {
+  "id": "riyanto2025",
   "key": "TRB8QMED",
   "csl": {
    "id": "http://zotero.org/users/7207399/items/TRB8QMED",
@@ -196,9 +213,12 @@
      ]
     ]
    }
-  }
+  },
+  "cite": "(Riyanto dkk., 2025)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Riyanto, S., Purwaningrum, D. N., &amp; Lazuardi, L. (2025). Evaluation of Anthropometric Data Quality for Children from Electronic-Based Nutrition Surveillance: A Case Study in Magelang Regency, Central Java, Indonesia. <i>Media Kesehatan Masyarakat Indonesia</i>, <i>21</i>(4), 298–311. https://doi.org/10.30597/mkmi.v21i4.43510</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.30597%2Fmkmi.v21i4.43510&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Evaluation%20of%20Anthropometric%20Data%20Quality%20for%20Children%20from%20Electronic-Based%20Nutrition%20Surveillance%3A%20A%20Case%20Study%20in%20Magelang%20Regency%2C%20Central%20Java%2C%20Indonesia&amp;rft.jtitle=Media%20Kesehatan%20Masyarakat%20Indonesia&amp;rft.volume=21&amp;rft.issue=4&amp;rft.aufirst=Slamet&amp;rft.aulast=Riyanto&amp;rft.au=Slamet%20Riyanto&amp;rft.au=Digna%20Niken%20Purwaningrum&amp;rft.au=Lutfan%20Lazuardi&amp;rft.date=2025-12-17&amp;rft.pages=298-311&amp;rft.spage=298&amp;rft.epage=311&amp;rft.issn=2356-4067\"></span>\n</div>"
  },
  {
+  "id": "febriyanti2025",
   "key": "SDX42E75",
   "csl": {
    "id": "febriyanti2025akurasi",
@@ -239,9 +259,12 @@
      ]
     ]
    }
-  }
+  },
+  "cite": "(Febriyanti dkk., 2025)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Febriyanti, F., Endah, T. A., Purnamawati, D., Handari, S. R. T., &amp; Pasaribu, E. S. (2025). Akurasi dan Presisi Pengukuran Antropometri Balita oleh Kader Posyandu dalam Mengidentifikasi Kejadian Stunting di Puskesmas Sadeng Pasar. <i>Jurnal Kesehatan Masyarakat</i>, <i>13</i>(1), 27–42. https://doi.org/10.14710/jkm.v13i1.46750</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.14710%2Fjkm.v13i1.46750&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Akurasi%20dan%20Presisi%20Pengukuran%20Antropometri%20Balita%20oleh%20Kader%20Posyandu%20dalam%20Mengidentifikasi%20Kejadian%20Stunting%20di%20Puskesmas%20Sadeng%20Pasar&amp;rft.jtitle=Jurnal%20Kesehatan%20Masyarakat&amp;rft.volume=13&amp;rft.issue=1&amp;rft.aufirst=F.&amp;rft.aulast=Febriyanti&amp;rft.au=F.%20Febriyanti&amp;rft.au=T.%20A.%20Endah&amp;rft.au=D.%20Purnamawati&amp;rft.au=S.%20R.%20T.%20Handari&amp;rft.au=E.%20S.%20Pasaribu&amp;rft.date=2025&amp;rft.pages=27-42&amp;rft.spage=27&amp;rft.epage=42\"></span>\n</div>"
  },
  {
+  "id": "beal2018",
   "key": "7ZWBZW9M",
   "csl": {
    "id": "http://zotero.org/users/7207399/items/7ZWBZW9M",
@@ -286,9 +309,12 @@
      ]
     ]
    }
-  }
+  },
+  "cite": "(Beal dkk., 2018)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Beal, T., Tumilowicz, A., Sutrisna, A., Izwardy, D., &amp; Neufeld, L. M. (2018). A review of child stunting determinants in Indonesia. <i>Maternal &amp; Child Nutrition</i>, <i>14</i>(4). https://doi.org/10.1111/mcn.12617</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.1111%2Fmcn.12617&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=A%20review%20of%20child%20stunting%20determinants%20in%20Indonesia&amp;rft.jtitle=Maternal%20%26%20Child%20Nutrition&amp;rft.volume=14&amp;rft.issue=4&amp;rft.aufirst=Ty&amp;rft.aulast=Beal&amp;rft.au=Ty%20Beal&amp;rft.au=Alison%20Tumilowicz&amp;rft.au=Aang%20Sutrisna&amp;rft.au=Doddy%20Izwardy&amp;rft.au=Lynnette%20M.%20Neufeld&amp;rft.date=2018-05-17&amp;rft.issn=1740-8695\"></span>\n</div>"
  },
  {
+  "id": "titaley2019",
   "key": "9IU7GNCU",
   "csl": {
    "id": "http://zotero.org/users/7207399/items/9IU7GNCU",
@@ -334,9 +360,12 @@
      ]
     ]
    }
-  }
+  },
+  "cite": "(Titaley dkk., 2019)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Titaley, C. R., Ariawan, I., Hapsari, D., Muasyaroh, A., &amp; Dibley, M. J. (2019). Determinants of the Stunting of Children Under Two Years Old in Indonesia: A Multilevel Analysis of the 2013 Indonesia Basic Health Survey. <i>Nutrients</i>, <i>11</i>(5), 1106. https://doi.org/10.3390/nu11051106</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.3390%2Fnu11051106&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Determinants%20of%20the%20Stunting%20of%20Children%20Under%20Two%20Years%20Old%20in%20Indonesia%3A%20A%20Multilevel%20Analysis%20of%20the%202013%20Indonesia%20Basic%20Health%20Survey&amp;rft.jtitle=Nutrients&amp;rft.volume=11&amp;rft.issue=5&amp;rft.aufirst=Christiana%20R.&amp;rft.aulast=Titaley&amp;rft.au=Christiana%20R.%20Titaley&amp;rft.au=Iwan%20Ariawan&amp;rft.au=Dwi%20Hapsari&amp;rft.au=Anifatun%20Muasyaroh&amp;rft.au=Michael%20J.%20Dibley&amp;rft.date=2019-05-18&amp;rft.pages=1106&amp;rft.issn=2072-6643\"></span>\n</div>"
  },
  {
+  "id": "christian2013",
   "key": "CVAISV2Y",
   "csl": {
    "id": "http://zotero.org/users/7207399/items/CVAISV2Y",
@@ -489,9 +518,12 @@
      ]
     ]
    }
-  }
+  },
+  "cite": "(Christian dkk., 2013)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Christian, P., Lee, S. E., Donahue Angel, M., Adair, L. S., Arifeen, S. E., Ashorn, P., Barros, F. C., Fall, C. H., Fawzi, W. W., Hao, W., Hu, G., Humphrey, J. H., Huybregts, L., Joglekar, C. V., Kariuki, S. K., Kolsteren, P., Krishnaveni, G. V., Liu, E., Martorell, R., … Black, R. E. (2013). Risk of childhood undernutrition related to small-for-gestational age and preterm birth in low- and middle-income countries. <i>International Journal of Epidemiology</i>, <i>42</i>(5), 1340–1355. https://doi.org/10.1093/ije/dyt109</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.1093%2Fije%2Fdyt109&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Risk%20of%20childhood%20undernutrition%20related%20to%20small-for-gestational%20age%20and%20preterm%20birth%20in%20low-%20and%20middle-income%20countries&amp;rft.jtitle=International%20Journal%20of%20Epidemiology&amp;rft.volume=42&amp;rft.issue=5&amp;rft.aufirst=Parul&amp;rft.aulast=Christian&amp;rft.au=Parul%20Christian&amp;rft.au=Sun%20Eun%20Lee&amp;rft.au=Moira%20Donahue%20Angel&amp;rft.au=Linda%20S%20Adair&amp;rft.au=Shams%20E%20Arifeen&amp;rft.au=Per%20Ashorn&amp;rft.au=Fernando%20C%20Barros&amp;rft.au=Caroline%20Hd%20Fall&amp;rft.au=Wafaie%20W%20Fawzi&amp;rft.au=Wei%20Hao&amp;rft.au=Gang%20Hu&amp;rft.au=Jean%20H%20Humphrey&amp;rft.au=Lieven%20Huybregts&amp;rft.au=Charu%20V%20Joglekar&amp;rft.au=Simon%20K%20Kariuki&amp;rft.au=Patrick%20Kolsteren&amp;rft.au=Ghattu%20V%20Krishnaveni&amp;rft.au=Enqing%20Liu&amp;rft.au=Reynaldo%20Martorell&amp;rft.au=David%20Osrin&amp;rft.au=Lars-Ake%20Persson&amp;rft.au=Usha%20Ramakrishnan&amp;rft.au=Linda%20Richter&amp;rft.au=Dominique%20Roberfroid&amp;rft.au=Ayesha%20Sania&amp;rft.au=Feiko%20O%20Ter%20Kuile&amp;rft.au=James%20Tielsch&amp;rft.au=Cesar%20G%20Victora&amp;rft.au=Chittaranjan%20S%20Yajnik&amp;rft.au=Hong%20Yan&amp;rft.au=Lingxia%20Zeng&amp;rft.au=Robert%20E%20Black&amp;rft.date=2013-08-06&amp;rft.pages=1340-1355&amp;rft.spage=1340&amp;rft.epage=1355&amp;rft.issn=1464-3685\"></span>\n</div>"
  },
  {
+  "id": "victora2010",
   "key": "EEYPJRNB",
   "csl": {
    "id": "victora2010timing",
@@ -533,9 +565,12 @@
      ]
     ]
    }
-  }
+  },
+  "cite": "(Victora dkk., 2010)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Victora, C. G., de Onis, M., Hallal, P. C., Blössner, M., &amp; Shrimpton, R. (2010). Worldwide timing of growth faltering: Revisiting implications for interventions. <i>Pediatrics</i>, <i>125</i>(3), e473–e480. https://doi.org/10.1542/peds.2009-1519</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.1542%2Fpeds.2009-1519&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Worldwide%20timing%20of%20growth%20faltering%3A%20revisiting%20implications%20for%20interventions&amp;rft.jtitle=Pediatrics&amp;rft.volume=125&amp;rft.issue=3&amp;rft.aufirst=Cesar%20G.&amp;rft.aulast=Victora&amp;rft.au=Cesar%20G.%20Victora&amp;rft.au=Mercedes%20de%20Onis&amp;rft.au=Pedro%20Curi%20Hallal&amp;rft.au=Monika%20Bl%C3%B6ssner&amp;rft.au=Roger%20Shrimpton&amp;rft.date=2010&amp;rft.pages=e473-e480&amp;rft.spage=e473&amp;rft.epage=e480\"></span>\n</div>"
  },
  {
+  "id": "thurstans2020",
   "key": "LGQWFDIX",
   "csl": {
    "id": "http://zotero.org/users/7207399/items/LGQWFDIX",
@@ -604,6 +639,869 @@
      ]
     ]
    }
-  }
+  },
+  "cite": "(Thurstans dkk., 2020)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Thurstans, S., Opondo, C., Seal, A., Wells, J., Khara, T., Dolan, C., Briend, A., Myatt, M., Garenne, M., Sear, R., &amp; Kerac, M. (2020). Boys are more likely to be undernourished than girls: A systematic review and meta-analysis of sex differences in undernutrition. <i>BMJ Global Health</i>, <i>5</i>(12), e004030. https://doi.org/10.1136/bmjgh-2020-004030</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.1136%2Fbmjgh-2020-004030&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Boys%20are%20more%20likely%20to%20be%20undernourished%20than%20girls%3A%20a%20systematic%20review%20and%20meta-analysis%20of%20sex%20differences%20in%20undernutrition&amp;rft.jtitle=BMJ%20Global%20Health&amp;rft.volume=5&amp;rft.issue=12&amp;rft.aufirst=Susan&amp;rft.aulast=Thurstans&amp;rft.au=Susan%20Thurstans&amp;rft.au=Charles%20Opondo&amp;rft.au=Andrew%20Seal&amp;rft.au=Jonathan%20Wells&amp;rft.au=Tanya%20Khara&amp;rft.au=Carmel%20Dolan&amp;rft.au=Andr%C3%A9%20Briend&amp;rft.au=Mark%20Myatt&amp;rft.au=Michel%20Garenne&amp;rft.au=Rebecca%20Sear&amp;rft.au=Marko%20Kerac&amp;rft.date=2020-12&amp;rft.pages=e004030&amp;rft.issn=2059-7908\"></span>\n</div>"
+ },
+ {
+  "id": "black2013",
+  "key": "VT9LATAZ",
+  "csl": {
+   "id": "black2013maternal",
+   "type": "article-journal",
+   "citation-key": "black2013maternal",
+   "container-title": "The Lancet",
+   "DOI": "10.1016/S0140-6736(13)60937-X",
+   "issue": "9890",
+   "page": "427-451",
+   "title": "Maternal and child undernutrition and overweight in low-income and middle-income countries",
+   "volume": "382",
+   "author": [
+    {
+     "family": "Black",
+     "given": "Robert E."
+    },
+    {
+     "family": "Victora",
+     "given": "Cesar G."
+    },
+    {
+     "family": "Walker",
+     "given": "Susan P."
+    },
+    {
+     "family": "Bhutta",
+     "given": "Zulfiqar A."
+    },
+    {
+     "family": "Christian",
+     "given": "Parul"
+    },
+    {
+     "family": "Onis",
+     "given": "Mercedes",
+     "non-dropping-particle": "de"
+    },
+    {
+     "family": "Ezzati",
+     "given": "Majid"
+    },
+    {
+     "family": "Grantham-McGregor",
+     "given": "Sally"
+    },
+    {
+     "family": "Katz",
+     "given": "Joanne"
+    },
+    {
+     "family": "Martorell",
+     "given": "Reynaldo"
+    },
+    {
+     "family": "Uauy",
+     "given": "Ricardo"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2013"
+     ]
+    ]
+   }
+  },
+  "cite": "(Black dkk., 2013)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Black, R. E., Victora, C. G., Walker, S. P., Bhutta, Z. A., Christian, P., de Onis, M., Ezzati, M., Grantham-McGregor, S., Katz, J., Martorell, R., &amp; Uauy, R. (2013). Maternal and child undernutrition and overweight in low-income and middle-income countries. <i>The Lancet</i>, <i>382</i>(9890), 427–451. https://doi.org/10.1016/S0140-6736(13)60937-X</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.1016%2FS0140-6736(13)60937-X&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Maternal%20and%20child%20undernutrition%20and%20overweight%20in%20low-income%20and%20middle-income%20countries&amp;rft.jtitle=The%20Lancet&amp;rft.volume=382&amp;rft.issue=9890&amp;rft.aufirst=Robert%20E.&amp;rft.aulast=Black&amp;rft.au=Robert%20E.%20Black&amp;rft.au=Cesar%20G.%20Victora&amp;rft.au=Susan%20P.%20Walker&amp;rft.au=Zulfiqar%20A.%20Bhutta&amp;rft.au=Parul%20Christian&amp;rft.au=Mercedes%20de%20Onis&amp;rft.au=Majid%20Ezzati&amp;rft.au=Sally%20Grantham-McGregor&amp;rft.au=Joanne%20Katz&amp;rft.au=Reynaldo%20Martorell&amp;rft.au=Ricardo%20Uauy&amp;rft.date=2013&amp;rft.pages=427-451&amp;rft.spage=427&amp;rft.epage=451\"></span>\n</div>"
+ },
+ {
+  "id": "walker2007",
+  "key": "GQNP8NKW",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/GQNP8NKW",
+   "type": "article-journal",
+   "container-title": "The Lancet",
+   "DOI": "10.1016/S0140-6736(07)60076-2",
+   "ISSN": "0140-6736",
+   "issue": "9556",
+   "page": "145-157",
+   "publisher": "Elsevier BV",
+   "title": "Child development: risk factors for adverse outcomes in developing countries",
+   "URL": "https://doi.org/10.1016/s0140-6736(07)60076-2",
+   "volume": "369",
+   "author": [
+    {
+     "family": "Walker",
+     "given": "Susan P"
+    },
+    {
+     "family": "Wachs",
+     "given": "Theodore D"
+    },
+    {
+     "family": "Meeks Gardner",
+     "given": "Julie"
+    },
+    {
+     "family": "Lozoff",
+     "given": "Betsy"
+    },
+    {
+     "family": "Wasserman",
+     "given": "Gail A"
+    },
+    {
+     "family": "Pollitt",
+     "given": "Ernesto"
+    },
+    {
+     "family": "Carter",
+     "given": "Julie A"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2007",
+      1
+     ]
+    ]
+   }
+  },
+  "cite": "(Walker dkk., 2007)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Walker, S. P., Wachs, T. D., Meeks Gardner, J., Lozoff, B., Wasserman, G. A., Pollitt, E., &amp; Carter, J. A. (2007). Child development: Risk factors for adverse outcomes in developing countries. <i>The Lancet</i>, <i>369</i>(9556), 145–157. https://doi.org/10.1016/S0140-6736(07)60076-2</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.1016%2FS0140-6736(07)60076-2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Child%20development%3A%20risk%20factors%20for%20adverse%20outcomes%20in%20developing%20countries&amp;rft.jtitle=The%20Lancet&amp;rft.volume=369&amp;rft.issue=9556&amp;rft.aufirst=Susan%20P&amp;rft.aulast=Walker&amp;rft.au=Susan%20P%20Walker&amp;rft.au=Theodore%20D%20Wachs&amp;rft.au=Julie%20Meeks%20Gardner&amp;rft.au=Betsy%20Lozoff&amp;rft.au=Gail%20A%20Wasserman&amp;rft.au=Ernesto%20Pollitt&amp;rft.au=Julie%20A%20Carter&amp;rft.date=2007-01&amp;rft.pages=145-157&amp;rft.spage=145&amp;rft.epage=157&amp;rft.issn=0140-6736\"></span>\n</div>"
+ },
+ {
+  "id": "dewey2011",
+  "key": "SVV4FARJ",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/SVV4FARJ",
+   "type": "article-journal",
+   "abstract": "Abstract This review summarizes the impact of stunting, highlights recent research findings, discusses policy and programme implications and identifies research priorities. There is growing evidence of the connections between slow growth in height early in life and impaired health and educational and economic performance later in life. Recent research findings, including follow‐up of an intervention trial in Guatemala, indicate that stunting can have long‐term effects on cognitive development, school achievement, economic productivity in adulthood and maternal reproductive outcomes. This evidence has contributed to the growing scientific consensus that tackling childhood stunting is a high priority for reducing the global burden of disease and for fostering economic development. Follow‐up of randomized intervention trials is needed in other regions to add to the findings of the Guatemala trial. Further research is also needed to: understand the pathways by which prevention of stunting can have long‐term effects; identify the pathways through which the non‐genetic transmission of nutritional effects is mediated in future generations; and determine the impact of interventions focused on linear growth in early life on chronic disease risk in adulthood.",
+   "container-title": "Maternal & Child Nutrition",
+   "DOI": "10.1111/j.1740-8709.2011.00349.x",
+   "ISSN": "1740-8695",
+   "issue": "s3",
+   "page": "5-18",
+   "publisher": "Wiley",
+   "title": "Long‐term consequences of stunting in early life",
+   "URL": "https://doi.org/10.1111/j.1740-8709.2011.00349.x",
+   "volume": "7",
+   "author": [
+    {
+     "family": "Dewey",
+     "given": "Kathryn G."
+    },
+    {
+     "family": "Begum",
+     "given": "Khadija"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2011",
+      9,
+      19
+     ]
+    ]
+   }
+  },
+  "cite": "(Dewey & Begum, 2011)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Dewey, K. G., &amp; Begum, K. (2011). Long‐term consequences of stunting in early life. <i>Maternal &amp; Child Nutrition</i>, <i>7</i>(s3), 5–18. https://doi.org/10.1111/j.1740-8709.2011.00349.x</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.1111%2Fj.1740-8709.2011.00349.x&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Long%E2%80%90term%20consequences%20of%20stunting%20in%20early%20life&amp;rft.jtitle=Maternal%20%26%20Child%20Nutrition&amp;rft.volume=7&amp;rft.issue=s3&amp;rft.aufirst=Kathryn%20G.&amp;rft.aulast=Dewey&amp;rft.au=Kathryn%20G.%20Dewey&amp;rft.au=Khadija%20Begum&amp;rft.date=2011-09-19&amp;rft.pages=5-18&amp;rft.spage=5&amp;rft.epage=18&amp;rft.issn=1740-8695\"></span>\n</div>"
+ },
+ {
+  "id": "victora2008",
+  "key": "XMTFXDLW",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/XMTFXDLW",
+   "type": "article-journal",
+   "container-title": "The Lancet",
+   "DOI": "10.1016/s0140-6736(07)61692-4",
+   "ISSN": "0140-6736",
+   "issue": "9609",
+   "page": "340-357",
+   "publisher": "Elsevier BV",
+   "title": "Maternal and child undernutrition: consequences for adult health and human capital",
+   "URL": "https://doi.org/10.1016/s0140-6736(07)61692-4",
+   "volume": "371",
+   "author": [
+    {
+     "family": "Victora",
+     "given": "Cesar G"
+    },
+    {
+     "family": "Adair",
+     "given": "Linda"
+    },
+    {
+     "family": "Fall",
+     "given": "Caroline"
+    },
+    {
+     "family": "Hallal",
+     "given": "Pedro C"
+    },
+    {
+     "family": "Martorell",
+     "given": "Reynaldo"
+    },
+    {
+     "family": "Richter",
+     "given": "Linda"
+    },
+    {
+     "family": "Sachdev",
+     "given": "Harshpal Singh"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2008",
+      1
+     ]
+    ]
+   }
+  },
+  "cite": "(Victora dkk., 2008)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Victora, C. G., Adair, L., Fall, C., Hallal, P. C., Martorell, R., Richter, L., &amp; Sachdev, H. S. (2008). Maternal and child undernutrition: Consequences for adult health and human capital. <i>The Lancet</i>, <i>371</i>(9609), 340–357. https://doi.org/10.1016/s0140-6736(07)61692-4</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.1016%2Fs0140-6736(07)61692-4&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Maternal%20and%20child%20undernutrition%3A%20consequences%20for%20adult%20health%20and%20human%20capital&amp;rft.jtitle=The%20Lancet&amp;rft.volume=371&amp;rft.issue=9609&amp;rft.aufirst=Cesar%20G&amp;rft.aulast=Victora&amp;rft.au=Cesar%20G%20Victora&amp;rft.au=Linda%20Adair&amp;rft.au=Caroline%20Fall&amp;rft.au=Pedro%20C%20Hallal&amp;rft.au=Reynaldo%20Martorell&amp;rft.au=Linda%20Richter&amp;rft.au=Harshpal%20Singh%20Sachdev&amp;rft.date=2008-01&amp;rft.pages=340-357&amp;rft.spage=340&amp;rft.epage=357&amp;rft.issn=0140-6736\"></span>\n</div>"
+ },
+ {
+  "id": "hoddinott2008",
+  "key": "MRRLGNF5",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/MRRLGNF5",
+   "type": "article-journal",
+   "container-title": "The Lancet",
+   "DOI": "10.1016/s0140-6736(08)60205-6",
+   "ISSN": "0140-6736",
+   "issue": "9610",
+   "page": "411-416",
+   "publisher": "Elsevier BV",
+   "title": "Effect of a nutrition intervention during early childhood on economic productivity in Guatemalan adults",
+   "URL": "https://doi.org/10.1016/s0140-6736(08)60205-6",
+   "volume": "371",
+   "author": [
+    {
+     "family": "Hoddinott",
+     "given": "John"
+    },
+    {
+     "family": "Maluccio",
+     "given": "John A"
+    },
+    {
+     "family": "Behrman",
+     "given": "Jere R"
+    },
+    {
+     "family": "Flores",
+     "given": "Rafael"
+    },
+    {
+     "family": "Martorell",
+     "given": "Reynaldo"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2008",
+      2
+     ]
+    ]
+   }
+  },
+  "cite": "(Hoddinott dkk., 2008)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Hoddinott, J., Maluccio, J. A., Behrman, J. R., Flores, R., &amp; Martorell, R. (2008). Effect of a nutrition intervention during early childhood on economic productivity in Guatemalan adults. <i>The Lancet</i>, <i>371</i>(9610), 411–416. https://doi.org/10.1016/s0140-6736(08)60205-6</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.1016%2Fs0140-6736(08)60205-6&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Effect%20of%20a%20nutrition%20intervention%20during%20early%20childhood%20on%20economic%20productivity%20in%20Guatemalan%20adults&amp;rft.jtitle=The%20Lancet&amp;rft.volume=371&amp;rft.issue=9610&amp;rft.aufirst=John&amp;rft.aulast=Hoddinott&amp;rft.au=John%20Hoddinott&amp;rft.au=John%20A%20Maluccio&amp;rft.au=Jere%20R%20Behrman&amp;rft.au=Rafael%20Flores&amp;rft.au=Reynaldo%20Martorell&amp;rft.date=2008-02&amp;rft.pages=411-416&amp;rft.spage=411&amp;rft.epage=416&amp;rft.issn=0140-6736\"></span>\n</div>"
+ },
+ {
+  "id": "stewart2013",
+  "key": "6KZKHPNK",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/6KZKHPNK",
+   "type": "article-journal",
+   "abstract": "Abstract An estimated 165 million children are stunted due to the combined effects of poor nutrition, repeated infection and inadequate psychosocial stimulation. The complementary feeding period, generally corresponding to age 6–24 months, represents an important period of sensitivity to stunting with lifelong, possibly irrevocable consequences. Interventions to improve complementary feeding practices or the nutritional quality of complementary foods must take into consideration the contextual as well as proximal determinants of stunting. This review presents a conceptual framework that highlights the role of complementary feeding within the layers of contextual and causal factors that lead to stunted growth and development and the resulting short‐ and long‐term consequences. Contextual factors are organized into the following groups: political economy; health and health care systems; education; society and culture; agriculture and food systems; and water, sanitation and environment. We argue that these community and societal conditions underlie infant and young child feeding practices, which are a central pillar to healthy growth and development, and can serve to either impede or enable progress. Effectiveness studies with a strong process evaluation component are needed to identify transdisciplinary solutions. Programme and policy interventions aimed at preventing stunting should be informed by careful assessment of these factors at all levels.",
+   "container-title": "Maternal & Child Nutrition",
+   "DOI": "10.1111/mcn.12088",
+   "ISSN": "1740-8695",
+   "issue": "S2",
+   "page": "27-45",
+   "publisher": "Wiley",
+   "title": "Contextualising complementary feeding in a broader framework for stunting prevention",
+   "URL": "https://doi.org/10.1111/mcn.12088",
+   "volume": "9",
+   "author": [
+    {
+     "family": "Stewart",
+     "given": "Christine P."
+    },
+    {
+     "family": "Iannotti",
+     "given": "Lora"
+    },
+    {
+     "family": "Dewey",
+     "given": "Kathryn G."
+    },
+    {
+     "family": "Michaelsen",
+     "given": "Kim F."
+    },
+    {
+     "family": "Onyango",
+     "given": "Adelheid W."
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2013",
+      9
+     ]
+    ]
+   }
+  },
+  "cite": "(Stewart dkk., 2013)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Stewart, C. P., Iannotti, L., Dewey, K. G., Michaelsen, K. F., &amp; Onyango, A. W. (2013). Contextualising complementary feeding in a broader framework for stunting prevention. <i>Maternal &amp; Child Nutrition</i>, <i>9</i>(S2), 27–45. https://doi.org/10.1111/mcn.12088</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.1111%2Fmcn.12088&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Contextualising%20complementary%20feeding%20in%20a%20broader%20framework%20for%20stunting%20prevention&amp;rft.jtitle=Maternal%20%26%20Child%20Nutrition&amp;rft.volume=9&amp;rft.issue=S2&amp;rft.aufirst=Christine%20P.&amp;rft.aulast=Stewart&amp;rft.au=Christine%20P.%20Stewart&amp;rft.au=Lora%20Iannotti&amp;rft.au=Kathryn%20G.%20Dewey&amp;rft.au=Kim%20F.%20Michaelsen&amp;rft.au=Adelheid%20W.%20Onyango&amp;rft.date=2013-09&amp;rft.pages=27-45&amp;rft.spage=27&amp;rft.epage=45&amp;rft.issn=1740-8695\"></span>\n</div>"
+ },
+ {
+  "id": "rahmadiani2025",
+  "key": "K6TZQJX9",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/K6TZQJX9",
+   "type": "article-journal",
+   "abstract": "Abstract Background: Stunting during early childhood is a serious public health concern. In 2022, the prevalence of stunting in Indonesia was 21.6%, still a high prevalence. Low birth weight (LBW) is a major public health issue in low- and middle-income countries. Both play crucial roles in children’s morbidity and mortality. Shreds of evidence show the role of LBW in children’s stunting, however, limited study in Indonesia. This study aimed to determine the relationship between LBW and stunting in Indonesian toddlers. Methods: The study reported a cross-sectional survey using Indonesian Nutrition Status Survey data ( Survei Status Gizi Indonesia = SSGI ) in 2021, obtained from the National Institute for Health Development Policy, Ministry of Health, Republic of Indonesia, involving 20,808 data. The data were then presented in proportions and analyzed using multiple logistic regression. Results: The results showed children with certain factors were related to the occurrence of stunting, i.e., children with LBW ( P &lt; 0.001; aOR = 2.73; 95%CI = 2.420–3.080), aged under-twelve months old ( P &lt; 0.001; aOR = 0.38; 95%CI = 0.350–0.417), male ( P &lt; 0.001; aOR = 1.44; 95%CI = 1.338–1.547), early starting solid foods (&lt;six months) ( P &lt; 0.001; aOR = 0.82; 95%CI = 0.767–0.886), having no health insurance ( P = 0.026; aOR = 1.10; 95%CI = 1.011–1.191), low-educated mothers ( P &lt; 0.001; OR = 1.33; 95%CI = 1.230–1.436), employed mothers ( P = 0.013; aOR = 0.90; 95%CI = 0.834–0.979), low-middle asset ownership ( P &lt; 0.001; aOR = 0.82; 95%CI = 0.767-0.886), vulnerable food insecurity ( P = 0.037; aOR = 1.08; 95%CI = 1.005–1.167), and living in rural areas ( P = 0.001; aOR = 1.14; 95%CI = 1.057–1.231). Conclusions: This study found stunting prevalence was 18.6% and LBW was 6.8%. LBW, male sex, no health insurance, low-educated mothers, low-middle assets, food insecurity, children aged 12 months or over, late-starting solid foods, unemployed mothers, and living in rural areas increased the risk of stunting in toddlers.",
+   "container-title": "International Journal of Preventive Medicine",
+   "DOI": "10.4103/ijpvm.ijpvm_242_24",
+   "ISSN": "2008-7802",
+   "publisher": "Ovid Technologies (Wolters Kluwer Health)",
+   "title": "Impact of Low Birth Weight and Other Determinants on Stunting in Children Under-Five Years Old: Evidence from Indonesia’s Nutrition Status Survey",
+   "URL": "https://doi.org/10.4103/ijpvm.ijpvm_242_24",
+   "volume": "16",
+   "author": [
+    {
+     "family": "Rahmadiani",
+     "given": "Ine"
+    },
+    {
+     "family": "Fibriana",
+     "given": "Arulita Ika"
+    },
+    {
+     "family": "Nisa",
+     "given": "Alfiana Ainun"
+    },
+    {
+     "family": "Shabbir",
+     "given": "Syed Abdul"
+    },
+    {
+     "family": "Azam",
+     "given": "Mahalul"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2025",
+      11
+     ]
+    ]
+   }
+  },
+  "cite": "(Rahmadiani dkk., 2025)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Rahmadiani, I., Fibriana, A. I., Nisa, A. A., Shabbir, S. A., &amp; Azam, M. (2025). Impact of Low Birth Weight and Other Determinants on Stunting in Children Under-Five Years Old: Evidence from Indonesia’s Nutrition Status Survey. <i>International Journal of Preventive Medicine</i>, <i>16</i>. https://doi.org/10.4103/ijpvm.ijpvm_242_24</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.4103%2Fijpvm.ijpvm_242_24&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Impact%20of%20Low%20Birth%20Weight%20and%20Other%20Determinants%20on%20Stunting%20in%20Children%20Under-Five%20Years%20Old%3A%20Evidence%20from%20Indonesia%E2%80%99s%20Nutrition%20Status%20Survey&amp;rft.jtitle=International%20Journal%20of%20Preventive%20Medicine&amp;rft.volume=16&amp;rft.aufirst=Ine&amp;rft.aulast=Rahmadiani&amp;rft.au=Ine%20Rahmadiani&amp;rft.au=Arulita%20Ika%20Fibriana&amp;rft.au=Alfiana%20Ainun%20Nisa&amp;rft.au=Syed%20Abdul%20Shabbir&amp;rft.au=Mahalul%20Azam&amp;rft.date=2025-11&amp;rft.issn=2008-7802\"></span>\n</div>"
+ },
+ {
+  "id": "laksono2024",
+  "key": "P9LVCTR9",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/P9LVCTR9",
+   "type": "article-journal",
+   "abstract": "Objective Based on previous studies, urban-poor societies are very vulnerable to stunted children under five. The study aims to determine the appropriate policy targets to reduce the prevalence of stunted under-five children in urban-poor communities in Indonesia. Design A study was conducted using a secondary data analysis. The study analysed existing data from the 2022 Indonesian National Nutritional Status Survey. Setting and participants At the national level, Indonesia encompassed 43 284 toddlers. Interventions Non-intervention study. Primary and secondary outcomes The study’s eight independent factors were the mother’s age, education, marital status, employment, wealth, antenatal care (ANC), children’s age and sex, with nutritional status as the dependent variable. We employed a binary logistic regression test for the most recent exam. Results Maternal age was related to stunted toddlers in communities of urban poor in Indonesia. The lower the education, the higher the possibility of having stunted kids. Unemployed mothers were 1.153 times more likely than employed mothers to have stunted under-five children (95% CI 1.145 to 1.160). The poorest were 1.235 times more likely to get stunted under-five than the poorer (95% CI 1.227 to 1.242). Mothers without ANC during pregnancy were 1.212 times more likely to get stunted kids than those with ANC during pregnancy (95% CI 1.186 to 1.240). All kids' ages were more probable than 0–11 to be stunted. Boys were 1.099 times more likely to be stunted than girls (AOR 1.099; 95% CI 1.093 to 1.105). Conclusion The appropriate policy targets to reduce the prevalence of stunted under-five children in urban-poor communities in Indonesia were younger mothers, those with poor education, those unemployed, the most impoverished, those without ANC, those with older under-five and those with boy kids.",
+   "container-title": "BMJ Open",
+   "DOI": "10.1136/bmjopen-2024-089531",
+   "ISSN": "2044-6055",
+   "issue": "9",
+   "page": "e089531",
+   "publisher": "BMJ",
+   "title": "Determination of appropriate policy targets to reduce the prevalence of stunting in children under five years of age in urban-poor communities in Indonesia: a secondary data analysis of the 2022 Indonesian national nutritional status survey",
+   "URL": "https://doi.org/10.1136/bmjopen-2024-089531",
+   "volume": "14",
+   "author": [
+    {
+     "family": "Laksono",
+     "given": "Agung Dwi"
+    },
+    {
+     "family": "Izza",
+     "given": "Nailul"
+    },
+    {
+     "family": "Trisnani",
+     "given": "Trisnani"
+    },
+    {
+     "family": "Paramita",
+     "given": "Astridya"
+    },
+    {
+     "family": "Sholikhah",
+     "given": "Hidayad Heny"
+    },
+    {
+     "family": "Andarwati",
+     "given": "Pramita"
+    },
+    {
+     "family": "Rosyadi",
+     "given": "Khoirul"
+    },
+    {
+     "family": "Wulandari",
+     "given": "Ratna Dwi"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2024",
+      9
+     ]
+    ]
+   }
+  },
+  "cite": "(Laksono dkk., 2024)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Laksono, A. D., Izza, N., Trisnani, T., Paramita, A., Sholikhah, H. H., Andarwati, P., Rosyadi, K., &amp; Wulandari, R. D. (2024). Determination of appropriate policy targets to reduce the prevalence of stunting in children under five years of age in urban-poor communities in Indonesia: A secondary data analysis of the 2022 Indonesian national nutritional status survey. <i>BMJ Open</i>, <i>14</i>(9), e089531. https://doi.org/10.1136/bmjopen-2024-089531</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.1136%2Fbmjopen-2024-089531&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Determination%20of%20appropriate%20policy%20targets%20to%20reduce%20the%20prevalence%20of%20stunting%20in%20children%20under%20five%20years%20of%20age%20in%20urban-poor%20communities%20in%20Indonesia%3A%20a%20secondary%20data%20analysis%20of%20the%202022%20Indonesian%20national%20nutritional%20status%20survey&amp;rft.jtitle=BMJ%20Open&amp;rft.volume=14&amp;rft.issue=9&amp;rft.aufirst=Agung%20Dwi&amp;rft.aulast=Laksono&amp;rft.au=Agung%20Dwi%20Laksono&amp;rft.au=Nailul%20Izza&amp;rft.au=Trisnani%20Trisnani&amp;rft.au=Astridya%20Paramita&amp;rft.au=Hidayad%20Heny%20Sholikhah&amp;rft.au=Pramita%20Andarwati&amp;rft.au=Khoirul%20Rosyadi&amp;rft.au=Ratna%20Dwi%20Wulandari&amp;rft.date=2024-09&amp;rft.pages=e089531&amp;rft.issn=2044-6055\"></span>\n</div>"
+ },
+ {
+  "id": "bilukha2020",
+  "key": "DF3WME4A",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/DF3WME4A",
+   "type": "article-journal",
+   "abstract": "Abstract Background Ensuring the quality of anthropometry data is paramount for getting accurate estimates of malnutrition prevalence among children aged 6–59 months in humanitarian and refugee settings. Previous reports based on data from Demographic and Health Surveys suggested systematic differences in anthropometric data quality between the younger and older groups of preschool children. Methods We analyzed 712 anthropometric population-representative field surveys from humanitarian and refugee settings conducted during 2011–2018. We examined and compared the quality of five anthropometric indicators in children aged 6–23 months and children aged 24–59 months: weight for height, weight for age, height for age, body mass index for age and mid-upper arm circumference (MUAC) for age. Using the z-score distribution of each indicator, we calculated the following parameters: standard deviation (SD), percentage of outliers, and measures of distribution normality. We also examined and compared the quality of height, weight, MUAC and age measurements using missing data and rounding criteria. Results Both SD and percentage of flags were significantly smaller on average in older than in younger age group for all five anthropometric indicators. Differences in SD between age groups did not change meaningfully depending on overall survey quality or on the quality of age ascertainment. Over 50% of surveys overall did not deviate significantly from normality. The percentage of non-normal surveys was higher in older than in the younger age groups. Digit preference score for weight, height and MUAC was slightly higher in younger age group, and for age slightly higher in the older age group. Children with reported exact date of birth (DOB) had much lower digit preference for age than those without exact DOB. SD, percentage flags and digit preference scores were positively correlated between the two age groups at the survey level, such as those surveys showing higher anthropometry data quality in younger age group also tended to show higher quality in older age group. Conclusions There should be an emphasis on increased rigor of training survey measurers in taking anthropometric measurements in the youngest children. Standardization test, a mandatory component of the pre-survey measurer training and evaluation, of 10 children should include at least 4–5 children below 2 years of age.",
+   "container-title": "BMC Nutrition",
+   "DOI": "10.1186/s40795-020-00385-0",
+   "ISSN": "2055-0928",
+   "issue": "1",
+   "publisher": "Springer Science and Business Media LLC",
+   "title": "Comparison of anthropometric data quality in children aged 6-23 and 24-59 months: lessons from population-representative surveys from humanitarian settings",
+   "URL": "https://doi.org/10.1186/s40795-020-00385-0",
+   "volume": "6",
+   "author": [
+    {
+     "family": "Bilukha",
+     "given": "Oleg"
+    },
+    {
+     "family": "Couture",
+     "given": "Alexia"
+    },
+    {
+     "family": "McCain",
+     "given": "Kelly"
+    },
+    {
+     "family": "Leidman",
+     "given": "Eva"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2020",
+      11,
+      13
+     ]
+    ]
+   }
+  },
+  "cite": "(Bilukha dkk., 2020)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Bilukha, O., Couture, A., McCain, K., &amp; Leidman, E. (2020). Comparison of anthropometric data quality in children aged 6-23 and 24-59 months: Lessons from population-representative surveys from humanitarian settings. <i>BMC Nutrition</i>, <i>6</i>(1). https://doi.org/10.1186/s40795-020-00385-0</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.1186%2Fs40795-020-00385-0&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Comparison%20of%20anthropometric%20data%20quality%20in%20children%20aged%206-23%20and%2024-59%20months%3A%20lessons%20from%20population-representative%20surveys%20from%20humanitarian%20settings&amp;rft.jtitle=BMC%20Nutrition&amp;rft.volume=6&amp;rft.issue=1&amp;rft.aufirst=Oleg&amp;rft.aulast=Bilukha&amp;rft.au=Oleg%20Bilukha&amp;rft.au=Alexia%20Couture&amp;rft.au=Kelly%20McCain&amp;rft.au=Eva%20Leidman&amp;rft.date=2020-11-13&amp;rft.issn=2055-0928\"></span>\n</div>"
+ },
+ {
+  "id": "silva2023",
+  "key": "5R833DB3",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/5R833DB3",
+   "type": "article-journal",
+   "abstract": "OBJETIVOS: Avaliar a qualidade dos dados antropométricos de crianças registradas no Sistema de Vigilância Alimentar e Nutricional (Sisvan) no período 2008-2017. MÉTODOS: Estudo descritivo sobre a qualidade dos dados antropométricos de crianças menores de 5 anos atendidas nos serviços de atenção primária do Sistema Único de Saúde, a partir das bases de dados individuais do Sisvan. A qualidade dos dados foi avaliada anualmente por meio dos indicadores: cobertura, completude, razão entre sexos, distribuição da idade, preferência por dígitos de peso e estatura, valores de escore-z implausíveis, desvio-padrão e normalidade dos escores-z. RESULTADOS: N o t otal, 7 3.745.023 r egistros e 2 9.852.480 c rianças f oram i dentificados. A cobertura aumentou de 17,7% em 2008 para 45,4% em 2017. A completude da data de nascimento, peso e estatura correspondeu a quase 100% para todos os anos. A razão entre sexos foi equilibrada e aproximadamente similar a razão esperada, variando entre 0,8 e 1. A distribuição da idade revelou maiores percentuais de registros entre as idades de 2 a 4 anos até meados de 2015. Uma preferência pelos dígitos terminais “zero” e “cinco” foi identificada entre os registros de peso e estatura. As porcentagens de escores-z implausíveis excederam 1% para todos os índices antropométricos, com redução dos valores a partir de 2014. Uma alta dispersão dos escores-z, incluindo desvios-padrão entre 1,2 e 1,6, foi identificada principalmente nos índices incluindo estatura e nos registros de crianças menores de 2 anos e residentes das regiões Norte, Nordeste e Centro-Oeste. A distribuição dos escores-z foi simétrica para todos os índices e platicúrtica para estatura/idade e peso/idade. CONCLUSÕES: A qualidade dos dados antropométricos do Sisvan para crianças menores de 5 anos melhorou substancialmente entre 2008 e 2017. Alguns indicadores requerem atenção, sobretudo para medidas de estatura, cuja qualidade foi principalmente inferior entre os grupos mais vulneráveis a agravos nutricionais.",
+   "container-title": "Revista de Saúde Pública",
+   "DOI": "10.11606/s1518-8787.2023057004655",
+   "ISSN": "1518-8787",
+   "issue": "1",
+   "language": "en",
+   "page": "62",
+   "publisher": "Universidade de São Paulo. Agência de Bibliotecas e Coleções Digitais",
+   "title": "Quality of child anthropometric data from SISVAN, Brazil, 2008-2017",
+   "URL": "https://doi.org/10.11606/s1518-8787.2023057004655",
+   "volume": "57",
+   "author": [
+    {
+     "family": "Silva",
+     "given": "Natanael De Jesus"
+    },
+    {
+     "family": "Mello E Silva",
+     "given": "Juliana Freitas De"
+    },
+    {
+     "family": "Carrilho",
+     "given": "Thaís Rangel Bousquet"
+    },
+    {
+     "family": "Pinto",
+     "given": "Elizabete De Jesus"
+    },
+    {
+     "family": "Andrade",
+     "given": "Rafaella Da Costa Santin De"
+    },
+    {
+     "family": "Silva",
+     "given": "Sara Araújo"
+    },
+    {
+     "family": "Pedroso",
+     "given": "Jéssica"
+    },
+    {
+     "family": "Spaniol",
+     "given": "Ana Maria"
+    },
+    {
+     "family": "Bortolini",
+     "given": "Gisele Ane"
+    },
+    {
+     "family": "Fagundes",
+     "given": "Andhressa"
+    },
+    {
+     "family": "Nilson",
+     "given": "Eduardo Augusto Fernandes"
+    },
+    {
+     "family": "Fiaccone",
+     "given": "Rosemeire Leovigildo"
+    },
+    {
+     "family": "Kac",
+     "given": "Gilberto"
+    },
+    {
+     "family": "Barreto",
+     "given": "Maurício Lima"
+    },
+    {
+     "family": "Ribeiro-Silva",
+     "given": "Rita De Cássia"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2023",
+      9,
+      14
+     ]
+    ]
+   }
+  },
+  "cite": "(Silva dkk., 2023)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Silva, N. D. J., Mello E Silva, J. F. D., Carrilho, T. R. B., Pinto, E. D. J., Andrade, R. D. C. S. D., Silva, S. A., Pedroso, J., Spaniol, A. M., Bortolini, G. A., Fagundes, A., Nilson, E. A. F., Fiaccone, R. L., Kac, G., Barreto, M. L., &amp; Ribeiro-Silva, R. D. C. (2023). Quality of child anthropometric data from SISVAN, Brazil, 2008-2017. <i>Revista de Saúde Pública</i>, <i>57</i>(1), 62. https://doi.org/10.11606/s1518-8787.2023057004655</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.11606%2Fs1518-8787.2023057004655&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Quality%20of%20child%20anthropometric%20data%20from%20SISVAN%2C%20Brazil%2C%202008-2017&amp;rft.jtitle=Revista%20de%20Sa%C3%BAde%20P%C3%BAblica&amp;rft.volume=57&amp;rft.issue=1&amp;rft.aufirst=Natanael%20De%20Jesus&amp;rft.aulast=Silva&amp;rft.au=Natanael%20De%20Jesus%20Silva&amp;rft.au=Juliana%20Freitas%20De%20Mello%20E%20Silva&amp;rft.au=Tha%C3%ADs%20Rangel%20Bousquet%20Carrilho&amp;rft.au=Elizabete%20De%20Jesus%20Pinto&amp;rft.au=Rafaella%20Da%20Costa%20Santin%20De%20Andrade&amp;rft.au=Sara%20Ara%C3%BAjo%20Silva&amp;rft.au=J%C3%A9ssica%20Pedroso&amp;rft.au=Ana%20Maria%20Spaniol&amp;rft.au=Gisele%20Ane%20Bortolini&amp;rft.au=Andhressa%20Fagundes&amp;rft.au=Eduardo%20Augusto%20Fernandes%20Nilson&amp;rft.au=Rosemeire%20Leovigildo%20Fiaccone&amp;rft.au=Gilberto%20Kac&amp;rft.au=Maur%C3%ADcio%20Lima%20Barreto&amp;rft.au=Rita%20De%20C%C3%A1ssia%20Ribeiro-Silva&amp;rft.date=2023-09-14&amp;rft.pages=62&amp;rft.issn=1518-8787&amp;rft.language=en\"></span>\n</div>"
+ },
+ {
+  "id": "mataheru2026",
+  "key": "IZEZLX6Q",
+  "csl": {
+   "id": "http://zotero.org/users/7207399/items/IZEZLX6Q",
+   "type": "article-journal",
+   "abstract": "ABSTRACT Stunting is a chronic form of undernutrition with long-term consequences for children’s growth and development. Although the national prevalence of stunting in Indonesia has shown a downward trend, the rate in West Sulawesi Province remains high and exceeds the national average. This study aimed to examine risk factors associated with stunting among under-five children in West Sulawesi using data from the 2024 Indonesian Nutrition Status Survey (SSGI). A cross-sectional design with complex survey analysis was applied. Risk factors were assessed using bivariate and multivariate logistic regression and are presented as odds ratios (ORs) with 95% confidence intervals. The prevalence of stunting was 35.6%. Multivariate analysis identified low birth weight as the strongest risk factor for stunting (aOR = 2.08; 95% CI: 1.60–2.70). Other factors significantly associated with stunting included male sex (aOR = 1.24; 95% CI: 1.05–1.47), use of unprotected drinking water sources (aOR = 1.43; 95% CI: 1.08–1.90), low maternal education (aOR = 1.91; 95% CI: 1.45–2.51), medium maternal education (aOR = 1.36; 95% CI: 1.05–1.85), and maternal chronic energy deficiency during pregnancy (aOR = 1.47; 95% CI: 1.10–1.96). Stunting among children in West Sulawesi is influenced by a combination of biological, sociodemographic, and environmental factors, underscoring the need for integrated preventive interventions starting from pregnancy through early childhood. Keywords: Malnutrition, Stunting, Growth Dissorder, Toddler. ABSTRAK Stunting merupakan masalah gizi kronis yang berdampak jangka panjang terhadap pertumbuhan dan perkembangan anak. Meskipun prevalensi stunting nasional cenderung menurun, Provinsi Sulawesi Barat masih menunjukkan angka yang tinggi lebih dari rata-rata nasional. Penelitian ini bertujuan menganalisis faktor risiko yang berhubungan dengan kejadian stunting pada balita di Provinsi Sulawesi Barat berdasarkan data Survei Status Gizi Indonesia (SSGI) tahun 2024. Penelitian ini menggunakan desain potong lintang dengan analisis survei kompleks. Faktor risiko dianalisis menggunakan regresi logistik bivariat dan multivariat, serta disajikan dalam odds ratio (OR) dan interval kepercayaan 95%. Prevalensi stunting pada balita sebesar 35,6%. Analisis multivariat menunjukkan bahwa berat badan lahir rendah (BBLR) merupakan faktor risiko paling kuat terhadap stunting (aOR = 2,08; 95% CI: 1,60–2,70). Faktor lain yang berhubungan signifikan adalah jenis kelamin laki-laki (aOR = 1,24; 95% CI: 1,05–1,47), akses sumber air minum tidak terlindungi (aOR = 1,43; 95% CI: 1,08–1,90), pendidikan ibu rendah (aOR = 1,91; 95% CI: 1,45–2,51), pendidikan ibu menengah (aOR = 1,36; 95% CI: 1,05–1,85), serta riwayat kekurangan energi kronik (KEK) pada ibu saat hamil (aOR = 1,47; 95% CI: 1,10–1,96). Stunting pada balita di Sulawesi Barat dipengaruhi oleh faktor biologis, sosiodemografis, dan lingkungan, sehingga pencegahan perlu dilakukan secara terintegrasi sejak masa kehamilan hingga awal kehidupan anak. Kata Kunci: Malnutrisi, Stunting, Gangguan Pertumbuhan, Balita.",
+   "container-title": "Malahayati Nursing Journal",
+   "DOI": "10.33024/mnj.v8i6.25165",
+   "ISSN": "2655-4712",
+   "issue": "6",
+   "page": "12-27",
+   "publisher": "Universitas Malahayati Bandar Lampung",
+   "title": "Faktor Risiko yang Berhubungan dengan Kejadian Stunting pada Balita di Sulawesi Barat: Analisis Data SSGI 2024",
+   "URL": "https://doi.org/10.33024/mnj.v8i6.25165",
+   "volume": "8",
+   "author": [
+    {
+     "family": "Mataheru",
+     "given": "Jeanette Silvia"
+    },
+    {
+     "family": "Utari",
+     "given": "Diah Mulyawati"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2026",
+      6,
+      1
+     ]
+    ]
+   }
+  },
+  "cite": "(Mataheru & Utari, 2026)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Mataheru, J. S., &amp; Utari, D. M. (2026). Faktor Risiko yang Berhubungan dengan Kejadian Stunting pada Balita di Sulawesi Barat: Analisis Data SSGI 2024. <i>Malahayati Nursing Journal</i>, <i>8</i>(6), 12–27. https://doi.org/10.33024/mnj.v8i6.25165</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=info%3Adoi%2F10.33024%2Fmnj.v8i6.25165&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Faktor%20Risiko%20yang%20Berhubungan%20dengan%20Kejadian%20Stunting%20pada%20Balita%20di%20Sulawesi%20Barat%3A%20Analisis%20Data%20SSGI%202024&amp;rft.jtitle=Malahayati%20Nursing%20Journal&amp;rft.volume=8&amp;rft.issue=6&amp;rft.aufirst=Jeanette%20Silvia&amp;rft.aulast=Mataheru&amp;rft.au=Jeanette%20Silvia%20Mataheru&amp;rft.au=Diah%20Mulyawati%20Utari&amp;rft.date=2026-06-01&amp;rft.pages=12-27&amp;rft.spage=12&amp;rft.epage=27&amp;rft.issn=2655-4712\"></span>\n</div>"
+ },
+ {
+  "id": "kemenkes2023",
+  "key": "T3JYN6EY",
+  "csl": {
+   "id": "kemenkes2023",
+   "type": "webpage",
+   "citation-key": "kemenkes2023",
+   "language": "id",
+   "title": "Prevalensi stunting di Indonesia turun ke 21,6% dari 24,4%",
+   "URL": "https://www.kemkes.go.id/id/prevalensi-stunting-di-indonesia-turun-ke-216-dari-244",
+   "author": [
+    {
+     "literal": "Kementerian Kesehatan Republik Indonesia"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2023",
+      1,
+      25
+     ]
+    ]
+   }
+  },
+  "cite": "(Kementerian Kesehatan Republik Indonesia, 2023)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Kementerian Kesehatan Republik Indonesia. (2023, Januari 25). <i>Prevalensi stunting di Indonesia turun ke 21,6% dari 24,4%</i>. https://www.kemkes.go.id/id/prevalensi-stunting-di-indonesia-turun-ke-216-dari-244</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.type=webpage&amp;rft.title=Prevalensi%20stunting%20di%20Indonesia%20turun%20ke%2021%2C6%25%20dari%2024%2C4%25&amp;rft.identifier=https%3A%2F%2Fwww.kemkes.go.id%2Fid%2Fprevalensi-stunting-di-indonesia-turun-ke-216-dari-244&amp;rft.au=undefined&amp;rft.date=2023-01-25&amp;rft.language=id\"></span>\n</div>"
+ },
+ {
+  "id": "jme2025",
+  "key": "EZREA8D5",
+  "csl": {
+   "id": "unicef2025",
+   "type": "report",
+   "citation-key": "unicef2025",
+   "language": "en",
+   "publisher-place": "Geneva",
+   "title": "Levels and trends in child malnutrition: UNICEF/WHO/World Bank Group joint child malnutrition estimates: Key findings of the 2025 edition",
+   "URL": "https://www.who.int/publications/i/item/9789240112308",
+   "author": [
+    {
+     "literal": "UNICEF"
+    },
+    {
+     "literal": "World Health Organization"
+    },
+    {
+     "literal": "World Bank Group"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2025"
+     ]
+    ]
+   }
+  },
+  "cite": "(UNICEF dkk., 2025)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">UNICEF, World Health Organization, &amp; World Bank Group. (2025). <i>Levels and trends in child malnutrition: UNICEF/WHO/World Bank Group joint child malnutrition estimates: Key findings of the 2025 edition</i>. https://www.who.int/publications/i/item/9789240112308</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=report&amp;rft.btitle=Levels%20and%20trends%20in%20child%20malnutrition%3A%20UNICEF%2FWHO%2FWorld%20Bank%20Group%20joint%20child%20malnutrition%20estimates%3A%20Key%20findings%20of%20the%202025%20edition&amp;rft.place=Geneva&amp;rft.au=undefined&amp;rft.au=undefined&amp;rft.au=undefined&amp;rft.date=2025&amp;rft.language=en\"></span>\n</div>"
+ },
+ {
+  "id": "wholbw",
+  "key": "8NALHDCC",
+  "csl": {
+   "id": "wholbw",
+   "type": "webpage",
+   "citation-key": "wholbw",
+   "language": "en",
+   "note": "accessed: {\"date-parts\": [[2026, 10, 21]]}",
+   "title": "Low birth weight",
+   "URL": "https://www.who.int/data/nutrition/nlis/info/low-birth-weight",
+   "author": [
+    {
+     "literal": "World Health Organization"
+    }
+   ]
+  },
+  "cite": "(World Health Organization, t.t.)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">World Health Organization. (t.t.). <i>Low birth weight</i>. Diambil https://www.who.int/data/nutrition/nlis/info/low-birth-weight</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.type=webpage&amp;rft.title=Low%20birth%20weight&amp;rft.identifier=https%3A%2F%2Fwww.who.int%2Fdata%2Fnutrition%2Fnlis%2Finfo%2Flow-birth-weight&amp;rft.au=undefined&amp;rft.language=en\"></span>\n</div>"
+ },
+ {
+  "id": "who2019",
+  "key": "784JCPM2",
+  "csl": {
+   "id": "who2019",
+   "type": "report",
+   "citation-key": "who2019",
+   "ISBN": "978-92-4-151555-9",
+   "language": "en",
+   "publisher-place": "Geneva",
+   "title": "Recommendations for data collection, analysis and reporting on anthropometric indicators in children under 5 years old",
+   "URL": "https://www.who.int/publications/i/item/9789241515559",
+   "author": [
+    {
+     "literal": "World Health Organization"
+    },
+    {
+     "literal": "United Nations Children's Fund"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2019"
+     ]
+    ]
+   }
+  },
+  "cite": "(World Health Organization & United Nations Children’s Fund, 2019)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">World Health Organization &amp; United Nations Children’s Fund. (2019). <i>Recommendations for data collection, analysis and reporting on anthropometric indicators in children under 5 years old</i>. https://www.who.int/publications/i/item/9789241515559</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_id=urn%3Aisbn%3A978-92-4-151555-9&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=report&amp;rft.btitle=Recommendations%20for%20data%20collection%2C%20analysis%20and%20reporting%20on%20anthropometric%20indicators%20in%20children%20under%205%20years%20old&amp;rft.place=Geneva&amp;rft.au=undefined&amp;rft.au=undefined&amp;rft.date=2019&amp;rft.isbn=978-92-4-151555-9&amp;rft.language=en\"></span>\n</div>"
+ },
+ {
+  "id": "unglobalpulse2023",
+  "key": "NRD4ITVJ",
+  "csl": {
+   "id": "unglobalpulse2023",
+   "type": "report",
+   "citation-key": "unglobalpulse2023",
+   "language": "en",
+   "title": "Assessing the implementation of Indonesia's National Nutrition Information System (e-PPGBM): Challenges, gaps and opportunities",
+   "URL": "https://www.unglobalpulse.org/?p=908",
+   "author": [
+    {
+     "literal": "UN Global Pulse"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2023"
+     ]
+    ]
+   }
+  },
+  "cite": "(UN Global Pulse, 2023)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">UN Global Pulse. (2023). <i>Assessing the implementation of Indonesia’s National Nutrition Information System (e-PPGBM): Challenges, gaps and opportunities</i>. https://www.unglobalpulse.org/?p=908</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=report&amp;rft.btitle=Assessing%20the%20implementation%20of%20Indonesia's%20National%20Nutrition%20Information%20System%20(e-PPGBM)%3A%20Challenges%2C%20gaps%20and%20opportunities&amp;rft.au=undefined&amp;rft.date=2023&amp;rft.language=en\"></span>\n</div>"
+ },
+ {
+  "id": "kemenkes2010",
+  "key": "F6Z9QWJZ",
+  "csl": {
+   "id": "kemenkes2010",
+   "type": "document",
+   "citation-key": "kemenkes2010",
+   "language": "id",
+   "title": "Peraturan Menteri Kesehatan Nomor 155/Menkes/Per/I/2010 tentang Penggunaan Kartu Menuju Sehat (KMS) bagi Balita",
+   "author": [
+    {
+     "literal": "Kementerian Kesehatan Republik Indonesia"
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2010"
+     ]
+    ]
+   }
+  },
+  "cite": "(Kementerian Kesehatan Republik Indonesia, 2010)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Kementerian Kesehatan Republik Indonesia. (2010). <i>Peraturan Menteri Kesehatan Nomor 155/Menkes/Per/I/2010 tentang Penggunaan Kartu Menuju Sehat (KMS) bagi Balita</i>.</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.type=document&amp;rft.title=Peraturan%20Menteri%20Kesehatan%20Nomor%20155%2FMenkes%2FPer%2FI%2F2010%20tentang%20Penggunaan%20Kartu%20Menuju%20Sehat%20(KMS)%20bagi%20Balita&amp;rft.au=undefined&amp;rft.date=2010&amp;rft.language=id\"></span>\n</div>"
+ },
+ {
+  "id": "sanda2022",
+  "key": "PPK3PXXG",
+  "csl": {
+   "id": "sanda2022",
+   "type": "article-journal",
+   "citation-key": "sanda2022",
+   "container-title": "Hasanuddin Journal of Public Health",
+   "issue": "2",
+   "language": "id",
+   "page": "145-154",
+   "title": "Faktor risiko stunting pada balita di Puskesmas Tamalate Kota Makassar tahun 2022",
+   "URL": "https://journal.unhas.ac.id/index.php/hjph/article/view/21275",
+   "volume": "3",
+   "author": [
+    {
+     "family": "Sanda",
+     "given": "A."
+    },
+    {
+     "family": "Amiruddin",
+     "given": "R."
+    },
+    {
+     "family": "Rismayanti",
+     "given": "R."
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2022"
+     ]
+    ]
+   }
+  },
+  "cite": "(Sanda dkk., 2022)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Sanda, A., Amiruddin, R., &amp; Rismayanti, R. (2022). Faktor risiko stunting pada balita di Puskesmas Tamalate Kota Makassar tahun 2022. <i>Hasanuddin Journal of Public Health</i>, <i>3</i>(2), 145–154. https://journal.unhas.ac.id/index.php/hjph/article/view/21275</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Faktor%20risiko%20stunting%20pada%20balita%20di%20Puskesmas%20Tamalate%20Kota%20Makassar%20tahun%202022&amp;rft.jtitle=Hasanuddin%20Journal%20of%20Public%20Health&amp;rft.volume=3&amp;rft.issue=2&amp;rft.aufirst=A.&amp;rft.aulast=Sanda&amp;rft.au=A.%20Sanda&amp;rft.au=R.%20Amiruddin&amp;rft.au=R.%20Rismayanti&amp;rft.date=2022&amp;rft.pages=145-154&amp;rft.spage=145&amp;rft.epage=154&amp;rft.language=id\"></span>\n</div>"
+ },
+ {
+  "id": "ishak2026",
+  "key": "4U36NA8G",
+  "csl": {
+   "id": "ishak2026",
+   "type": "thesis",
+   "citation-key": "ishak2026",
+   "genre": "Tesis",
+   "language": "id",
+   "publisher-place": "Bogor",
+   "title": "Analisis hubungan karakteristik kader posyandu dengan kualitas data pengukuran status gizi dalam e-PPGBM di Kabupaten Toraja Utara",
+   "URL": "https://repository.ipb.ac.id/handle/123456789/172888",
+   "author": [
+    {
+     "family": "Ishak",
+     "given": "A."
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      "2026"
+     ]
+    ]
+   }
+  },
+  "cite": "(Ishak, 2026)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">Ishak, A. (2026). <i>Analisis hubungan karakteristik kader posyandu dengan kualitas data pengukuran status gizi dalam e-PPGBM di Kabupaten Toraja Utara</i> [Tesis]. https://repository.ipb.ac.id/handle/123456789/172888</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.title=Analisis%20hubungan%20karakteristik%20kader%20posyandu%20dengan%20kualitas%20data%20pengukuran%20status%20gizi%20dalam%20e-PPGBM%20di%20Kabupaten%20Toraja%20Utara&amp;rft.aufirst=A.&amp;rft.aulast=Ishak&amp;rft.au=A.%20Ishak&amp;rft.date=2026&amp;rft.language=id\"></span>\n</div>"
+ },
+ {
+  "id": "whodqa",
+  "key": "TK99XTWE",
+  "csl": {
+   "id": "whodqa",
+   "type": "webpage",
+   "citation-key": "whodqa",
+   "language": "en",
+   "note": "accessed: {\"date-parts\": [[2026, 10, 21]]}",
+   "title": "Data quality assurance (DQA)",
+   "URL": "https://www.who.int/data/data-collection-tools/health-service-data/data-quality-assurance-dqa",
+   "author": [
+    {
+     "literal": "World Health Organization"
+    }
+   ]
+  },
+  "cite": "(World Health Organization, t.t.)",
+  "bib": "<div class=\"csl-bib-body\" style=\"line-height: 2; margin-left: 2em; text-indent:-2em;\">\n  <div class=\"csl-entry\">World Health Organization. (t.t.). <i>Data quality assurance (DQA)</i>. Diambil https://www.who.int/data/data-collection-tools/health-service-data/data-quality-assurance-dqa</div>\n  <span class=\"Z3988\" title=\"url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.type=webpage&amp;rft.title=Data%20quality%20assurance%20(DQA)&amp;rft.identifier=https%3A%2F%2Fwww.who.int%2Fdata%2Fdata-collection-tools%2Fhealth-service-data%2Fdata-quality-assurance-dqa&amp;rft.au=undefined&amp;rft.language=en\"></span>\n</div>"
  }
 ]
