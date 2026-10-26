@@ -1,0 +1,31 @@
+a3_antar_desa                py=204 lain=204 cocok=204
+    tetap n_anak                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap kasus                  maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap pct                    maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap ci_low                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap ci_high                maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap resid_std              maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap chi2                   maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap df                     maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap p_chi2                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+a4_cakupan_desa_bulan        py=231 lain=231 cocok=231
+    tetap terukur                maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap sasaran                maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap cakupan_pct            maks selisih = 0          rerata = 0          NA-berbeda = 0
+a4_cakupan_bulan             py=33 lain=33 cocok=33
+    tetap terukur                maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap sasaran                maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap cakupan_pct            maks selisih = 0          rerata = 0          NA-berbeda = 0
+a5_uji_jk_umur               py=36 lain=36 cocok=36
+    tetap n_anak                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap chi2                   maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap df                     maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap p_chi2                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+p2_bulan_terukur             py=2 lain=2 cocok=2
+    tetap n_anak                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap pct_ge12               maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap pct_ge24               maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap median                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap p25                    maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap p75                    maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap maks                   maks selisih = 0          rerata = 0          NA-berbeda = 0

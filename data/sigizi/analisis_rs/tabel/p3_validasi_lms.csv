@@ -1,0 +1,3 @@
+validasi,median_selisih,pct_selisih_le_0_1
+tanpa koreksi posisi,0.005,95.9
+dengan koreksi posisi,0.005,97.9

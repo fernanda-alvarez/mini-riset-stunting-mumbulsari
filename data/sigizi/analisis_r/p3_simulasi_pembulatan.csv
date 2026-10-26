@@ -1,0 +1,19 @@
+"cara","tahun","rasio_rerata","rasio_min","rasio_maks","pct_di_bawah_min2"
+"ke atas 1 cm",2024,1.06,0.95,1.18,13.51
+"ke bawah 1 cm",2024,1.01,0.94,1.1,21.85
+"tanpa pembulatan",2024,1.07,1.01,1.14,17.21
+"terdekat 0,5 cm",2024,1.07,0.98,1.13,17.22
+"terdekat 1 cm",2024,1.03,0.92,1.13,17.37
+"ke atas 1 cm",2025,1.02,0.95,1.16,21.1
+"ke bawah 1 cm",2025,0.99,0.88,1.06,30.19
+"tanpa pembulatan",2025,1.05,0.99,1.14,25.25
+"terdekat 0,5 cm",2025,1.04,0.94,1.11,25.29
+"terdekat 1 cm",2025,1.01,0.92,1.13,25.39
+"ke atas 1 cm",2026,1.03,0.94,1.11,10.32
+"ke bawah 1 cm",2026,1,0.89,1.1,15.42
+"tanpa pembulatan",2026,1.1,0.95,1.24,12.57
+"terdekat 0,5 cm",2026,1.05,0.93,1.19,12.6
+"terdekat 1 cm",2026,1.02,0.93,1.1,12.7
+"TERAMATI (data)",2024,5.82,,,6.21
+"TERAMATI (data)",2025,5.04,,,13.02
+"TERAMATI (data)",2026,2.62,,,7.12

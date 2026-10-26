@@ -1,0 +1,147 @@
+a1_prevalensi_desa_tahun     py=320 lain=320 cocok=320
+    tetap n_anak                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_valid                maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap kasus                  maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap pct                    maks selisih = 0          rerata = 0          NA-berbeda = 0
+    acak  ci_low                 maks selisih = 0.58       rerata = 0.091312   NA-berbeda = 0
+    acak  ci_high                maks selisih = 0.69       rerata = 0.11206    NA-berbeda = 0
+a1_prevalensi_bulan          py=528 lain=528 cocok=528
+    tetap n_valid                maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap kasus                  maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap pct                    maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap ci_low                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap ci_high                maks selisih = 0          rerata = 0          NA-berbeda = 0
+a2_seri_bulanan              py=2610 lain=2610 cocok=2610
+    tetap t                      maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_valid                maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap pct                    maks selisih = 4.9738e-14 rerata = 1.0797e-14 NA-berbeda = 0
+a2_tren_mannkendall          py=84 lain=84 cocok=84
+    tetap n_bulan                maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap tau                    maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap p_mk                   maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap sen_pp_per_bulan       maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap sen_ci_low             maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap sen_ci_high            maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap sen_pp_per_tahun       maks selisih = 0          rerata = 0          NA-berbeda = 0
+a2_tren_segmented            py=288 lain=288 cocok=288
+    tetap n_bulan                maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap est                    maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap se_nw                  maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap p                      maks selisih = 0          rerata = 0          NA-berbeda = 0
+a3_antar_desa                berkas tidak ada (TRUE / FALSE)
+a4_cakupan_desa_bulan        berkas tidak ada (TRUE / FALSE)
+a4_cakupan_bulan             berkas tidak ada (TRUE / FALSE)
+a5_umur_jk                   py=216 lain=216 cocok=216
+    tetap n_anak                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_valid                maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap kasus                  maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap pct                    maks selisih = 0          rerata = 0          NA-berbeda = 0
+    acak  ci_low                 maks selisih = 0.67       rerata = 0.15176    NA-berbeda = 0
+    acak  ci_high                maks selisih = 0.59       rerata = 0.14977    NA-berbeda = 0
+a5_uji_jk_umur               berkas tidak ada (TRUE / FALSE)
+a6_zscore_ringkas            py=144 lain=144 cocok=144
+    tetap n_anak                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n                      maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap mean                   maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap sd                     maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap skew                   maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap p5                     maks selisih = 0.01       rerata = 0.00013889 NA-berbeda = 0
+    tetap p25                    maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap median                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap p75                    maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap p95                    maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap pct_di_bawah_min2      maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_min2_0_min1_9        maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_min2_1_min2_0        maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap rasio_tumpuk           maks selisih = 0          rerata = 0          NA-berbeda = 0
+    acak  ci_low                 maks selisih = 0.0349     rerata = 0.0049118  NA-berbeda = 0
+    acak  ci_high                maks selisih = 0.0237     rerata = 0.0044972  NA-berbeda = 0
+a6_zscore_histogram_tbu_s0   py=1152 lain=1152 cocok=1152
+    tetap n                      maks selisih = 0          rerata = 0          NA-berbeda = 0
+a6_zscore_bulanan_s0         py=783 lain=783 cocok=783
+    tetap n                      maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap mean                   maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap sd                     maks selisih = 0          rerata = 0          NA-berbeda = 0
+a7_kurva_umur                py=120 lain=120 cocok=120
+    tetap n                      maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap zs_tbu_mean            maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap zs_bbu_mean            maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap zs_bbtb_mean           maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap stunting_pct           maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap wasting_pct            maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap underweight_pct        maks selisih = 0          rerata = 0          NA-berbeda = 0
+    acak  zs_tbu_lo              maks selisih = 0.0169     rerata = 0.0051567  NA-berbeda = 0
+    acak  zs_tbu_hi              maks selisih = 0.0266     rerata = 0.0060208  NA-berbeda = 0
+    acak  zs_bbu_lo              maks selisih = 0.0165     rerata = 0.0051375  NA-berbeda = 0
+    acak  zs_bbu_hi              maks selisih = 0.0196     rerata = 0.00529    NA-berbeda = 0
+    acak  zs_bbtb_lo             maks selisih = 0.0222     rerata = 0.0062133  NA-berbeda = 0
+    acak  zs_bbtb_hi             maks selisih = 0.0217     rerata = 0.0058758  NA-berbeda = 0
+    acak  stunting_lo            maks selisih = 0.52       rerata = 0.12317    NA-berbeda = 0
+    acak  stunting_hi            maks selisih = 0.4        rerata = 0.1255     NA-berbeda = 0
+    acak  wasting_lo             maks selisih = 0.36       rerata = 0.099167   NA-berbeda = 0
+    acak  wasting_hi             maks selisih = 0.45       rerata = 0.1195     NA-berbeda = 0
+    acak  underweight_lo         maks selisih = 0.44       rerata = 0.13225    NA-berbeda = 0
+    acak  underweight_hi         maks selisih = 0.61       rerata = 0.1625     NA-berbeda = 0
+a8_faktor_risiko             py=198 lain=198 cocok=198
+    tetap OR                     maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap ci_low                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap ci_high                maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap p                      maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_obs                  maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_anak                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_kasus                maks selisih = 0          rerata = 0          NA-berbeda = 0
+a9_transisi_status           py=414 lain=414 cocok=414
+    tetap n_pasangan             maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_anak                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap pct                    maks selisih = 0          rerata = 0          NA-berbeda = 0
+    acak  ci_low                 maks selisih = 2.51       rerata = 0.16739    NA-berbeda = 0
+    acak  ci_high                maks selisih = 6.25       rerata = 0.24698    NA-berbeda = 0
+a9_kecepatan_tumbuh          py=42 lain=42 cocok=42
+    tetap n_pasangan             maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap mean_cm                maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap sd_cm                  maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap pct_turun_ge1cm        maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap pct_naik_ge5cm         maks selisih = 0          rerata = 0          NA-berbeda = 0
+a9_km_stunting               py=632 lain=632 cocok=632
+    tetap n_anak                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_kejadian             maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_berisiko             maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap kejadian               maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap S                      maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap ci_low                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap ci_high                maks selisih = 0          rerata = 0          NA-berbeda = 0
+a9_logrank                   py=4 lain=4 cocok=4
+    tetap n_anak                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_kejadian             maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap chi2                   maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap p                      maks selisih = 0          rerata = 0          NA-berbeda = 0
+p1_km_konfirmasi             py=20 lain=20 cocok=20
+    tetap n_anak                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_kejadian             maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap S_12bln_sejak_masuk    maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap S_24bln_sejak_masuk    maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap S_umur24               maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap S_umur36               maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_umur_tak_valid       maks selisih = 0          rerata = 0          NA-berbeda = 0
+p1_logrank                   py=40 lain=40 cocok=40
+    tetap n_anak                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_kejadian             maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap chi2                   maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap p                      maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap O_grup1                maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap E_grup1                maks selisih = 0          rerata = 0          NA-berbeda = 0
+p2_bulan_terukur             berkas tidak ada (TRUE / FALSE)
+p3_tumpuk_digit              py=8 lain=8 cocok=8
+    tetap n                      maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_atas                 maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap n_bawah                maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap rasio_tumpuk           maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap pct_di_bawah_min2      maks selisih = 0          rerata = 0          NA-berbeda = 0
+p3_simulasi_pembulatan       py=18 lain=18 cocok=18
+    acak  rasio_rerata           maks selisih = 0.04       rerata = 0.012778   NA-berbeda = 0
+    acak  rasio_min              maks selisih = 0.07       rerata = 0.029333   NA-berbeda = 0
+    acak  rasio_maks             maks selisih = 0.06       rerata = 0.028      NA-berbeda = 0
+    acak  pct_di_bawah_min2      maks selisih = 0.18       rerata = 0.087778   NA-berbeda = 0
+p3_validasi_lms              py=2 lain=2 cocok=2
+    tetap median_selisih         maks selisih = 0          rerata = 0          NA-berbeda = 0
+    tetap pct_selisih_le_0_1     maks selisih = 0          rerata = 0          NA-berbeda = 0

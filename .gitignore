@@ -12,3 +12,6 @@
 ~$*
 __pycache__/
 *.pyc
+
+# Berkas perantara SPSS (OMS)
+**/data/sigizi/analisis_spss/tmp/

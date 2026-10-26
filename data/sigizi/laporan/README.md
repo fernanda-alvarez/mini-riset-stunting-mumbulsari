@@ -9,7 +9,8 @@
 
 ## Membangun ulang
 ```bash
-python -I skrip/siapkan_laporan.py data/sigizi/analisis data/sumber/anak_bersih/anak_bersih.csv data/sigizi/laporan   # gambar + tabel_laporan.json
+python -I skrip/gabung_hasil_rs.py data/sigizi/analisis data/sigizi/analisis_r data/sigizi/analisis_spss data/sigizi/analisis_rs   # tabel hasil R + SPSS (sejak 26 Okt 2026)
+python -I skrip/siapkan_laporan.py data/sigizi/analisis_rs data/sumber/anak_bersih/anak_bersih.csv data/sigizi/laporan   # gambar + tabel_laporan.json
 python -I skrip/gambar_kerangka.py data/sigizi/laporan/gambar                                                          # kerangka teori dan konsep
 NODE_PATH=<folder node_modules berisi docx@9> node skrip/bangun_laporan.js data/sigizi/laporan data/sigizi/laporan/Laporan_Mini_Riset_Stunting_Mumbulsari.docx
 python -I skrip/pasang_sitasi_zotero.py data/sigizi/laporan/Laporan_Mini_Riset_Stunting_Mumbulsari.docx data/sigizi/laporan/referensi_zotero.json
@@ -20,3 +21,7 @@ Di `bangun_laporan.js` sitasi ditulis `[@id; @id]` (naratif: `Penulis dkk. [-@id
 `perbarui_daftar_isi.ps1` memperbarui nomor keterangan (field SEQ), Daftar Isi, Daftar Tabel, dan Daftar Gambar. Nomor tabel/gambar di teks ditulis manual dan harus urut sesuai kemunculan.
 
 Isi narasi ada di `skrip/bangun_laporan.js`; angka tabel dan gambar dari `tabel_laporan.json` dan `gambar/` (semua agregat). Angka di teks ditulis manual dan diperiksa terhadap `data/sigizi/analisis/tabel/`.
+
+
+## Sumber angka sejak 26 Okt 2026
+Tabel dan gambar kini dari hasil R dan SPSS (`data/sigizi/analisis_rs/`), bukan Python. Selisih hanya pada batas IK bootstrap (sel IK di Tabel 8, Lampiran 1 dan 2, Gambar 6); teks Bab 4.2 disesuaikan (stunting 2024: 6,0–7,1; 2026: 6,4–7,6). Subbab 3 (alat analisis) dan lampiran sumber ikut diperbarui di `bangun_laporan.js`. **File .docx belum dibangun ulang** dengan perubahan ini (Word sedang membuka berkasnya, modul node `docx` tidak ditemukan, Zotero tertutup); jalankan perintah di atas setelah itu terpenuhi.
