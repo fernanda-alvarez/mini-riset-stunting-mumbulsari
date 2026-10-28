@@ -60,7 +60,7 @@ def tren_bulanan():
     t1, t2 = range(0, 24), range(24, 33)
     ax.plot(list(t1), [a + b * t for t in t1], color=ABU, lw=1.6, ls=":")
     ax.plot(list(t2), [a + b * t + j + ds * (t - 24) for t in t2], color=ABU, lw=1.6, ls=":",
-            label="Garis tren regresi segmented (S0)")
+            label="Garis tren regresi segmen (S0)")
     ax.axvline(23.5, color="#888", lw=0.8)
     ax.set_ylim(0, max(x[1] for x in s0) * 1.12)
     ax.text(23.3, ax.get_ylim()[1] * 0.97, "Januari 2026:\ncakupan melonjak dan\ncara pencatatan berubah",
