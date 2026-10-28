@@ -1,37 +1,49 @@
-# Mini Riset: Status Gizi Balita pada Kunjungan MTBS, Puskesmas Mumbulsari 2025–2026
+# Mini Riset Stunting, Puskesmas Mumbulsari 2024–2026
 
-KOAS Ilmu Kesehatan Masyarakat, FK Universitas Jember.
+Analisis data rutin SigiziKesga (pengukuran antropometri balita) di Puskesmas Mumbulsari: prevalensi dan tren stunting, perbedaan antar desa, kualitas data pengukuran, dan faktor risiko. Kepaniteraan Ilmu Kesehatan Masyarakat, FK Universitas Jember.
 
-## Struktur folder
+Penulis: Thalia Anisya Dewi, Fitranda Kusyanto Taslim.
+
+## Data tidak ada di repo ini
+
+Data per anak memuat identitas (nama, NIK, nomor RM), jadi **tidak** diunggah. Yang ada di repo hanya hasil agregat (tingkat desa, bulan, atau kelompok umur) yang dipakai untuk tabel dan gambar laporan. Skrip yang membaca data per anak tidak bisa dijalankan tanpa data sumber, tetapi tetap bisa dibaca untuk memeriksa caranya.
+
+Berkas yang sengaja di-ignore ada di `.gitignore` (data sumber, data bersih per anak, rekap per posyandu, laporan `.docx`/`.pdf`, arsip).
+
+## Struktur
 
 | Folder | Isi |
 |---|---|
-| `data/sumber/` | Snapshot register asli dari puskesmas. Hanya dibaca, jangan diubah. Memuat identitas anak (tidak masuk git). |
-| `data/olahan/` | Hasil tiap tahap (kosong sampai dataset baru diproses): Data Bersih → Siap Olah → Z-score → Analisis Lanjut → Tabel & Grafik, Kelengkapan & Kualitas, Kualitas Tambahan, Daftar Tindak Lanjut (INTERNAL). |
-| `data/sensitivitas/` | Analisis sensitivitas yang memasukkan kunjungan Juli–Desember 2024. |
-| `grafik/` | Gambar G0–G4 yang dipakai di laporan. |
-| `skrip/` | Semua skrip Python, R, dan PowerShell. |
-| `referensi/` | 16 referensi (`.bib`, salinan `.json` dari Zotero) dan gaya sitasi `.csl`. |
-| `naskah/` | Draf proposal (sumber laporan). Laporan `.docx` dibuat di folder induk ini, PDF lama ada di `arsip/`. |
-| `presentasi/` | Slide presentasi. |
-| `arsip/` | Hasil kerja yang sudah selesai/dibekukan, satu subfolder per snapshot (struktur sama dengan folder induk). `snapshot_2026-10-13` = data register 13 Okt 2026 beserta laporan, grafik, presentasi, form, dan TODO-nya. |
-| `data/sigizi/` | Data SigiziKesga Jan 2025–Okt 2026. `rekap_status_gizi/` = Excel rekap per desa (agregat; **sheet `Laporan Puskesmas` = dataset analisis tingkat desa**). `daftar_status_gizi/` = dokumentasi dataset per anak. Baca `README.md` di tiap subfolder dulu. Data per anak (memuat identitas anak, tidak masuk git) ada di `data/sumber/sigizi_daftar_status_gizi_2026-10-19/`; `rekap_insiden_stunting/` = 10 berkas rekap insiden stunting per desa dan jenis kelamin (agregat, Jan–Okt 2026). `rekap_tambahan/` = Sasaran Anak (penyebut), Status Gizi & Usia (+JK), dan cek volume 2024. `inventaris_sigizikesga.md` = peta semua laporan situs dan analisis yang layak. |
-
-Daftar pekerjaan untuk dataset baru ada di `TODO.md`.
+| `skrip/` | Skrip Python, R, dan SPSS: pembersihan data, z-score WHO 2006, analisis, pembuatan gambar. `buat_gambar_laporan.py` membuat Gambar 3, 5, dan 9 laporan dari hasil agregat. |
+| `data/sigizi/analisis/` | Hasil analisis versi Python (`tabel/*.csv`, termasuk `who_lhfa_lms.csv`). |
+| `data/sigizi/analisis_r/` | Hasil analisis R (tren Mann-Kendall dan Sen, regresi segmen, Kaplan-Meier, bootstrap klaster, simulasi pembulatan). |
+| `data/sigizi/analisis_rs/`, `analisis_spss/` | Hasil gabungan R dan SPSS, serta pembanding dengan Python. |
+| `data/sigizi/laporan/gambar/` | Gambar yang dipakai di laporan. |
+| `data/sigizi/rekap_*/` | Rekap agregat dari situs SigiziKesga (per desa, jenis kelamin, insiden stunting). |
+| `referensi/` | Daftar pustaka (`.bib`, ekspor Zotero) dan gaya sitasi (`.csl`). |
+| `TODO.md`, `data/sigizi/RENCANA_ANALISIS.md` | Catatan kerja dan rencana analisis. |
 
 ## Menjalankan ulang
 
+Dengan data sumber lokal (tidak ada di repo):
+
 ```bash
-sh jalankan_semua.sh
+sh jalankan_analisis_sigizi.sh
 ```
 
-Dijalankan dari folder ini. Urutannya: siap olah → z-score (WHO 2006, paket R `anthro`) → analisis lanjut → tabel dan grafik → kelengkapan dan kualitas → sensitivitas 2024 → daftar tindak lanjut → laporan `.docx` → sitasi Zotero → daftar isi. PDF tidak dibuat ulang otomatis (ekspor manual dari Word bila perlu).
+Hanya gambar laporan, dari hasil agregat di repo:
 
-Data Bersih dibuat sekali dari data sumber dengan `skrip/cleanup_mtbs.py` (perintah ada di komentar `jalankan_semua.sh`).
+```bash
+python skrip/buat_gambar_laporan.py [folder_keluaran]
+```
 
-## Catatan
+Kebutuhan: Python 3.12 (pandas, numpy, matplotlib), R 4.6 (paket `anthro` untuk z-score WHO), dan SPSS 27 bila ingin mengulang analisis SPSS.
 
-- Laporan di folder induk ini dihasilkan skrip `buat_laporan_docx.py` dari draf proposal. Jangan diedit langsung, karena akan tertimpa saat build. Ubah teksnya di skrip.
-- Skrip membaca draf per nomor paragraf. Kalau struktur draf berubah, build berhenti dengan pesan "draf tidak sesuai peta".
-- Sitasi memakai field Zotero (gaya NLM/Vancouver bernomor). Di Word: tab Zotero → Refresh.
-- File yang memuat identitas anak (data sumber, Data Bersih, Daftar Tindak Lanjut, form isian) tidak masuk git dan tidak boleh dibagikan di grup.
+## Catatan kehati-hatian
+
+- Beberapa baris `desa_bulan.csv` memiliki jumlah anak kecil (n < 20; terendah 2). Hati-hati bila dipublikasikan.
+- Sebelum repo dibuat publik: periksa ulang sel kecil, dan pastikan izin dari puskesmas dan fakultas.
+
+## Lisensi
+
+Kode: MIT (`LICENSE`). Hasil agregat dan gambar: sebaiknya CC BY 4.0 bila nanti dipublikasikan.

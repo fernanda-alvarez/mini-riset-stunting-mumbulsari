@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Jika memakai kode atau hasil agregat ini, mohon sitasi sebagai berikut."
+title: "Mini Riset Stunting pada Data Rutin SigiziKesga, Puskesmas Mumbulsari 2024-2026"
+type: software
+authors:
+  - family-names: "Dewi"
+    given-names: "Thalia Anisya"
+  - family-names: "Taslim"
+    given-names: "Fitranda Kusyanto"
+license: MIT
+date-released: 2026-10-28

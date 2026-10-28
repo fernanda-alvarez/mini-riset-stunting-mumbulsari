@@ -15,3 +15,21 @@ __pycache__/
 
 # Berkas perantara SPSS (OMS)
 **/data/sigizi/analisis_spss/tmp/
+
+# --- Ditambahkan untuk repo GitHub (privat) ---
+# Arsip snapshot lama, naskah, dan presentasi tidak ikut
+arsip/
+naskah/
+presentasi/
+# Laporan akhir (disimpan di luar repo)
+*.docx
+*.pdf
+*.pptx
+# Rekap per posyandu: banyak sel kecil (0-3 anak) dengan nama posyandu
+**/rekap_status_gizi_per_posyandu.*
+**/rekap_status_gizi/_mentah/
+# Data per anak untuk SPSS/R dan berkas biner lain
+*.sav
+*.rds
+*.RData
+.Rhistory
