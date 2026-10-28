@@ -24,4 +24,4 @@ Isi narasi ada di `skrip/bangun_laporan.js`; angka tabel dan gambar dari `tabel_
 
 
 ## Sumber angka sejak 26 Okt 2026
-Tabel dan gambar kini dari hasil R dan SPSS (`data/sigizi/analisis_rs/`), bukan Python. Selisih hanya pada batas IK bootstrap (sel IK di Tabel 8, Lampiran 1 dan 2, Gambar 6); teks Bab 4.2 disesuaikan (stunting 2024: 6,0–7,1; 2026: 6,4–7,6). Subbab 3 (alat analisis) dan lampiran sumber ikut diperbarui di `bangun_laporan.js`. **File .docx belum dibangun ulang** dengan perubahan ini (Word sedang membuka berkasnya, modul node `docx` tidak ditemukan, Zotero tertutup); jalankan perintah di atas setelah itu terpenuhi.
+Tabel dan gambar kini dari hasil R dan SPSS (`data/sigizi/analisis_rs/`), bukan Python. Selisih hanya pada batas IK bootstrap (sel IK di Tabel 8, Lampiran 1 dan 2, Gambar 6); teks Bab 4.2 disesuaikan (stunting 2024: 6,0–7,1; 2026: 6,4–7,6). Subbab 3 (alat analisis) dan lampiran sumber ikut diperbarui di `bangun_laporan.js`. File .docx dibangun ulang 26 Okt 2026 (53 halaman, 93 sitasi Zotero, daftar isi diperbarui).
