@@ -24,7 +24,7 @@ anak_analisis.csv (lokal)
 
 `jalankan_analisis_sigizi.sh` di akar repo menjalankan urutan ini dari `siapkan_data_spss_r.py` sampai `siapkan_laporan.py`.
 
-**Skenario S0–S3.** Hasil dihitung pada empat himpunan data untuk menguji kekokohan terhadap masalah kualitas pengukuran: S0 semua data yang lolos pembersihan; S1 tanpa Lampeji, Mumbulsari, dan Lengkong untuk Jan–Sep 2026; S2 tanpa desa-tahun dengan penumpukan angka tinggi badan; S3 tanpa desa-bulan dengan entri massal. Aturan lengkap ada di `data/sigizi/RENCANA_ANALISIS.md`.
+**Skenario S0–S3.** Hasil dihitung pada empat himpunan data untuk menguji kekokohan terhadap masalah kualitas pengukuran: S0 semua data yang lolos pembersihan; S1 tanpa Lampeji, Mumbulsari, dan Lengkong untuk Jan–Sep 2026; S2 hanya desa-tahun dengan heaping tinggi badan rendah (< 70%); S3 tanpa desa-bulan anomali (TB/U Outlier ≥ 10% atau stunting ≥ 50%). Definisi mengikuti subbab 3.8.2 laporan; aturan lengkap ada di `data/sigizi/RENCANA_ANALISIS.md`.
 
 **Metode bersama.** Estimasi titik memakai anak-bulan yang dikumpulkan; IK 95% memakai bootstrap klaster per anak (B = 500). Uji hipotesis memakai satu pengukuran acak per anak per tahun supaya sampel bebas. Python dan R/SPSS sengaja mengerjakan analisis yang sama supaya bisa dibandingkan; selisih hanya pada batas IK bootstrap (RNG berbeda).
 
