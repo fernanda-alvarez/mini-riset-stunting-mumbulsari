@@ -1,50 +1,55 @@
-# Rencana analisis data SigiziKesga (Puskesmas Mumbulsari)
+# Rencana analisis data SigiziKesga
 
-Dibuat 19 Okt 2026. Status tiap tahap ada di judulnya. Sumber data dan kualitasnya: `daftar_status_gizi/README.md`, `rekap_status_gizi/README.md`, `rekap_tambahan/README.md`.
+Dokumen ini memuat keputusan dasar, tahap pembersihan data, dan daftar analisis yang dikerjakan pada data SigiziKesga Puskesmas Mumbulsari. Rencana disusun pada 19 Oktober 2026 sebelum analisis dijalankan. Sumber data dan kualitasnya dijelaskan di [`daftar_status_gizi/README.md`](daftar_status_gizi/README.md), [`rekap_status_gizi/README.md`](rekap_status_gizi/README.md), dan [`rekap_tambahan/README.md`](rekap_tambahan/README.md).
 
-## Tahap 0 — Keputusan dasar [DISETUJUI 19 Okt 2026]
-- **Periode**: Jan 2024–Sep 2026. Okt 2026 dibuang (belum final). 2024 ikut dianalisis atas persetujuan pembimbing.
-- **Dua unit analisis**: desa-bulan (7 desa × 33 bulan) dan anak-bulan (±108 ribu pengukuran, ±6.300 anak).
-- **Data bermasalah ditandai (flag), tidak dihapus**, lalu dibandingkan lewat skenario sensitivitas:
-  - **S0**: semua data.
-  - **S1**: tanpa Lampeji, Mumbulsari, Lengkong untuk Jan–Sep 2026 (diperluas 19 Okt 2026: Sep 2026 berpola sama dengan Jan–Agu).
-  - **S2**: hanya desa-tahun dengan heaping tinggi badan rendah.
-  - **S3**: tanpa hari entri massal.
+## Tahap 0: keputusan dasar
 
-## Tahap 1 — Data cleaning [DISETUJUI, SELESAI 19 Okt 2026; hasil dan definisi flag aktual: `analisis/README.md`]
-Perubahan dari usulan: "entri massal" dipecah menjadi `f_tgl_seragam` (informasi) dan `f_anomali_desabulan` (dipakai di S3); `statsmodels` tidak bisa dipasang (ARM64), regresi ditulis dengan `scipy`.
-1. NIK diganti ID acak; Nama, Nama Ortu, Alamat, RT/RW dibuang; kolom kosong dibuang (KPSP, KIA, Kelas Ibu).
-2. BB Lahir (kg) → gram, turunkan BBLR (<2.500 g) dan PBLR (<48 cm); hitung ulang umur dari Tgl Lahir dan tanggal ukur.
-3. Flag kualitas, satu kolom per aturan: ZS = ±1000; tinggi/berat 0; berat > 40; tinggi > 130; tanggal ukur di luar bulan berkas; Desa/Posyandu kosong; NIK ganda dalam satu bulan; entri massal (tanggal modus menumpuk di desa-bulan); TB/U Outlier; Cara Ukur tidak sesuai umur; heaping per desa-tahun.
-4. Opsional: hitung ulang z-score WHO (butuh tabel LMS).
-5. Keluaran: `anak_bersih` (anak-bulan), `desa_bulan` (7 × 33: persen stunting, wasting, underweight, cakupan, kolom kualitas), log jumlah baris kena tiap flag.
+- **Periode.** Januari 2024 sampai September 2026. Oktober 2026 tidak dipakai karena bulannya masih berjalan dan datanya belum final.
+- **Dua unit analisis.** Desa-bulan (7 desa × 33 bulan) dan anak-bulan (sekitar 108 ribu pengukuran dari sekitar 6.300 anak).
+- **Data bermasalah ditandai (flag) dan tidak dihapus**, lalu dampaknya diuji lewat empat skenario sensitivitas:
+  - **S0**: semua baris tanpa flag keras dan dengan desa terisi.
+  - **S1**: S0 tanpa Lampeji, Mumbulsari, dan Lengkong untuk Januari sampai September 2026.
+  - **S2**: S0 hanya pada desa-tahun dengan penumpukan digit tinggi badan rendah (kurang dari 70%).
+  - **S3**: S0 tanpa desa-bulan anomali.
 
-## Tahap 2 — Analisis 1–12 [DISETUJUI]
-| # | Analisis | Metode | Catatan kelayakan |
+## Tahap 1: pembersihan data
+
+Dikerjakan oleh `skrip/bersihkan_data_anak.py`. Definisi flag dan skenario yang dipakai ada di [`analisis/README.md`](analisis/README.md). Langkah-langkahnya:
+
+1. NIK diganti ID acak. Kolom nama, nama orang tua, alamat, dan RT/RW dibuang, begitu juga kolom yang hampir kosong (KPSP, KIA, Kelas Ibu).
+2. Berat lahir (dalam kg) diubah ke gram, lalu diturunkan BBLR (berat lahir di bawah 2.500 g) dan PBLR (panjang lahir di bawah 48 cm). Umur dihitung ulang dari tanggal lahir dan tanggal ukur.
+3. Setiap aturan kualitas menjadi satu kolom flag: z-score penanda, tinggi atau berat nol, berat di atas 40 kg, tinggi di atas 130 cm, tanggal ukur di luar bulan berkas, desa atau posyandu kosong, NIK ganda dalam satu bulan, tanggal ukur yang seragam, TB/U outlier, cara ukur yang tidak sesuai umur, dan penumpukan digit tinggi badan per desa-tahun. Pada pelaksanaan, "entri massal" dipecah menjadi `f_tgl_seragam` (informasi) dan `f_anomali_desabulan` (dipakai di S3).
+4. Keluarannya: dataset anak-bulan, tabel desa-bulan (persen stunting, wasting, underweight, cakupan, dan kolom kualitas), dan log jumlah baris yang terkena tiap flag.
+
+Perhitungan ulang z-score WHO bersifat opsional dan tidak dikerjakan di tahap ini, karena label situs sudah konsisten dengan z-score.
+
+## Tahap 2: analisis
+
+| # | Analisis | Metode | Catatan |
 |---|---|---|---|
-| 1 | Prevalensi stunting, wasting, underweight | persen + CI Wilson, per desa dan bulan | layak, dengan caveat heaping |
-| 2 | Tren 2024→2026 | uji tren (Cochran-Armitage/Mann-Kendall), regresi segmented | dibaca bersama perubahan cakupan |
-| 3 | Antar desa | chi-square, forest plot | layak |
-| 4 | Cakupan ukur/sasaran | deskriptif + tren | 22 bulan sudah ada, 2024 dihitung baru |
-| 5 | Status gizi menurut umur dan JK | tabel silang | layak |
-| 6 | Distribusi z-score | rerata, SD, histogram per tahun | bukti kualitas data |
-| 7 | Prevalensi per kelompok umur dan JK | tabel, kurva umur | layak |
-| 8 | Faktor risiko BBLR, PBLR, JK, umur | regresi logistik (GEE per anak) | MBG, KPSP, KIA, Kelas Ibu dikeluarkan |
-| 9 | Longitudinal | insiden dan pemulihan stunting, Kaplan-Meier, lintasan z-score | layak, kekuatan utama dataset |
-| 10 | Dampak MBG | deskriptif saja | hanya 275 pengukuran "ya", tidak layak inferensial |
-| 11 | Spasial | tingkat desa (7 titik) | tanpa peta kecuali ada shapefile; posyandu tidak dipakai |
-| 12 | Kualitas data | heaping, z-score piling, entri massal | masuk Metode dan Keterbatasan |
+| 1 | Prevalensi stunting, wasting, dan underweight | Persentase dengan interval kepercayaan, per desa dan bulan | Dibaca bersama masalah penumpukan digit |
+| 2 | Tren 2024 sampai 2026 | Mann-Kendall dan kemiringan Sen, regresi segmented | Dibaca bersama perubahan cakupan |
+| 3 | Perbedaan antar desa | Chi-kuadrat dan residual terstandar | |
+| 4 | Cakupan (terukur dibagi sasaran) | Deskriptif dan tren | Sasaran tersedia sejak Januari 2025 |
+| 5 | Status gizi menurut umur dan jenis kelamin | Tabel silang dan chi-kuadrat | |
+| 6 | Distribusi z-score | Rerata, SD, histogram per tahun | Sebagai pemeriksaan kualitas data |
+| 7 | Prevalensi menurut kelompok umur dan jenis kelamin | Tabel dan kurva umur | |
+| 8 | Faktor risiko (BBLR, PBLR, jenis kelamin, umur) | Regresi logistik dengan galat baku robust klaster per anak | MBG, KPSP, KIA, dan Kelas Ibu tidak dianalisis karena hampir kosong atau tidak konsisten |
+| 9 | Longitudinal | Insiden dan pemulihan stunting, Kaplan-Meier, kecepatan tumbuh | Memanfaatkan pengukuran berulang |
+| 10 | MBG | Deskriptif saja | Terlalu sedikit pengukuran berstatus "ya" untuk inferensi |
+| 11 | Profil per desa | Tingkat desa (7 titik) | Tanpa peta, dan posyandu tidak dipakai |
+| 12 | Kualitas data | Penumpukan digit, penumpukan z-score, tanggal ukur seragam | Masuk ke metode dan keterbatasan |
 
-Fokus: utama tren dan perbandingan desa (1–5), sekunder faktor risiko dan longitudinal (7–9).
+Analisis tambahan P1 (Kaplan-Meier dengan kejadian terkonfirmasi), P2 (jumlah bulan terukur per anak), dan P3 (penumpukan digit dan simulasi pembulatan) dikerjakan kemudian saat telaah laporan. Prioritas analisis: tren dan perbandingan desa (1–5) sebagai utama, faktor risiko dan longitudinal (7–9) sebagai sekunder.
 
-## Tahap 3 — Excel [USULAN]
-Satu workbook `Analisis_Stunting_Mumbulsari.xlsx` (openpyxl): Ringkasan, Kamus Data, satu sheet per analisis (tabel + grafik native), Data Desa-Bulan, Kualitas. Gaya: header berwarna, panel dibekukan, filter, format angka/persen, lebar kolom otomatis, color scale, setelan cetak. Excel lama (`rekap_status_gizi_per_posyandu.xlsx`, `sasaran_cakupan_cek2024.xlsx`) dirapikan dengan gaya yang sama.
+## Tahap 3: workbook Excel
 
-## Tahap 4 — Urutan kerja
-Cleaning → dataset desa-bulan → analisis 1–5 → 6–9 → 10–12 → workbook akhir. Berhenti dan komit di tiap akhir tahap.
+Satu workbook, `analisis/Analisis_Stunting_Mumbulsari.xlsx`, dibuat dengan openpyxl. Isinya ringkasan, kamus, satu sheet per analisis (tabel dan grafik Excel), data desa-bulan, dan kualitas data. Tampilannya memakai header berwarna, panel yang dibekukan, filter, format angka dan persen, lebar kolom otomatis, color scale, dan setelan cetak.
 
-## Keputusan terbuka
-1. Pertanyaan utama (usulan: tren + antar desa utama; faktor risiko + longitudinal sekunder).
-2. Dataset per anak yang dipseudonimkan masuk git atau tetap di `data/sumber/` (sementara: tetap di `data/sumber/`).
-3. Pemasangan paket Python `pandas`, `scipy`, `statsmodels`, `matplotlib` (belum terpasang; dibutuhkan analisis 2, 8, 9).
-4. Satu workbook utama atau beberapa berkas (usulan: satu).
+## Tahap 4: urutan kerja
+
+Pembersihan data, dataset desa-bulan, analisis 1–5, lalu 6–9, lalu 10–12, dan terakhir workbook. Setiap tahap diakhiri dengan commit.
+
+## Keputusan tentang perangkat lunak
+
+Pembersihan data dan penandaan skenario dikerjakan di Python (`pandas`, `scipy`, `matplotlib`). Paket `statsmodels` tidak bisa dipasang di komputer ARM64 yang dipakai (tidak ada wheel dan build-nya membutuhkan Visual Studio), sehingga regresi logistik dengan galat baku robust klaster ditulis sendiri dengan `scipy`. Pada pelaksanaan akhir, analisis statistik dikerjakan ulang di R dan SPSS dan dibandingkan dengan hasil Python (lihat [`analisis_r/README.md`](analisis_r/README.md) dan [`analisis_spss/README.md`](analisis_spss/README.md)).

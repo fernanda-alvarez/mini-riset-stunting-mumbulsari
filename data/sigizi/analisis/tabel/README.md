@@ -1,88 +1,60 @@
-# Tabel analisis 1–5 (Tahap 2)
+# Tabel hasil analisis (versi Python)
 
-Dibuat 19 Okt 2026 oleh `skrip/analisis_tahap2.py` dari `anak_bersih.csv` (lokal) dan `rekap_tambahan/sasaran_cakupan_cek2024.xlsx`. Semua agregat, aman di git. Definisi flag dan skenario S0–S3: `../README.md`. Skrip menjalankan verifikasi silang (kasus per desa-tahun = jumlah per bulan = `desa_bulan.csv`; n analisis 5 = n analisis 1; sasaran dan terukur cocok dengan sheet Cakupan, selisih ≤ 8 anak tanpa desa).
+Folder ini berisi tabel CSV keluaran `skrip/analisis_tahap2.py` (analisis 1–5), `analisis_tahap2b.py` (analisis 6–9), dan `analisis_tahap2c.py` (analisis tambahan P1–P3). Semuanya agregat. Tabel dihitung dari `anak_bersih.csv` (lokal) dan `data/sigizi/rekap_tambahan/sasaran_cakupan_cek2024.xlsx`. Definisi flag dan skenario S0–S3 ada di [`../README.md`](../README.md). Tabel versi R dan SPSS memakai nama dan kolom yang sama (lihat [`../../analisis_r/README.md`](../../analisis_r/README.md) dan [`../../analisis_spss/README.md`](../../analisis_spss/README.md)).
 
-## Metode
-- **Titik estimasi**: anak-bulan dikumpulkan, sama dengan situs dan Laporan Puskesmas. Outcome biner dari label situs; kategori Outlier dikeluarkan dari penyebut.
-- **CI 95%**: bootstrap klaster per anak (500 ulangan, seed 20261019), karena anak yang sama diukur berulang. CI bulanan: Wilson (satu bulan = anak berbeda).
-- **Uji hipotesis** (antar desa, JK, umur): satu pengukuran acak per anak per tahun (seed tetap) supaya sampel bebas. "Pertama" tidak dipakai karena Januari sering anomali.
-- **Tren**: Mann-Kendall + Sen slope (33 titik bulanan). **Segmented**: OLS dengan titik patah Jan 2026, SE Newey-West (lag 3); parameter `lompatan_2026-01_pp` = lompatan level pada Jan 2026.
+Skrip menjalankan pemeriksaan silang saat berjalan: kasus per desa-tahun harus sama dengan jumlah kasus per bulan di `desa_bulan.csv`, jumlah anak pada analisis 5 harus sama dengan analisis 1, dan jumlah sasaran serta anak terukur harus cocok dengan sheet Cakupan (selisihnya paling banyak 8 anak yang tidak punya desa).
 
-## Berkas
-| Berkas | Isi |
+## Metode yang berlaku di semua tabel
+
+**Titik estimasi.** Prevalensi dihitung dari seluruh pengukuran anak-bulan yang dikumpulkan, sama seperti situs SigiziKesga dan Laporan Puskesmas. Outcome biner diambil dari label situs, dan pengukuran berkategori "Outlier" dikeluarkan dari penyebut.
+
+**Interval kepercayaan.** Untuk prevalensi per desa dan tahun dipakai bootstrap klaster per anak (500 ulangan, seed 20261019), karena anak yang sama diukur berulang dan barisnya tidak saling bebas. Untuk prevalensi bulanan dipakai interval Wilson, karena dalam satu bulan setiap anak hanya muncul sekali.
+
+**Uji hipotesis.** Perbandingan antar desa, jenis kelamin, dan umur memakai chi-kuadrat pada satu pengukuran acak per anak per tahun (seed tetap), supaya sampelnya saling bebas. Pengukuran "pertama" tidak dipakai karena Januari sering bermasalah.
+
+**Tren.** Deret bulanan (33 titik) diuji dengan Mann-Kendall dan kemiringan Sen. Regresi segmented memakai OLS dengan titik patah pada Januari 2026 dan galat baku Newey-West (lag 3); parameter `lompatan_2026-01_pp` adalah lompatan level pada Januari 2026 dalam poin persen.
+
+**Regresi logistik.** Ditulis sendiri dengan metode IRLS dan galat baku robust klaster per anak, karena `statsmodels` tidak tersedia di komputer ARM64 yang dipakai. Ada uji internal yang mereproduksi odds ratio dari tabel 2×2 dan galat baku Woolf. Pemeriksaan lain: jumlah pasangan pengukuran tidak boleh melebihi jumlah baris, dan kurva Kaplan-Meier harus menurun monoton.
+
+## Analisis 1–5: prevalensi, tren, antar desa, cakupan, umur dan jenis kelamin
+
+| Berkas | Isi dan kolom utama |
 |---|---|
-| `a1_prevalensi_desa_tahun.csv` | prevalensi stunting, wasting, underweight, gizi lebih per skenario × desa (+SEMUA) × tahun, dengan CI klaster |
-| `a1_prevalensi_bulan.csv` | prevalensi bulanan gabungan semua desa per skenario |
-| `a2_seri_bulanan.csv`, `a2_tren_mannkendall.csv`, `a2_tren_segmented.csv` | deret bulanan per desa dan hasil uji tren |
-| `a3_antar_desa.csv` | prevalensi, residual terstandar, dan uji chi-square antar 7 desa per tahun |
-| `a4_cakupan_desa_bulan.csv`, `a4_cakupan_bulan.csv` | terukur / sasaran (sasaran hanya ada 2025-01..2026-09; 2024 tanpa penyebut) |
-| `a5_umur_jk.csv`, `a5_uji_jk_umur.csv` | prevalensi menurut kelompok umur × JK (S0, S1) dan uji chi-square JK dan umur |
+| `a1_prevalensi_desa_tahun.csv` | Prevalensi stunting, wasting, underweight, dan gizi lebih per skenario, desa (ditambah `SEMUA` untuk seluruh Puskesmas), dan tahun. Kolom: `n_anak`, `n_valid` (pengukuran yang masuk penyebut), `kasus`, `pct`, `ci_low`, `ci_high`. |
+| `a1_prevalensi_bulan.csv` | Prevalensi bulanan gabungan semua desa per skenario, dengan interval Wilson. |
+| `a2_seri_bulanan.csv` | Deret bulanan per desa dan outcome: `t` (indeks bulan, 0 = Januari 2024), `n_valid`, `pct`. |
+| `a2_tren_mannkendall.csv` | Hasil Mann-Kendall (`tau`, `p_mk`) dan kemiringan Sen dalam poin persen per bulan dan per tahun, dengan interval kepercayaannya. |
+| `a2_tren_segmented.csv` | Parameter regresi segmented (`parameter`, `est`, `se_nw`, `p`). |
+| `a3_antar_desa.csv` | Prevalensi per desa dalam satu tahun, residual terstandar (`resid_std`, nilai di luar ±2 menandai desa yang menyimpang), serta statistik chi-kuadrat antar tujuh desa (`chi2`, `df`, `p_chi2`). |
+| `a4_cakupan_bulan.csv`, `a4_cakupan_desa_bulan.csv` | Anak terukur dibagi sasaran (`cakupan_pct`). Sasaran hanya tersedia Januari 2025 sampai September 2026, jadi 2024 tidak punya penyebut. |
+| `a5_umur_jk.csv` | Prevalensi menurut kelompok umur dan jenis kelamin (skenario S0 dan S1). |
+| `a5_uji_jk_umur.csv` | Uji chi-kuadrat untuk jenis kelamin dan kelompok umur terhadap tiap outcome. |
 
-## Temuan utama (baca bersama peringatan)
-1. **Prevalensi gabungan Puskesmas (S0)**: stunting 6,5% (2024), 13,1% (2025), 7,0% (2026); wasting 7,8%, 8,9%, 6,1%; underweight 10,1%, 12,4%, 10,6%. Naik-turun ini **bukan tren nyata**, lihat poin 2–3.
-2. **Prevalensi per desa berubah tidak masuk akal antar tahun**: stunting Mumbulsari 4,2% → 28,4% → 1,9%; Lengkong 14,0% → 24,2% → 2,4%; Tamansari 1,3% → 14,9% → 8,9%; Suco 8,7% → 8,5% → **21,5%** (satu-satunya desa yang naik tajam di 2026); Lampeji 4,8% → 6,2% → 1,4%. Perubahan sebesar itu pada populasi yang stabil tidak lazim, dan yang melonjak/ambruk adalah desa-desa yang diketahui bermasalah pencatatannya (`../README.md`). Selisih antar desa signifikan (chi-square p < 0,001 tiap tahun, termasuk S3), tetapi **lebih mencerminkan cara pencatatan per desa daripada beda biologis**.
-3. **Tren pooled tidak dapat ditafsirkan sebagai tren**: segmented S0 menunjukkan lompatan −10,6 poin stunting pada Jan 2026 (p < 0,001); itu terjadi bersamaan dengan lonjakan cakupan dan perubahan pencatatan. Pada S1 komposisi desa berubah setelah Jan 2026 (tiga desa dibuang), jadi tren naik yang tampak di S1 (Sen +3,0 poin/tahun, p = 0,0004) adalah artefak komposisi, bukan kenaikan stunting. Tren harus dibaca **per desa dan dalam periode yang metode pencatatannya sama**.
-4. **Cakupan**: 56–72% sepanjang 2025, **92–95% sejak Jan 2026**. Per desa 2026: Lampeji, Lengkong, Mumbulsari rata-rata **100%** dari sasaran, tepat pada tiga desa yang berpola satu tanggal ukur per bulan dan stunting ±1–2%. Cakupan 100% dengan satu tanggal per bulan lebih mirip pengisian daftar sasaran massal daripada pengukuran nyata. Suco justru turun (86% → 79%). 2024 tanpa sasaran; jumlah terukur 2.741–3.216 per bulan.
-5. **Umur dan JK** (uji pada satu pengukuran acak per anak per tahun, S0): menurut kelompok umur, ketiga outcome berbeda bermakna hampir di semua tahun (p < 0,05; pengecualian underweight 2025, p = 0,06). Menurut JK: stunting bermakna di 2025 dan 2026 (p = 0,006 dan 0,001) tetapi tidak di 2024 (p = 0,08); wasting bermakna semua tahun (p 0,017–0,030); underweight bermakna 2024 dan 2026 (p = 0,004 dan 0,048) tetapi tidak 2025 (p = 0,54). Arah dan besar efek ada di `a5_umur_jk.csv` dan belum dibaca di sini. Uji ini juga terpengaruh kualitas data per desa, dan beberapa p mendekati 0,05 tanpa koreksi perbandingan ganda (18 uji).
+## Analisis 6–9: distribusi z-score, kurva umur, faktor risiko, longitudinal
 
-## Implikasi
-Prevalensi absolut per desa-tahun dan perbandingan antar desa tidak boleh dilaporkan tanpa kualifikasi. Analisis yang lebih tahan terhadap masalah ini: perubahan **dalam anak** (analisis 9, longitudinal), distribusi z-score (analisis 6), dan analisis hanya pada desa-periode dengan pencatatan yang konsisten (Karangkedawung, Kawangrejo, Suco sepanjang 2024–2026; Lampeji/Lengkong/Mumbulsari 2025).
-
-# Analisis 6–9 (`skrip/analisis_tahap2b.py`, 19 Okt 2026)
-
-Metode tambahan: regresi logistik ditulis sendiri (`statsmodels` tidak bisa dipasang di ARM64), IRLS dengan SE robust klaster per anak; **self-test lolos** (reproduksi OR silang tabel 2×2 dan SE Woolf). Verifikasi: jumlah pasangan ≤ jumlah baris, kurva KM menurun monoton.
-
-| Berkas | Isi |
+| Berkas | Isi dan kolom utama |
 |---|---|
-| `a6_zscore_ringkas.csv`, `a6_zscore_histogram_tbu_s0.csv`, `a6_zscore_bulanan_s0.csv` | rerata, SD, persentil z-score per desa-tahun (S0, S3); histogram TB/U; deret bulanan |
-| `a7_kurva_umur.csv` | rerata z-score dan prevalensi per kelompok umur 3 bulan × tahun (S0, S3) |
-| `a8_faktor_risiko.csv` | OR (CI 95%) BBLR, PBLR, JK, umur terhadap stunting, wasting, underweight; model A (BBLR), B (PBLR), C (keduanya); S0, S1, S3 |
-| `a9_transisi_status.csv` | insiden, pemulihan, dan perubahan status per bulan pada anak yang terukur di dua bulan berturutan |
-| `a9_kecepatan_tumbuh.csv` | selisih tinggi antar bulan berturutan (cm/bulan) menurut desa-tahun dan umur |
-| `a9_km_stunting.csv`, `a9_logrank.csv` | Kaplan-Meier waktu sampai stunting pertama (anak pertama kali terlihat tidak stunting pada umur < 24 bulan) |
+| `a6_zscore_ringkas.csv` | Ringkasan z-score per desa dan tahun (S0 dan S3): rerata dengan interval, SD, kemencengan, persentil, persentase di bawah −2 SD, dan `rasio_tumpuk`, yaitu rasio jumlah anak di rentang −2,0 sampai −1,9 SD terhadap −2,1 sampai −2,0 SD (nilai sekitar 1 wajar). |
+| `a6_zscore_histogram_tbu_s0.csv` | Histogram z-score TB/U per desa dan tahun (`bin_awal`, `n`). |
+| `a6_zscore_bulanan_s0.csv` | Rerata dan SD z-score per desa dan bulan. |
+| `a7_kurva_umur.csv` | Rerata z-score dan prevalensi per kelompok umur 3 bulan dan tahun, dengan interval. |
+| `a8_faktor_risiko.csv` | Odds ratio (`OR`, `ci_low`, `ci_high`, `p`) untuk BBLR, PBLR, jenis kelamin, dan umur terhadap stunting, wasting, dan underweight. Model A hanya berisi BBLR, model B hanya PBLR, model C keduanya. Semua model disesuaikan dengan jenis kelamin, kelompok umur, dan efek tetap desa × tahun, dan tersedia untuk S0, S1, dan S3. |
+| `a9_transisi_status.csv` | Insiden, pemulihan, dan perubahan status stunting antara dua bulan berurutan pada anak yang terukur di keduanya. |
+| `a9_kecepatan_tumbuh.csv` | Selisih tinggi badan antara dua bulan berurutan (cm per bulan) menurut desa, tahun, dan umur, termasuk persentase pasangan yang tinggi badannya turun 1 cm atau lebih. |
+| `a9_km_stunting.csv`, `a9_logrank.csv` | Kaplan-Meier dan log-rank untuk waktu hingga stunting pertama, pada anak yang pertama kali terlihat tidak stunting di umur kurang dari 24 bulan. |
 
-## Analisis 6 — distribusi z-score: bukti kualitas data
-- **Rerata TB/U (S0)**: Puskesmas −0,98 (2024), −1,23 (2025), −0,49 (2026). Tiga desa bermasalah bergeser tidak masuk akal pada 2026: Lampeji −1,56 → **+0,01**, Mumbulsari −1,22 → **+0,13**, Lengkong −1,37 → **−0,10**. Pergeseran sekitar +1,5 SD dalam setahun tidak mungkin terjadi pada populasi nyata. Desa yang stabil: Karangkedawung −1,14/−1,27/−1,13, Kawangrejo −1,09/−1,17/−1,08, Suco −0,96/−0,97/−1,12.
-- **Kekurangan anak di bawah −2 SD**: bila z-score TB/U kira-kira normal, stunting yang diharapkan dari rerata dan SD yang teramati jauh lebih tinggi daripada yang tercatat. S3, desa yang stabil: Karangkedawung 2024 diharapkan 20,5% vs tercatat 7,5%; Kawangrejo 19,4% vs 7,1%; Suco 18,1% vs 8,7%; seluruh Puskesmas 2024 17,8% vs 6,2%, 2025 26,1% vs 13,0%. Selaras dengan penumpukan tepat di atas −2 SD (rasio 5,8 pada 2024, 4,8 pada 2025, Lampeji 2025: 19,2). Ini mendukung dugaan tinggi badan dibulatkan/disesuaikan ke arah tidak stunting, tetapi belum membuktikannya (asumsi normal hanya pendekatan).
-- **Pengecualian yang menarik**: Mumbulsari 2025 (tercatat 29,4% vs diharapkan 31,0%) dan Lengkong 2025 (29,3% vs 35,9%), dekat dengan harapan (heaping Lengkong 35%, Mumbulsari 75%, jadi bukan hanya soal heaping rendah). Hipotesis (perlu diverifikasi): prevalensi stunting sebenarnya di desa lain juga mungkin 20–30%, dan 6–9% adalah angka yang diperkecil.
+Catatan tentang tabel `a8`: pada model dengan efek tetap desa × tahun, anak hanya dibandingkan dengan anak lain di desa dan tahun yang sama, sehingga artefak pencatatan yang seragam dalam satu desa-tahun tidak ikut terbaca sebagai faktor risiko. BBLR dan PBLR diisi oleh petugas dan sebagian kosong, dan keduanya saling berkorelasi, itulah alasan model A, B, dan C disediakan terpisah.
 
-## Analisis 7 — kurva umur
-Pada 2024 (S3) rerata TB/U turun dari −0,39 (0–2 bln) ke −1,15 (30 bln) lalu mendatar sekitar −1,0, pola yang lazim (*growth faltering*). 2025 serupa tetapi lebih rendah (sampai −1,43). **2026 rusak**: rerata anak 6–11 bulan sekitar −0,07, lebih tinggi daripada bayi 0–2 bulan (−0,50). Stunting menurut umur 2024 datar 6–8% sampai 36 bulan lalu turun ke 3% pada 54–59 bulan; anak yang sudah stunting jarang pulih, jadi penurunan itu tidak lazim.
+## Analisis tambahan P1–P3
 
-## Analisis 8 — faktor risiko: hasil yang paling tahan banting
-Regresi logistik anak-bulan, disesuaikan JK, kelompok umur, dan **efek tetap desa × tahun** (membandingkan anak di desa dan tahun yang sama, sehingga artefak pencatatan per desa-tahun tersingkir), SE robust klaster per anak. Model C (BBLR dan PBLR bersama), S3: n = 90.838 pengukuran, 5.661 anak, 7.531 kasus stunting.
+Dijalankan dengan `python -I skrip/analisis_tahap2c.py <anak_bersih.csv> data/sigizi/analisis/tabel/who_lhfa_lms.csv data/sigizi/analisis/tabel`. Definisi lama Kaplan-Meier direproduksi lebih dulu sebagai pemeriksaan: pada S3 harus menghasilkan 2.995 anak, 1.152 kejadian, S(12 bulan) = 0,7304, dan log-rank BBLR χ² = 13,17.
 
-| Faktor | Stunting OR (CI 95%) | Underweight OR | Wasting OR |
-|---|---|---|---|
-| BBLR (<2.500 g) | **2,11** (1,64–2,71) | 2,30 (1,82–2,90) | 1,89 (1,50–2,37) |
-| PBLR (<48 cm) | **1,47** (1,15–1,88) | 1,51 (1,19–1,91) | 1,24 (0,99–1,56; p = 0,068) |
-| Perempuan (vs laki-laki) | **0,68** (0,60–0,78) | 0,71 (0,61–0,81) | 0,64 (0,56–0,74) |
-
-Hasil hampir identik di S0 dan S1 (mis. BBLR→stunting 2,09 dan 2,11), jadi tidak bergantung pada pembuangan data bermasalah. Model BBLR saja: OR 2,45; PBLR saja: 2,03 (S3). Rentang ini sejalan dengan literatur (BBLR sekitar 2–3×). Keterbatasan: BB/TB lahir diisi petugas dan 4–9% kosong; BBLR dan PBLR berkorelasi; asosiasi, bukan kausal.
-
-## Analisis 9 — longitudinal
-- **Status berubah sangat sering antar bulan**: 5,6% (2024), 7,6% (2025) pasangan bulan berturutan berganti status stunting; **pemulihan 43% per bulan (2024), 32% (2025)** dan insiden 3,0–3,9% per bulan. Stunting tidak pulih 43% per bulan dalam kenyataan; ini kebisingan pengukuran di sekitar ambang −2 SD. Desa yang paling "tenang" tetap 17–25% pulih per bulan (Suco 2025: 18%, Kawangrejo 2026: 17%). **Insiden dan pemulihan per bulan tidak boleh ditafsirkan sebagai kejadian nyata.** Di tiga desa bermasalah 2026: insiden 0,5–1,1%, pemulihan 66–77% (data seragam).
-- **Kecepatan tumbuh tinggi (S0)**: 2024 masuk akal: 2,2 cm/bulan pada 0–5 bln, 0,75 cm pada 12–23 bln, 0,5 cm pada 24–47 bln; 4,9% pasangan turun ≥ 1 cm. **2026 tiga desa bermasalah** punya SD 16–17 cm (selisih tinggi antar bulan melompat) dan 24–29% pasangan turun ≥ 1 cm, jadi tinggi badan mereka tidak bisa dipakai. Desa lain SD 1,8–2,3 cm.
-- **Kaplan-Meier** (S3; 2.995 anak yang pertama kali terlihat tidak stunting pada umur < 24 bulan): S(12 bln) = 0,73 dan S(24 bln) = 0,56, yaitu 44% menjadi stunting dalam 24 bulan. Angka ini terlalu tinggi dibanding prevalensi 6–13% dan kemungkinan besar terdorong kebisingan pengukuran di sekitar −2 SD, jadi besaran absolutnya tidak dapat dipakai. **Perbandingan relatif** lebih tahan: BBLR S(12) = 0,64 vs 0,74 tanpa BBLR (log-rank p = 0,0003), laki-laki 0,68 vs perempuan 0,78 (p < 0,0001), searah dengan analisis 8.
-
-## Implikasi
-Hasil yang layak jadi inti laporan: **analisis 8** (faktor risiko BBLR, PBLR, JK, umur dengan efek tetap desa-tahun) dan perbandingan relatif di analisis 9, ditambah analisis 6, 7, 12 sebagai bukti kualitas data dan keterbatasan. Prevalensi absolut, insiden, pemulihan, dan tren 2026 untuk Lampeji/Mumbulsari/Lengkong tidak layak dilaporkan sebagai temuan.
-
-# Analisis sensitivitas P1–P3 (`skrip/analisis_tahap2c.py`, 20 Okt 2026)
-
-Diusulkan saat telaah laporan dan dijalankan atas persetujuan peneliti. Pakai: `python -I skrip/analisis_tahap2c.py <anak_bersih.csv> data/sigizi/analisis/tabel/who_lhfa_lms.csv data/sigizi/analisis/tabel`. Verifikasi bawaan: definisi lama mereproduksi `a9_km_stunting`/`a9_logrank` (S3: 2.995 anak, 1.152 kejadian, S(12) = 0,7304, log-rank BBLR χ² 13,17).
-
-| Berkas | Isi |
+| Berkas | Isi dan kolom utama |
 |---|---|
-| `who_lhfa_lms.csv` | tabel LMS TB/U WHO 2006 (umur 0–1.826 hari, L = 1), diekspor dari paket R `anthro` 1.1.0 (`anthro:::growthstandards_lenanthro`); data acuan publik |
-| `p1_km_konfirmasi.csv` | Kaplan-Meier S0/S3: kejadian satu pengukuran vs terkonfirmasi (dua pengukuran berurutan < −2 SD, jarak ≤ 3 bulan); S pada 12 dan 24 bulan sejak masuk dan pada umur 24 dan 36 bulan (delayed entry) |
-| `p1_logrank.csv` | log-rank BBLR dan JK: skala sejak masuk/umur, tanpa strata, strata desa, strata desa × umur masuk |
-| `p2_bulan_terukur.csv` | jumlah bulan terukur per anak (semua baris dan S0) |
-| `p3_tumpuk_digit.csv` | rasio penumpukan dan % < −2 SD menurut digit desimal tinggi (.0/.5 vs lain), S3 |
-| `p3_simulasi_pembulatan.csv` | simulasi: z halus N(rerata, SD desa-tahun) → tinggi via LMS → dibulatkan 5 cara → z ulang (20 ulangan, seed 20261019) |
-| `p3_validasi_lms.csv` | kecocokan z dari tinggi tercatat + LMS dengan z situs |
-
-## Temuan
-- **P1**: dengan kejadian terkonfirmasi (S3), kejadian turun dari 1.152 menjadi 667 dan stunting dalam 24 bulan sejak masuk dari 44% menjadi 27% (sampai umur 36 bulan: 60% → 37%). Perbandingan relatif bertahan pada semua 10 varian S3: BBLR χ² 13,2–18,1 (p ≤ 0,0003), JK χ² 11,6–41,0 (p ≤ 0,0007), arah selalu sama; S0 serupa. Satu anak dikeluarkan dari skala umur (umur keluar ≤ umur masuk).
-- **P2**: dari 6.312 anak, 60,2% terukur pada ≥ 12 bulan dan 31,9% pada ≥ 24 bulan (median 16, IQR 9–27); S0 (6.202 anak) 59,8% dan 31,6%.
-- **P3**: z hitung ulang cocok dengan situs (median selisih 0,005; 97,9% dalam ±0,1 SD dengan koreksi posisi ukur). Simulasi pembulatan (0,5 cm, 1 cm, ke bawah, ke atas) menghasilkan rasio penumpukan 0,86–1,24 di semua ulangan, sedangkan teramati 5,82 (2024), 5,04 (2025), 2,62 (2026). Pembulatan ke atas 1 cm menurunkan % < −2 SD 2024 dari 17,0% ke 13,4% tanpa penumpukan. Penumpukan juga ada pada tinggi berdesimal selain .0/.5 (2024: 5,16; 2024–2026: 3,01; belum disesuaikan desa). Pembulatan saja tidak menjelaskan penumpukan; dugaan penyesuaian tinggi tetap belum dikonfirmasi.
+| `who_lhfa_lms.csv` | Tabel LMS TB/U standar WHO 2006 (umur 0–1.826 hari, L = 1), diekspor dari paket R `anthro` 1.1.0 (`anthro:::growthstandards_lenanthro`). Ini data acuan publik. |
+| `p1_km_konfirmasi.csv` | Kaplan-Meier (S0 dan S3) dengan dua definisi kejadian: satu pengukuran di bawah −2 SD, atau terkonfirmasi (dua pengukuran berurutan di bawah −2 SD dengan jarak paling lama 3 bulan). Berisi nilai survival pada 12 dan 24 bulan sejak masuk, dan pada umur 24 dan 36 bulan (skala umur dengan delayed entry). |
+| `p1_logrank.csv` | Log-rank untuk BBLR dan jenis kelamin pada beberapa skala waktu dan strata: tanpa strata, strata desa, dan strata desa × umur masuk. |
+| `p2_bulan_terukur.csv` | Jumlah bulan terukur per anak: persentase anak yang terukur minimal 12 dan 24 bulan, median, kuartil, dan maksimum. |
+| `p3_tumpuk_digit.csv` | Rasio penumpukan z-score di sekitar −2 SD menurut digit desimal tinggi badan (.0 atau .5 dibanding digit lain). |
+| `p3_simulasi_pembulatan.csv` | Simulasi: z-score halus dari N(rerata, SD desa-tahun) diubah menjadi tinggi dengan parameter LMS, dibulatkan dengan lima cara (tanpa pembulatan, ke 0,5 cm, ke 1 cm, ke bawah 1 cm, ke atas 1 cm), lalu z-score dihitung ulang. 20 ulangan, seed 20261019. Dipakai untuk menguji apakah pembulatan saja bisa menimbulkan penumpukan di atas −2 SD. |
+| `p3_validasi_lms.csv` | Kecocokan z-score yang dihitung dari tinggi tercatat dan LMS WHO dengan z-score yang ditampilkan situs. |
