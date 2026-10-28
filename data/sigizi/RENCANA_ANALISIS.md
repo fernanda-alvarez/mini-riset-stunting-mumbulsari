@@ -1,6 +1,6 @@
 # Rencana analisis data SigiziKesga (Puskesmas Mumbulsari)
 
-Dibuat 19 Okt 2026. Status tiap tahap ada di judulnya. Sumber data dan kualitasnya: `daftar_status_gizi/README.md`, `rekap_status_gizi/README.md`, `rekap_tambahan/README.md`, `inventaris_sigizikesga.md`.
+Dibuat 19 Okt 2026. Status tiap tahap ada di judulnya. Sumber data dan kualitasnya: `daftar_status_gizi/README.md`, `rekap_status_gizi/README.md`, `rekap_tambahan/README.md`.
 
 ## Tahap 0 — Keputusan dasar [DISETUJUI 19 Okt 2026]
 - **Periode**: Jan 2024–Sep 2026. Okt 2026 dibuang (belum final). 2024 ikut dianalisis atas persetujuan pembimbing.

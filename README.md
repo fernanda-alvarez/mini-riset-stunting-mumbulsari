@@ -72,7 +72,7 @@ Penjelasan tiap skrip ada di [`skrip/README.md`](skrip/README.md). Aturan pember
 | `data/sigizi/laporan/` | Gambar dan tabel yang dipakai di laporan, beserta catatan cara membangunnya. |
 | `data/sigizi/rekap_*/` | Rekap agregat yang diunduh dari situs SigiziKesga (per desa, per jenis kelamin, insiden stunting, sasaran). |
 | `referensi/` | Daftar pustaka (`.bib` dan ekspor Zotero) dan gaya sitasi (`.csl`). |
-| `TODO.md`, `data/sigizi/RENCANA_ANALISIS.md` | Catatan kerja dan rencana analisis. |
+| `data/sigizi/RENCANA_ANALISIS.md` | Rencana analisis: aturan pembersihan, skenario, dan daftar analisis. |
 
 ## Menjalankan ulang
 

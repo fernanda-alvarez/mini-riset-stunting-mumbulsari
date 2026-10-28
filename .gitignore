@@ -33,3 +33,6 @@ presentasi/
 *.rds
 *.RData
 .Rhistory
+# Catatan kerja pribadi (tidak ikut repo)
+TODO.md
+data/sigizi/inventaris_sigizikesga.md
