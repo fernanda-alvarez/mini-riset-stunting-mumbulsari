@@ -1,0 +1,19 @@
+{
+  "title": "Mini Riset Stunting pada Data Rutin SigiziKesga, Puskesmas Mumbulsari 2024-2026",
+  "upload_type": "software",
+  "description": "Kode analisis dan hasil agregat mini-riset stunting pada data rutin SigiziKesga, Puskesmas Mumbulsari. Data per anak tidak disertakan. Kode berlisensi MIT; hasil agregat berlisensi CC BY 4.0.",
+  "creators": [
+    {"name": "Dewi, Thalia Anisya"},
+    {"name": "Taslim, Fitranda Kusyanto"}
+  ],
+  "license": "MIT",
+  "language": "ind",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/fitrandakt/mini-riset-stunting-mumbulsari",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
