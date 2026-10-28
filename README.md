@@ -1,5 +1,7 @@
 # Mini Riset Stunting Puskesmas Mumbulsari, 2024–2026
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23724115.svg)](https://doi.org/10.5281/zenodo.23724115)
+
 Repositori ini berisi kode dan hasil agregat dari analisis data rutin pengukuran balita di wilayah kerja Puskesmas Mumbulsari, Kabupaten Jember. Data berasal dari aplikasi SigiziKesga (modul e-PPGBM) dan mencakup Januari 2024 sampai September 2026. Analisis ini dikerjakan sebagai mini riset pada Kepaniteraan Ilmu Kesehatan Masyarakat, Fakultas Kedokteran Universitas Jember, oleh Thalia Anisya Dewi dan Fitranda Kusyanto Taslim.
 
 Pertanyaan awalnya sederhana: berapa prevalensi stunting, wasting, dan underweight di tujuh desa wilayah Puskesmas, bagaimana trennya, dan faktor apa yang berhubungan dengannya (berat dan panjang lahir rendah, jenis kelamin, umur). Di tengah pengerjaan muncul pertanyaan kedua: seberapa jauh data rutin ini bisa dipercaya. Tinggi badan banyak yang dibulatkan, sebagian desa hanya mengisi satu tanggal ukur untuk seluruh bulan, dan angka di beberapa desa berubah drastis dari satu bulan ke bulan berikutnya. Karena itu sebagian besar skrip di sini mengerjakan pemeriksaan kualitas data, dan semua hasil prevalensi dihitung ulang pada beberapa skenario pembersihan.
