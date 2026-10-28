@@ -10,6 +10,19 @@ Data per anak memuat identitas (nama, NIK, nomor RM), jadi **tidak** diunggah. Y
 
 Berkas yang sengaja di-ignore ada di `.gitignore` (data sumber, data bersih per anak, rekap per posyandu, laporan `.docx`/`.pdf`, arsip).
 
+## Cuplikan hasil
+
+Seluruh gambar dari hasil agregat (bukan data per anak).
+
+![Prevalensi stunting per desa dan tahun](data/sigizi/laporan/gambar/g1_prevalensi_desa_tahun.png)
+*Prevalensi stunting (% anak-bulan, IK 95%) per desa dan tahun.*
+
+![Odds ratio faktor risiko](data/sigizi/laporan/gambar/g5_forest_faktor_risiko.png)
+*Odds ratio BBLR, PBLR, dan jenis kelamin terhadap stunting, wasting, dan underweight.*
+
+![Kaplan-Meier stunting menurut BBLR](data/sigizi/laporan/gambar/g6_kaplan_meier_bblr.png)
+*Waktu hingga stunting pada anak dengan dan tanpa BBLR.*
+
 ## Struktur
 
 | Folder | Isi |
@@ -37,7 +50,7 @@ Hanya gambar laporan, dari hasil agregat di repo:
 python skrip/buat_gambar_laporan.py [folder_keluaran]
 ```
 
-Kebutuhan: Python 3.12 (pandas, numpy, matplotlib), R 4.6 (paket `anthro` untuk z-score WHO), dan SPSS 27 bila ingin mengulang analisis SPSS.
+Kebutuhan: Python 3.12 (`pip install -r requirements.txt`), R 4.6 (paket `anthro` untuk z-score WHO), dan SPSS 27 bila ingin mengulang analisis SPSS.
 
 ## Catatan kehati-hatian
 
