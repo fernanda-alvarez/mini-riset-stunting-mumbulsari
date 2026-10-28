@@ -2,19 +2,7 @@
 
 Repositori ini berisi kode dan hasil agregat dari analisis data rutin pengukuran balita di wilayah kerja Puskesmas Mumbulsari, Kabupaten Jember. Data berasal dari aplikasi SigiziKesga (modul e-PPGBM) dan mencakup Januari 2024 sampai September 2026. Analisis ini dikerjakan sebagai mini riset pada Kepaniteraan Ilmu Kesehatan Masyarakat, Fakultas Kedokteran Universitas Jember, oleh Thalia Anisya Dewi dan Fitranda Kusyanto Taslim.
 
-Pertanyaan awalnya sederhana: berapa prevalensi stunting, wasting, dan underweight di tujuh desa wilayah Puskesmas, bagaimana trennya, dan faktor apa yang berhubungan dengannya (berat dan panjang lahir rendah, jenis kelamin, umur). Di tengah pengerjaan muncul pertanyaan kedua yang akhirnya menjadi temuan utama: seberapa jauh data rutin ini bisa dipercaya. Tinggi badan banyak yang dibulatkan, sebagian desa hanya mengisi satu tanggal ukur untuk seluruh bulan, dan angka di beberapa desa berubah drastis dari satu bulan ke bulan berikutnya. Karena itu sebagian besar skrip di sini mengerjakan pemeriksaan kualitas data, dan semua hasil prevalensi dihitung ulang pada beberapa skenario pembersihan.
-
-## Ringkasan temuan
-
-Prevalensi stunting gabungan seluruh Puskesmas adalah 6,5% pada 2024 (IK 95% 6,0–7,1), 13,1% pada 2025 (12,2–13,9), dan 7,0% pada 2026 (6,4–7,6). Angka ini jauh di bawah prevalensi nasional dari SSGI 2024 (19,8%). Kedua sumber memakai metode berbeda sehingga tidak bisa dibandingkan langsung, tetapi pola datanya memberi alasan untuk menduga bahwa prevalensi yang tercatat lebih rendah dari keadaan sebenarnya. Tiga hal mendukung dugaan itu:
-
-- Digit desimal tinggi badan menumpuk pada .0 dan .5, di beberapa desa sampai 98%, padahal pengukuran yang teliti seharusnya menghasilkan sekitar 20%.
-- Jumlah anak dengan z-score TB/U tepat di atas −2 SD jauh lebih banyak daripada yang tepat di bawahnya. Simulasi pembulatan saja tidak cukup untuk menghasilkan penumpukan sebesar itu.
-- Pada Januari 2026, tiga desa (Lampeji, Mumbulsari, Lengkong) berubah pola secara tiba-tiba: cakupan melonjak mendekati 100%, stunting turun ke 1,4–2,4%, dan banyak anak tercatat lebih pendek daripada bulan sebelumnya.
-
-Ini baru indikasi dari pola data. Dugaan bahwa tinggi badan disesuaikan agar anak tidak tergolong stunting belum diuji dengan pengukuran ulang, dan petugas baru membenarkan soal pembulatan serta pengisian satu tanggal per bulan.
-
-Untuk faktor risiko, pada model regresi logistik yang disesuaikan jenis kelamin, umur, dan desa × tahun (skenario S3), anak dengan berat lahir rendah (BBLR) memiliki odds stunting sekitar dua kali lipat (OR 2,11; IK 95% 1,64–2,71), anak dengan panjang lahir rendah (PBLR) sekitar 1,5 kali (OR 1,47; 1,15–1,88), dan anak perempuan memiliki odds yang lebih rendah daripada anak laki-laki (OR 0,68; 0,60–0,78). Arah dan besar hubungan ini hampir sama pada skenario S0, S1, dan S3 (S2 tidak dimodelkan). Semuanya adalah asosiasi dari data observasional, bukan hubungan sebab-akibat.
+Pertanyaan awalnya sederhana: berapa prevalensi stunting, wasting, dan underweight di tujuh desa wilayah Puskesmas, bagaimana trennya, dan faktor apa yang berhubungan dengannya (berat dan panjang lahir rendah, jenis kelamin, umur). Di tengah pengerjaan muncul pertanyaan kedua: seberapa jauh data rutin ini bisa dipercaya. Tinggi badan banyak yang dibulatkan, sebagian desa hanya mengisi satu tanggal ukur untuk seluruh bulan, dan angka di beberapa desa berubah drastis dari satu bulan ke bulan berikutnya. Karena itu sebagian besar skrip di sini mengerjakan pemeriksaan kualitas data, dan semua hasil prevalensi dihitung ulang pada beberapa skenario pembersihan.
 
 ## Data tidak ada di repo ini
 
@@ -94,7 +82,7 @@ Kebutuhan: Python 3.12 (`pip install -r requirements.txt`), R 4.6 dengan paket `
 
 ## Hal yang perlu diperhatikan
 
-Beberapa baris di `desa_bulan.csv` dan tabel per desa memiliki jumlah anak yang kecil (n kurang dari 20, terendah 2). Persentase dari angka sekecil itu tidak stabil dan tidak boleh dibaca sebagai prevalensi desa tersebut. Prevalensi absolut dalam repo ini juga sebaiknya tidak dipakai sebagai angka resmi, karena masalah kualitas data yang diuraikan di atas.
+Beberapa baris di `desa_bulan.csv` dan tabel per desa memiliki jumlah anak yang kecil (n kurang dari 20, terendah 2). Persentase dari angka sekecil itu tidak stabil dan tidak boleh dibaca sebagai prevalensi desa tersebut. Prevalensi absolut dalam repo ini juga sebaiknya tidak dipakai sebagai angka resmi, karena adanya masalah kualitas data pada pencatatan rutin (lihat bagian metodologi).
 
 ## Lisensi
 
