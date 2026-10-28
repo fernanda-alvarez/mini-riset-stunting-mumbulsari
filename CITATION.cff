@@ -7,5 +7,7 @@ authors:
     given-names: "Thalia Anisya"
   - family-names: "Taslim"
     given-names: "Fitranda Kusyanto"
-license: MIT
+license:
+  - MIT
+  - CC-BY-4.0
 date-released: 2026-10-28
