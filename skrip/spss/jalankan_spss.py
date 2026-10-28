@@ -6,7 +6,7 @@ Bila ada perintah yang gagal, perintah itu dicetak dan proses berhenti."""
 import os
 import sys
 
-SPSS_DIR = r"C:\Program Files\IBM\SPSS\Statistics\27"
+SPSS_DIR = os.environ.get("SPSS_DIR", r"C:\Program Files\IBM\SPSS\Statistics\27")  # ganti lewat variabel lingkungan SPSS_DIR bila perlu
 os.environ["PATH"] = SPSS_DIR + os.pathsep + os.environ.get("PATH", "")
 import spss  # noqa: E402
 

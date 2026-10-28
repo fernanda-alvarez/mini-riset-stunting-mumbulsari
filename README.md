@@ -62,15 +62,50 @@ Penjelasan tiap skrip ada di [`skrip/README.md`](skrip/README.md). Aturan pember
 | `referensi/` | Daftar pustaka (`.bib` dan ekspor Zotero) dan gaya sitasi (`.csl`). |
 | `data/sigizi/RENCANA_ANALISIS.md` | Rencana analisis: aturan pembersihan, skenario, dan daftar analisis. |
 
+## Format data sumber
+
+Skrip mengharapkan data sumber di `data/sumber/` dengan tata letak berikut. Folder ini ada di `.gitignore` dan harus disediakan sendiri.
+
+```
+data/sumber/
+├── sigizi_daftar_status_gizi_2026-10-19/
+│   └── Daftar_Status_Gizi_YYYY-MM.xls     satu berkas per bulan, 2024-01 sampai 2026-09
+├── anak_bersih/
+│   ├── anak_bersih.csv                    keluaran bersihkan_data_anak.py
+│   └── .garam                             garam HMAC untuk ID acak, dibuat otomatis, jangan dibagikan
+└── anak_analisis/
+    ├── anak_analisis.csv                  keluaran siapkan_data_spss_r.py
+    └── sasaran.csv                        sasaran per desa-bulan, dibuat dari sasaran_cakupan_cek2024.xlsx
+```
+
+**Berkas ekspor `Daftar_Status_Gizi_YYYY-MM.xls`.** Ini adalah laporan "Daftar Status Gizi" dari SigiziKesga: satu baris per pengukuran per anak. Berkasnya sebenarnya HTML dengan ekstensi `.xls`. Kolom yang dibaca skrip: `NIK`, `JK`, `Tgl Lahir`, `BB Lahir`, `TB Lahir`, `Desa/Kel`, `Posyandu`, `Tanggal Pengukuran`, `Berat`, `Tinggi`, `Cara Ukur`, `LiLA`, `BB/U`, `ZS BB/U`, `TB/U`, `ZS TB/U`, `BB/TB`, `ZS BB/TB`, `Naik Berat Badan`, `Jml Vit A`, dan `MBG`.
+
+**`anak_bersih.csv` dan `anak_analisis.csv`.** Satu baris adalah satu pengukuran seorang anak pada satu bulan. NIK sudah diganti `id_anak` (ID acak), dan nama, alamat, serta tanggal lahir tidak ada. Kolomnya terbagi menjadi beberapa kelompok:
+
+| Kelompok | Kolom |
+|---|---|
+| Identitas dan waktu | `id_anak`, `bulan_berkas`, `tahun`, `bulan`, `desa`, `posyandu`, `jk`, `tgl_ukur`, `umur_bln` |
+| Pengukuran | `berat`, `tinggi`, `lila`, `cara_ukur`, `bb_lahir_g`, `tb_lahir_cm`, `bblr`, `pblr`, `naik_bb`, `vit_a`, `mbg` |
+| Z-score dan kategori | `zs_bbu`, `zs_tbu`, `zs_bbtb`, `kat_bbu`, `kat_tbu`, `kat_bbtb` |
+| Outcome (0/1) | `stunting`, `stunting_berat`, `wasting`, `wasting_berat`, `underweight`, `gizi_lebih` |
+| Flag kualitas | `f_keras` dan kolom `f_*` lainnya (`f_zs_penanda`, `f_nol`, `f_aneh`, `f_nik_ganda`, `f_umur_luar`, `f_tgl_luar`, `f_pos_kosong`, `f_nik_pendek`, `f_id_tak_konsisten`, `f_tbu_outlier`, `f_cara_ukur_salah`, `f_tgl_seragam`, `f_anomali_desabulan`, `f_heaping_tinggi`), serta `pct_heaping_desa_tahun` |
+| Turunan untuk analisis | `kel_umur`, `t` (indeks bulan, 0 = Januari 2024), `s0`–`s3` (masuk skenario atau tidak), `pa_s0`–`pa_s3` (pengukuran acak terpilih per anak per tahun) |
+
+`anak_analisis.csv` adalah `anak_bersih.csv` ditambah kolom turunan pada baris terakhir tabel di atas. Arti skenario, flag, dan outcome dijelaskan di sheet "Kamus" pada `data/sigizi/analisis/Analisis_Stunting_Mumbulsari.xlsx` dan di `data/sigizi/analisis/README.md`.
+
 ## Menjalankan ulang
 
-Dengan data sumber di komputer lokal (tidak ada di repo), analisis R dan SPSS beserta workbook dan bahan laporan bisa dijalankan ulang dengan:
+Dengan data sumber di komputer lokal, analisis R dan SPSS beserta workbook dan bahan laporan dijalankan dengan:
 
 ```bash
 sh jalankan_analisis_sigizi.sh
 ```
 
-Skrip ini mengasumsikan `anak_bersih.csv` sudah dibuat oleh `skrip/bersihkan_data_anak.py` dan mengacu pada lokasi instalasi R dan SPSS di komputer penulis, jadi jalurnya perlu disesuaikan.
+Skrip ini mengasumsikan `anak_bersih.csv` sudah dibuat oleh `skrip/bersihkan_data_anak.py`. Lokasi perangkat lunak bisa diatur lewat variabel lingkungan: `PYTHON`, `RSCRIPT`, dan `SPSS_PYTHON` (Python bawaan SPSS). Contoh:
+
+```bash
+RSCRIPT="/c/Program Files/R/R-4.6.1/bin/Rscript" sh jalankan_analisis_sigizi.sh
+```
 
 Tanpa data sumber, yang bisa dijalankan hanyalah pembuatan gambar laporan dari hasil agregat yang ada di repo:
 
@@ -78,7 +113,7 @@ Tanpa data sumber, yang bisa dijalankan hanyalah pembuatan gambar laporan dari h
 python skrip/buat_gambar_laporan.py [folder_keluaran]
 ```
 
-Kebutuhan: Python 3.12 (`pip install -r requirements.txt`), R 4.6 dengan paket `anthro` untuk z-score WHO, dan SPSS 27 bila ingin mengulang analisis SPSS.
+**Lingkungan.** Python 3.12 dengan paket yang dikunci di `requirements.txt` (`pip install -r requirements.txt`). R 4.6.1: analisis utama hanya memakai base R, sedangkan paket untuk alur MTBS lama (`anthro`, `openxlsx`, `readxl`, `ggplot2`) dipasang dengan `Rscript install_paket_r.R`. Analisis SPSS membutuhkan SPSS 27 dan dijalankan lewat `skrip/spss/jalankan_spss.py` (lokasi instalasi bisa diatur dengan variabel `SPSS_DIR`).
 
 ## Hal yang perlu diperhatikan
 

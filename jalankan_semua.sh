@@ -6,9 +6,10 @@
 #   python skrip/cleanup_mtbs.py "data/sumber/Snapshot Data PKM Mumbulsari/13102026 Klaster 2 PKM Mumbulsari.xlsx" \
 #          "data/olahan/MTBS Balita PKM Mumbulsari 2025-2026 - Data Bersih.xlsx"
 set -e
-PY="/c/Users/Fitranda Taslim/AppData/Local/Programs/Python/Python311/python.exe"
-RS="/c/PROGRA~2/R/R-46~1.1/bin/x64/Rscript"
-PS="powershell"
+# Lokasi perangkat lunak. Isi lewat variabel lingkungan bila perlu (PYTHON, RSCRIPT, POWERSHELL).
+PY="${PYTHON:-python}"
+RS="${RSCRIPT:-Rscript}"
+PS="${POWERSHELL:-powershell}"
 S="skrip"
 F="data/olahan/MTBS Balita PKM Mumbulsari 2025-2026 - "
 SENS="data/sensitivitas"

@@ -1,0 +1,11 @@
+# Akhir baris: teks dinormalisasi ke LF di repo; skrip shell harus tetap LF agar bisa dijalankan di Linux/macOS dan Git Bash.
+* text=auto
+*.sh text eol=lf
+*.png binary
+*.xlsx binary
+*.xls binary
+
+# Berkas referensi pustaka bukan kode; jangan dihitung dalam statistik bahasa GitHub.
+referensi/** linguist-vendored
+*.csl linguist-vendored
+*.bib linguist-documentation

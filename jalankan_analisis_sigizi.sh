@@ -2,9 +2,11 @@
 # Analisis SIGIZI di SPSS dan R (Python hanya untuk cleaning dan penandaan skenario). Padanan skrip/analisis_tahap2*.py.
 # Usage: sh jalankan_analisis_sigizi.sh   (dari folder induk proyek; data/sumber/anak_bersih/anak_bersih.csv harus sudah ada)
 set -e
-PY="python"
-RS="/c/PROGRA~2/R/R-4.6.1/bin/x64/Rscript"
-SPSSPY="/c/Program Files/IBM/SPSS/Statistics/27/Python3/python.exe"
+# Lokasi perangkat lunak. Isi lewat variabel lingkungan bila lokasinya berbeda dari bawaan, misalnya:
+#   RSCRIPT="/c/Program Files/R/R-4.6.1/bin/Rscript" SPSS_PYTHON="/c/Program Files/IBM/SPSS/Statistics/27/Python3/python.exe" sh jalankan_analisis_sigizi.sh
+PY="${PYTHON:-python}"
+RS="${RSCRIPT:-Rscript}"
+SPSSPY="${SPSS_PYTHON:-/c/Program Files/IBM/SPSS/Statistics/27/Python3/python.exe}"
 AN="data/sumber/anak_analisis/anak_analisis.csv"
 TAB="data/sigizi/analisis/tabel"
 

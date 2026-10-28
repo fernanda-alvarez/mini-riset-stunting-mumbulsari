@@ -1,6 +1,6 @@
-pandas>=2.2
-numpy>=1.26
-scipy>=1.11
-matplotlib>=3.8
-openpyxl>=3.1
-python-docx>=1.1
+pandas==3.0.6
+numpy==2.5.3
+scipy==1.18.1
+matplotlib==3.11.2
+openpyxl==3.1.5
+python-docx==1.2.0
